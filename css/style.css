@@ -1,0 +1,27 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 64px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+main{
+    position: fixed;
+    left: 18vw;
+    top: 56px;
+    width: 64vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
