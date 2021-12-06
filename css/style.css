@@ -18,10 +18,72 @@ header {
 }
 
 main{
+    display: flex;
     position: fixed;
     left: 18vw;
     top: 56px;
     width: 64vw;
     height: 100vh;
     box-sizing: border-box;
+    justify-content: space-between;
+    background-color: red;
+}
+.h-logo-icon{   
+    width: 48px;
+    height: 48px;
+    margin: 24px;
+}
+.h-icon{
+    
+    
+}
+.h-user i{
+    padding: 0px 15px 0px 3px;
+    width: 24px;
+    height: 24px;
+    font-size: 21px;
+
+    
+}
+.h-user img{
+    width: 40px;
+    height: 40px;
+    margin: 0px 45px 0px 0px;
+    border-radius: 50%;
+}
+.h-location{
+    font-size: 16px;
+}
+.h-day{
+    font-size: 14px;
+    color: #8f8f8f;
+}
+.h-cloud{
+    font-size: 36px;
+    color: #f2f2f1;
+    display: flex;
+    margin: 0px 13px;
+}
+.h-temperatures{
+    margin: 0px 20px;
+}
+.h-temperature{
+    color: #212121;
+    display: flex;
+}
+.h-do{
+    font-size: 25px;
+}
+.h-CF{
+    display: flex;
+}
+
+.h-C{
+    color: #8f8f8f;
+    font-size: 14px;
+    margin: 0px 10px;
+}
+.h-status{
+    color: #8f8f8f;
+    font-size: 14px;
 }
