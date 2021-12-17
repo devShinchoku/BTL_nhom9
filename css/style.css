@@ -99,9 +99,9 @@ main {
 
 .A {
   padding: 0px;
+  display: flex;
 }
 .A_list {
-  display: flex;
   padding: 0px;
 }
 .A_list-item {
