@@ -89,6 +89,74 @@ main {
   right: 150px;
   top: 25%;
 }
+
+
+
+
+
+
+
+
+.A {
+  padding: 0px;
+}
+.A_list {
+  display: flex;
+  padding: 0px;
+}
+.A_list-item {
+  list-style: none;
+  padding: 0 5px;
+  white-space: nowrap;
+}
+.A_list-item a {
+  text-decoration: none;
+  color: #606060;
+  font-weight: 450;
+  font-size: 13px;
+  display: flex;
+}
+.A-text {
+  margin: 5px 0px 45px 30px;
+  display: block;
+  color: #909090;
+  font-size: 14px;
+}
+.A-text:hover{
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .h-status {
   color: #8f8f8f;
   font-size: 14px;
@@ -102,6 +170,26 @@ main {
   display: flex;
   justify-content: space-between;
 }
+.h_navbar{
+  height: 100vh;
+  overflow-y: scroll;
+}
+.h_navbar::-webkit-scrollbar{
+  width: 6px;
+}
+.h_navbar::-webkit-scrollbar-thumb{
+  background: transparent;
+  border-radius: 10px;
+  
+}
+.h_navbar::-webkit-scrollbar-track{
+  background: transparent
+}
+.h_navbar:hover::-webkit-scrollbar-thumb{
+  background: #b9b9b9;
+  
+}
+
 .exp1 {
   color: #83cee9;
   text-decoration: none;
@@ -129,6 +217,7 @@ main {
   font-size: 15px;
   text-decoration: none;
   color: #4a4a4a;
+  font-weight: 600;
 }
 .h_voucher-title:hover {
   text-decoration: underline;
