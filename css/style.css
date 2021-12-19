@@ -42,12 +42,12 @@ main {
   cursor: pointer;
 }
 
-#h-menu .menu-logo{
-  padding: 4px 12px;
-  display: inline-block;
+.h-menu .menu-logo{
+  padding: 0;
+  display: inline-flex;
   text-align: center;
-  padding: 12px 12px;
-  z-index: 1;
+  flex-direction: column;
+  justify-content: center;
 }
 .h-menu1{
   justify-content: center;
@@ -60,19 +60,11 @@ main {
   cursor: pointer;
 }
 
-.menu-logo-header{
-  width: 100%;
-  display: inline-flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#h-menu i{
+.h-menu i{
   font-size: 20px;
 }
 
-/*.nen-icon{
+.background-icon{
   content: "";
   z-index: 0;
   top: 4px;
@@ -83,7 +75,7 @@ main {
   background-color: rgb(134 243 255 / 30%);
   
 }
-*/
+
 .h-user i {
   padding: 0px 3px 0px 3px;
   width: 24px;
