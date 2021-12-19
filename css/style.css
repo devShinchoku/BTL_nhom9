@@ -307,7 +307,98 @@ main {
   padding-top: 5px;
 }
 
+.h-signpost{
+  display: flex;
+}
+.h-signpost i{
+  font-size: 16px;
+  margin: 0px 14px 0px 0px;
+}
+.h-signpost1{
+  font-size: 16px;
+}
+.h-calendar{
+  display: flex;
+}
+.h-calendar i{
+  font-size: 16px;
+  margin: 0px 14px 0px 0px;
+}
+.h-calendar1{
+  font-size: 16px;
+}
 
+.h-price{
+  display: flex;
+  justify-content: space-between;
+}
+.h-price1 {
+  font-size: 20px;
+  color: red;
+  font-weight: 600;
+}
+.h-price1 b {
+  display: flex;
+  font-size: 16px;
+  color: black;
+  font-weight: 600;
+}
+.h-price2{
+  height: 36px;
+  width: 130px;
+  background-color: #ffffff;
+  border: 1px solid #24a8d8;
+  color: #24a8d8;
+  border-radius: 50px;
+  margin-top: 15px;
+}
+.h-price2:hover{
+  background-color: #f6fcfe;
+}
+
+.h-interactive{
+  display: flex;
+  justify-content: space-between;
+}
+.h-interactive1{
+  display: flex;
+  font-weight: 200;
+  color: #979696;
+  
+}
+.h-interactive2{
+  font-weight: 200;
+  color: #979696;
+}
+.h-interactive1 i{
+  background-color: rgb(137, 137, 240);
+  height: 24px;
+  width: 24px;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  margin-right: 6px;
+}
+.h-interactive1:hover{
+  text-decoration: underline;
+}
+.h-interactive2-iteam:hover{
+  text-decoration: underline;
+}
+.btn-interactive{
+  justify-content: space-between;
+  text-align: center;
+}
+
+.btn-interactive1{
+  height: 36px;
+  width: 178px;
+  background-color: white;
+  border: none;
+}
+.btn-interactive1:hover{
+  background-color: rgb(236, 233, 233);
+}
 
 
 .exp1 {
