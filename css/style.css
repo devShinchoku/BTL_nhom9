@@ -38,6 +38,10 @@ main {
   height: 48px;
   margin: 24px;
 }
+.h-logo-icon:hover{
+  cursor: pointer;
+}
+
 #h-menu .menu-logo{
   padding: 4px 12px;
   display: inline-block;
@@ -46,13 +50,14 @@ main {
   z-index: 1;
 }
 .h-menu1{
-  margin-left: 230px;
+  justify-content: center;
 }
 .menu-logo{
   font-size: 14px;
 }
 .menu-logo:hover{
   background-color: #fafafa;
+  cursor: pointer;
 }
 
 .menu-logo-header{
@@ -62,6 +67,7 @@ main {
   flex-direction: column;
   justify-content: center;
 }
+
 #h-menu i{
   font-size: 20px;
 }
@@ -91,6 +97,7 @@ main {
 }
 .h-user-iteam:hover{
   background-color: rgb(236, 233, 233);
+  cursor: pointer;
 }
 
 
@@ -99,7 +106,10 @@ main {
   height: 40px;
   margin: 0px 45px 0px 0px;
   border-radius: 50%;
-
+}
+.h-user img:hover{
+  background-color: rgb(236, 233, 233);
+  cursor: pointer;
 }
 .card{
   box-shadow: 0 1px 6px rgba(0.1 , 0.1 ,0.1 ,0.1);
@@ -141,6 +151,7 @@ main {
 }
 .h-C:hover{
   background-color: rgb(236, 233, 233);
+  cursor: pointer;
 }
 
 
