@@ -17,6 +17,9 @@ header {
   height: 64px;
   box-sizing: border-box;
   justify-content: space-between;
+  box-shadow: 0 1px 6px rgba(0 , 0 ,0 ,0.1);
+
+  
 }
 
 main {
@@ -42,15 +45,25 @@ main {
   padding: 12px 12px;
   z-index: 1;
 }
+.h-menu1{
+  margin-left: 230px;
+}
+.menu-logo{
+  font-size: 14px;
+}
+.menu-logo:hover{
+  background-color: #fafafa;
+}
+
 .menu-logo-header{
-    width: 100%;
-    display: inline-flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 #h-menu i{
-  font-size: 24px;
+  font-size: 20px;
 }
 
 /*.nen-icon{
@@ -88,7 +101,10 @@ main {
   border-radius: 50%;
 
 }
-
+.card{
+  box-shadow: 0 1px 6px rgba(0.1 , 0.1 ,0.1 ,0.1);
+  border: none;
+}
 .h-location {
   font-size: 16px;
 }
@@ -236,6 +252,60 @@ main {
 .h_navbar:hover::-webkit-scrollbar-thumb {
   background: #b9b9b9;
 }
+.h-main-name{
+  display: flex;
+  justify-content: space-between;
+}
+.main-name{
+  display: flex;
+}
+
+.main-name-info{
+  margin: 5px 0px 0px 12px ;
+  font-weight: 600;
+  color: #212121;
+}
+.main-name-info:hover{
+  text-decoration: underline;
+}
+.main-name-button{
+  justify-content: space-between;
+  height: 30px;
+  width: 113px;
+  background-color: white;
+  border-radius: 50px;
+  border: 1px solid #bdb5b8;
+  font-size: 14px;
+}
+.main-name-button:hover {
+  background-color: #f5f5f5;
+}
+
+.h-name{
+  color: #ff9800;
+  font-weight: 500;
+}
+.h-name-tour{
+  display: flex;
+  justify-content: space-between;
+}
+.h-name-tour1{
+  height: 64px;
+  width: 475px;
+  font-size: 20px
+}
+.h-name-time{
+  height: 40px;
+  width: 60px;
+  background-color: #0ac46b;
+  text-align: center;
+  color: white;
+  border-radius: 0px 20px 0px 20px;
+  padding-top: 5px;
+}
+
+
+
 
 .exp1 {
   color: #83cee9;
