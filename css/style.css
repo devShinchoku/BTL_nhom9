@@ -23,6 +23,7 @@ header {
 }
 
 main {
+  margin-top: 64px;
   display: flex;
   position: fixed;
   left: 18vw;
