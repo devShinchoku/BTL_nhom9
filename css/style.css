@@ -188,6 +188,26 @@ main {
 .generality-text:hover {
   text-decoration: underline;
 }
+.search-datetime{
+  display: flex;
+}
+.search-datetime1{
+  border: none;
+  border-bottom: 1px solid #e9e6e6;
+  width: 268px;
+  height: 32px;
+}
+.search-datetime1:hover{
+  border-bottom: 1px solid #212121;
+}
+input[type="datetime-local"]{
+  color: #24a8d8;
+}
+
+
+
+
+
 
 .btn {
   display: flex;
