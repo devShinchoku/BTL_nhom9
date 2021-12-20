@@ -6,65 +6,37 @@
 html{
   font-family: Arial, Helvetica, sans-serif;
 }
-
+/* CSS for header */
 header {
-  display: flex;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
   height: 64px;
-  box-sizing: border-box;
-  justify-content: space-between;
   box-shadow: 0 1px 6px rgba(0 , 0 ,0 ,0.1);
-
-  
 }
-
-main {
-  margin-top: 64px;
-  display: flex;
-  position: fixed;
-  left: 18vw;
-  top: 56px;
-  width: 64vw;
-  height: 100vh;
-  box-sizing: border-box;
-  justify-content: space-between;
-  /* background-color: red; */
+.navbar{
+  height: inherit;
 }
-.h-logo-icon {
+.h-logo {
   width: 48px;
   height: 48px;
   margin: 24px;
 }
-.h-logo-icon:hover{
+.h-logo:hover{
   cursor: pointer;
 }
 
-.h-menu .menu-logo{
+.h-menu .h-menu-logo{
   padding: 0;
   display: inline-flex;
   text-align: center;
   flex-direction: column;
   justify-content: center;
+  color: black;
 }
-.h-menu1{
-  justify-content: center;
-}
-.menu-logo{
+.h-menu-logo{
   font-size: 14px;
 }
-.menu-logo:hover{
-  background-color: #fafafa;
-  cursor: pointer;
-}
-
 .h-menu i{
   font-size: 20px;
 }
-
 .background-icon{
   content: "";
   z-index: 0;
@@ -76,6 +48,12 @@ main {
   background-color: rgb(134 243 255 / 30%);
   
 }
+
+.h-menu-logo:hover{
+  background-color: #fafafa;
+  cursor: pointer;
+}
+
 
 .h-user i {
   padding: 0px 3px 0px 3px;
@@ -104,51 +82,48 @@ main {
   background-color: rgb(236, 233, 233);
   cursor: pointer;
 }
+
+/* CSS for main */
+
 .card{
   box-shadow: 0 1px 6px rgba(0.1 , 0.1 ,0.1 ,0.1);
   border: none;
 }
-.h-location {
+.location {
   font-size: 16px;
 }
-.h-day {
+.day {
   font-size: 14px;
   color: #8f8f8f;
 }
-.h-cloud {
+.w-cloud {
   font-size: 36px;
   color: #f2f2f1;
   display: flex;
   margin: 0px 13px;
 }
-.h-temperatures {
+.temper-container {
   margin: 0px 20px;
 }
-.h-temperature {
+.temperture {
   color: #212121;
   display: flex;
 }
-.h-do {
-  font-size: 25px;
-}
-.h-CF {
-  display: flex;
-}
 
-.h-C {
+.w-temper-sacles {
   color: #8f8f8f;
   font-size: 14px;
   margin: 0px 10px;
   width: 20px;
   height: 20px;
 }
-.h-C:hover{
+.w-temper-sacles:hover{
   background-color: rgb(236, 233, 233);
   cursor: pointer;
 }
 
 
-.h-C-separate::after {
+.w-temper-sacles-separate::after {
   content: "";
   display: block;
   position: absolute;
@@ -160,53 +135,50 @@ main {
   top: 25%;
 }
 
-.generality {
+.w-detail {
   padding: 0px;
   display: flex;
 }
-.generality_list {
+.w-detail-list {
   padding: 0px;
 }
-.generality_list-item {
+.w-detail-list-item {
   list-style: none;
   padding: 0 5px;
   white-space: nowrap;
 }
-.generality_list-item a {
+.w-detail-list-item p {
   text-decoration: none;
   color: #ada9a9;
   font-weight: 450;
   font-size: 13px;
   display: flex;
+  margin: 0;
 }
-.generality-text {
-  margin: 5px 0px 45px 30px;
+.w-cr {
+  margin: 5px 0px 20px 30px;
   display: block;
   color: #909090;
   font-size: 14px;
 }
-.generality-text:hover {
+.w-cr:hover {
   text-decoration: underline;
 }
 .search-datetime{
   display: flex;
 }
-.search-datetime1{
+.m-search-input{
   border: none;
   border-bottom: 1px solid #e9e6e6;
   width: 268px;
   height: 32px;
 }
-.search-datetime1:hover{
+.m-search-input:hover{
   border-bottom: 1px solid #212121;
 }
-input[type="datetime-local"]{
+input[type="datetime"]{
   color: #24a8d8;
 }
-
-
-
-
 
 
 .btn {
@@ -222,7 +194,7 @@ input[type="datetime-local"]{
   background-color: #ffffff;
   border: 1px solid #bdb5b8;
 }
-.btn2 {
+.btn-m-search {
   height: 36px;
   width: 90px;
   background-color: #24a8d8;
@@ -232,21 +204,21 @@ input[type="datetime-local"]{
 .btn1:hover {
   background-color: #f5f5f5;
 }
-.btn2:hover {
+.btn-m-search:hover {
   background-color: #1f82a7;
 }
-.h-search {
+.btn-m-search-code {
   display: block;
   color: #24a8d8;
   font-size: 16px;
   float: right;
   margin-top: 5px;
 }
-.h-search:hover {
+.btn-m-search-code:hover {
   text-decoration: underline;
 }
 
-.h-status {
+.w-status {
   color: #8f8f8f;
   font-size: 14px;
 }
@@ -259,40 +231,40 @@ input[type="datetime-local"]{
   display: flex;
   justify-content: space-between;
 }
-.h_navbar {
+.sidebar {
   height: 100vh;
   overflow-y: scroll;
 }
-.h_navbar::-webkit-scrollbar {
+.sidebar::-webkit-scrollbar {
   width: 6px;
 }
-.h_navbar::-webkit-scrollbar-thumb {
+.sidebar::-webkit-scrollbar-thumb {
   background: transparent;
   border-radius: 10px;
 }
-.h_navbar::-webkit-scrollbar-track {
+.sidebar::-webkit-scrollbar-track {
   background: transparent;
 }
-.h_navbar:hover::-webkit-scrollbar-thumb {
+.sidebar:hover::-webkit-scrollbar-thumb {
   background: #b9b9b9;
 }
-.h-main-name{
+.m-host{
   display: flex;
   justify-content: space-between;
 }
-.main-name{
+.host{
   display: flex;
 }
 
-.main-name-info{
+.host-name{
   margin: 5px 0px 0px 12px ;
   font-weight: 600;
   color: #212121;
 }
-.main-name-info:hover{
+.host-name:hover{
   text-decoration: underline;
 }
-.main-name-button{
+.host-like-button{
   justify-content: space-between;
   height: 30px;
   width: 113px;
@@ -301,24 +273,24 @@ input[type="datetime-local"]{
   border: 1px solid #bdb5b8;
   font-size: 14px;
 }
-.main-name-button:hover {
+.host-like-button:hover {
   background-color: #f5f5f5;
 }
 
-.h-name{
+.tour-name{
   color: #ff9800;
   font-weight: 500;
 }
-.h-name-tour{
+.tour-info{
   display: flex;
   justify-content: space-between;
 }
-.h-name-tour1{
+.tour-schedule{
   height: 64px;
   width: 475px;
   font-size: 20px
 }
-.h-name-time{
+.tour-long{
   height: 40px;
   width: 60px;
   background-color: #0ac46b;
@@ -328,24 +300,24 @@ input[type="datetime-local"]{
   padding-top: 5px;
 }
 
-.h-signpost{
+.tour-loc{
   display: flex;
 }
-.h-signpost i{
+.tour-loc i{
   font-size: 16px;
   margin: 0px 14px 0px 0px;
 }
-.h-signpost1{
+.tour-loc1{
   font-size: 16px;
 }
-.h-calendar{
+.w-temper-saclesalendar{
   display: flex;
 }
-.h-calendar i{
+.w-temper-saclesalendar i{
   font-size: 16px;
   margin: 0px 14px 0px 0px;
 }
-.h-calendar1{
+.w-temper-saclesalendar1{
   font-size: 16px;
 }
 
@@ -466,6 +438,7 @@ input[type="datetime-local"]{
 }
 .copyright {
   padding: 0px;
+  margin: 0px;
 }
 .copyright_list {
   display: flex;
