@@ -509,6 +509,105 @@ input[type="datetime"]{
   width: 870px;
   font-size: 26px
 }
-/* .ct-startend{
+.ct-startend{
+  display: flex;
   justify-content: space-between;
+}
+.ct-start{
+  height: 142px;
+  width: 456px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+}
+.ct-start1{
+  color: #0ac46b;
+}
+.ct-start2{
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  color: #0ac46b;
+  border: 1px solid #0ac46b;
+  background-color: white;
+}
+.ct-end{
+  height: 142px;
+  width: 456px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+}
+/* .ct-end::before{
+  top: 24px;
+  left: calc(-50%);
+  width: calc(100% - 24px);
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-bottom: 3px dotted #e0e0e0;
+}
+::before{
+  box-sizing: inherit;
 } */
+.ct-end1{
+  color: red;
+}
+.ct-end2{
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  color: red;
+  border: 1px solid red;
+  background-color: white;
+}
+.ct-startend-time{
+  color: #909090;
+}
+.ct-Tourcode{
+  display: flex;
+}
+
+.ct-tourcode {
+  display: flex;
+  height: 87px;
+  width: 456px;
+}
+.ct-tourcode1 {
+  padding: 0px;
+}
+.ct-tourcode1 {
+  list-style: none;
+  padding: 0 30px;
+}
+.ct-tourcode1-1 p {
+  display: flex;
+  margin: 0;
+}
+.ct-changedate{
+  display: flex;
+}
+.ct-changedate-btn{
+  border: none;
+  color: #83cee9;
+  background-color: white;
+  margin-left: 8px;
+}
+.ct-changedate-btn:hover{
+  text-decoration: underline;
+}
+
+
+
+
+.ct-btn-changesearch{
+  height: 42px;
+  width: 296px;
+  border: none;
+  border-radius: 10px;
+  background-color: #43bae6;
+  color: white;
+}
+.ct-btn-changesearch:hover{
+  background-color: #0e698a;
+}
