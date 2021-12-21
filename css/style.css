@@ -10,9 +10,10 @@ html{
 header {
   height: 64px;
   box-shadow: 0 1px 6px rgba(0 , 0 ,0 ,0.1);
+  background-color: #fff;
 }
 .navbar{
-  height: 50px;
+  height: 64px;
 }
 
 .container-fluid{
@@ -31,7 +32,8 @@ header {
 }
 
 .h-menu .h-menu-logo{
-  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 24px;
   display: inline-flex;
   text-align: center;
   flex-direction: column;
@@ -48,14 +50,18 @@ header {
 .background-icon{
   content: "";
   z-index: 0;
-  top: 29px;
-  left: 29px;
+  top: 32px;
+  left: 32px;
   width: 24px;
   height: 24px;
   border-radius: 50%;
   position: relative;
   background-color: rgb(134 243 255 / 30%);
   
+}
+.active{
+  border-bottom: 3px solid #24a8d8; 
+
 }
 .nav-link{
   width: 89px;
@@ -98,6 +104,9 @@ header {
 }
 
 /* CSS for main */
+main{
+  margin-top: 60px;
+}
 
 .card{
   box-shadow: 0 1px 6px rgba(0.1 , 0.1 ,0.1 ,0.1);
@@ -486,7 +495,7 @@ input[type="datetime"]{
 
 .container{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;                         
 }
 
 .m-img-tour{
