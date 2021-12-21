@@ -213,6 +213,8 @@ input[type="datetime"]{
   font-size: 16px;
   float: right;
   margin-top: 5px;
+  border: none;
+  background-color: white;
 }
 .btn-m-search-code:hover {
   text-decoration: underline;
