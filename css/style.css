@@ -661,32 +661,60 @@ input[type="datetime"]{
   width: 870px;
   border: 1px solid #8f8f8f;
   display: flex;
+  border-radius: 5px;
 }
 .ct-time-start{
-  margin: 0px 0px 0px 0px;
+  height: 64px;
+  width: 163px;
+  margin-left: 16px;
 }
 .ct-departureschedule-icon{
-  
+  margin-left: 16px;
+  height: 26px;
+  width: 26px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid #606060;
 }
 .ct-time-end{
-
+  margin-left: 50px;
+  height: 64px;
+  width: 163px;
 }
 .ct-price{
-
+  height: 48px;
+  width: 298px;
+  font-size: 22px;
+  color: red;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
+.ct-Booknow{
+  width: 145px;
+  height: 52px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.ct-booknow{
+  height: 36px;
+  width: 92px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 40px;
+  border: none;
+  color: white;
+  background-color: #24a8d8;
+}
+.ct-booknow:hover{
+  background-color: #0e698a;
+}
 .ct-btn-changesearch{
   height: 42px;
   width: 296px;
@@ -697,4 +725,24 @@ input[type="datetime"]{
 }
 .ct-btn-changesearch:hover{
   background-color: #0e698a;
+}
+.ct-interactive i{
+  font-size: 18px;
+  margin-right: 15px;
+}
+.ct-introduce{
+  justify-content: space-between;
+  display: flex;
+}
+.ct-introduce1:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+.ct-introduce1{
+  color: #24a8d8;
+}
+
+.ct-radiosgrid i{
+  font-size: 18px;
+  margin-right: 15px;
 }
