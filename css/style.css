@@ -6,6 +6,9 @@
 html{
   font-family: Arial, Helvetica, sans-serif;
 }
+body{
+  font-size: 0.75rem;
+}
 /* CSS for header */
 header {
   height: 64px;
@@ -30,8 +33,11 @@ header {
 .h-logo:hover{
   cursor: pointer;
 }
-
-.h-menu .h-menu-logo{
+.h-menu .selected {
+  border-bottom: 3px solid #24a8d8;
+  color: #24a8d8;
+}
+.h-menu-logo{
   padding-top: 10px;
   padding-bottom: 24px;
   display: inline-flex;
@@ -39,10 +45,9 @@ header {
   flex-direction: column;
   justify-content: center;
   color: black;
+  font-size: 0.75rem;
 }
-.h-menu-logo{
-  font-size: 14px;
-}
+
 .h-menu i{
   font-size: 20px;
   z-index: 1;
@@ -57,11 +62,7 @@ header {
   border-radius: 50%;
   position: relative;
   background-color: rgb(134 243 255 / 30%);
-  
-}
-.active{
-  border-bottom: 3px solid #24a8d8; 
-
+  box-sizing: inherit;
 }
 .nav-link{
   width: 89px;
@@ -69,8 +70,8 @@ header {
 }
 
 .h-menu-logo:hover{
-  background-color: #fafafa;
-  cursor: pointer;
+  background-color: #f6fcfe;
+
 }
 
 
@@ -105,7 +106,8 @@ header {
 
 /* CSS for main */
 main{
-  margin-top: 60px;
+  position: relative;
+  top: 60px
 }
 
 .card{
