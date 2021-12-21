@@ -480,3 +480,35 @@ input[type="datetime"]{
   color: #909090;
   font-size: 12px;
 }
+
+
+/* css content index */
+
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.m-img-tour{
+  display: block;
+  height: 499px;
+  width: 870px;
+  text-align: center;
+}
+.m-img-tour1{
+  background-color: red;
+  height: 120px;
+  width: 870px;
+}
+.ct-tour-name{
+  color: #ff9800;
+  font-weight: 500;
+}
+.ct-tour-schedule{
+  height: 32px;
+  width: 870px;
+  font-size: 26px
+}
+/* .ct-startend{
+  justify-content: space-between;
+} */
