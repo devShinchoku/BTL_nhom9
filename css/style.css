@@ -596,6 +596,93 @@ input[type="datetime"]{
 .ct-changedate-btn:hover{
   text-decoration: underline;
 }
+.ct-muitab{
+  width: 870px;
+  height: 40px;
+}
+.ct-muitab-btn{
+  border: none;
+  background-color: white;
+  margin: 0px 40px 0px 0px;
+  align-items: center;
+  color: #8f8f8f;
+}
+.ct-detail{
+  display: flex;
+  text-align: center;
+}
+
+.ct-detail-icon{
+  font-size: 16px;
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  border: 1px solid #0ac46b;
+  color: #0ac46b;
+  background-color: white;
+}
+.ct-detail-icon1{
+  border: 1px solid #24a8d8;
+  color: #24a8d8;
+}
+.ct-detail-icon2{
+  border: 1px solid red;
+  color: red;
+}
+
+.ct-detail-font{
+  font-weight: 500;
+  margin-left: 10px;
+  font-size: 16px;
+}
+.ct-detail-vehicle{
+  font-size: 18px;
+  height: 24px;
+  width: 24px;
+  display: flex;
+
+}
+.ct-detail-vehicle i{
+  margin: 0px 0px 0px 10px;
+}
+.ct-departuremonth{
+  height: 36px;
+  width: 134px;
+  background-color: #43bae6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.ct-departuremonth:hover{
+  background-color: #0e698a;
+}
+.ct-departureschedule{
+  height: 80px;
+  width: 870px;
+  border: 1px solid #8f8f8f;
+  display: flex;
+}
+.ct-time-start{
+  margin: 0px 0px 0px 0px;
+}
+.ct-departureschedule-icon{
+  
+}
+.ct-time-end{
+
+}
+.ct-price{
+
+}
+
+
+
+
+
+
+
+
+
 
 
 
