@@ -12,7 +12,14 @@ header {
   box-shadow: 0 1px 6px rgba(0 , 0 ,0 ,0.1);
 }
 .navbar{
-  height: inherit;
+  height: 50px;
+}
+
+.container-fluid{
+  width: 100%;
+  height: 64px;
+  padding-right: 0px;
+  padding-left: 0px;
 }
 .h-logo {
   width: 48px;
@@ -36,17 +43,23 @@ header {
 }
 .h-menu i{
   font-size: 20px;
+  z-index: 1;
 }
 .background-icon{
   content: "";
   z-index: 0;
-  top: 4px;
-  left: 8px;
+  top: 29px;
+  left: 29px;
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  position: relative;
   background-color: rgb(134 243 255 / 30%);
   
+}
+.nav-link{
+  width: 89px;
+  height: 64px;
 }
 
 .h-menu-logo:hover{
@@ -64,7 +77,8 @@ header {
 
 .h-user-iteam{
   border-radius: 50%;
-  padding: 10px 10px 10px 10px;
+  padding: 10px;
+
 }
 .h-user-iteam:hover{
   background-color: rgb(236, 233, 233);
