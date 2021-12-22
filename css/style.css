@@ -1,25 +1,25 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html{
+html {
   font-family: Arial, Helvetica, sans-serif;
 }
-body{
+body {
   font-size: 0.75rem;
 }
 /* CSS for header */
 header {
   height: 64px;
-  box-shadow: 0 1px 6px rgba(0 , 0 ,0 ,0.1);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
   background-color: #fff;
 }
-.navbar{
+.navbar {
   height: 64px;
 }
 
-.container-fluid{
+.container-fluid {
   width: 100%;
   height: 64px;
   padding-right: 0px;
@@ -30,14 +30,14 @@ header {
   height: 48px;
   margin: 24px;
 }
-.h-logo:hover{
+.h-logo:hover {
   cursor: pointer;
 }
 .h-menu .selected {
   border-bottom: 3px solid #24a8d8;
   color: #24a8d8;
 }
-.h-menu-logo{
+.h-menu-logo {
   padding-top: 10px;
   padding-bottom: 24px;
   display: inline-flex;
@@ -48,11 +48,11 @@ header {
   font-size: 0.75rem;
 }
 
-.h-menu i{
+.h-menu i {
   font-size: 20px;
   z-index: 1;
 }
-.background-icon{
+.background-icon {
   content: "";
   z-index: 0;
   top: 32px;
@@ -64,16 +64,14 @@ header {
   background-color: rgb(134 243 255 / 30%);
   box-sizing: inherit;
 }
-.nav-link{
+.nav-link {
   width: 89px;
   height: 64px;
 }
 
-.h-menu-logo:hover{
+.h-menu-logo:hover {
   background-color: #f6fcfe;
-
 }
-
 
 .h-user i {
   padding: 0px 3px 0px 3px;
@@ -82,16 +80,14 @@ header {
   font-size: 21px;
 }
 
-.h-user-iteam{
+.h-user-iteam {
   border-radius: 50%;
   padding: 10px;
-
 }
-.h-user-iteam:hover{
+.h-user-iteam:hover {
   background-color: rgb(236, 233, 233);
   cursor: pointer;
 }
-
 
 .h-user img {
   width: 40px;
@@ -99,47 +95,46 @@ header {
   margin: 0px 45px 0px 0px;
   border-radius: 50%;
 }
-.h-user img:hover{
+.h-user img:hover {
   background-color: rgb(236, 233, 233);
   cursor: pointer;
 }
-.footer-Bottom{
+.footer-Bottom {
   justify-content: space-between;
   display: flex;
   background-color: #fff;
   width: 100%;
   position: fixed;
   bottom: 0;
-  box-shadow: 0 1px 6px rgba(0 , 0 ,0 , 0.3);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
-.footer-bottom1{
+.footer-bottom1 {
   margin-left: 20px;
 }
 
-.text-left{
+.text-left {
   margin: 8px;
   font-weight: 450;
   font-size: 14px;
-
 }
-.price-tour-footer{
+.price-tour-footer {
   margin: 8px;
   color: red;
   font-size: 20px;
   font-weight: 500;
 }
 
-.footer-bottom2{
+.footer-bottom2 {
   display: flex;
 }
 
-.footer-bottom2{
+.footer-bottom2 {
   align-items: center;
   margin-right: 50px;
 }
 
 /*footer btn right*/
-.btn-booknow{
+.btn-booknow {
   height: 36px;
   width: 92px;
   margin-right: 20px;
@@ -150,10 +145,9 @@ header {
   border: none;
   color: white;
   background-color: #24a8d8;
-  
 }
 
-.btn-start-day{
+.btn-start-day {
   height: 36px;
   width: 196px;
   align-items: center;
@@ -166,13 +160,13 @@ header {
 }
 
 /* CSS for main */
-main{
+main {
   position: relative;
-  top: 60px
+  top: 60px;
 }
 
-.card{
-  box-shadow: 0 1px 6px rgba(0.1 , 0.1 ,0.1 ,0.1);
+.card {
+  box-shadow: 0 1px 6px rgba(0.1, 0.1, 0.1, 0.1);
   border: none;
 }
 .location {
@@ -203,11 +197,10 @@ main{
   width: 20px;
   height: 20px;
 }
-.w-temper-sacles:hover{
+.w-temper-sacles:hover {
   background-color: rgb(236, 233, 233);
   cursor: pointer;
 }
-
 
 .w-temper-sacles-separate::after {
   content: "";
@@ -250,22 +243,21 @@ main{
 .w-cr:hover {
   text-decoration: underline;
 }
-.search-datetime{
+.search-datetime {
   display: flex;
 }
-.m-search-input{
+.m-search-input {
   border: none;
   border-bottom: 1px solid #e9e6e6;
   width: 268px;
   height: 32px;
 }
-.m-search-input:hover{
+.m-search-input:hover {
   border-bottom: 1px solid #212121;
 }
-input[type="datetime"]{
+input[type="datetime"] {
   color: #24a8d8;
 }
-
 
 .btn {
   display: flex;
@@ -336,23 +328,23 @@ input[type="datetime"]{
 .sidebar:hover::-webkit-scrollbar-thumb {
   background: #b9b9b9;
 }
-.m-host{
+.m-host {
   display: flex;
   justify-content: space-between;
 }
-.host{
+.host {
   display: flex;
 }
 
-.host-name{
-  margin: 5px 0px 0px 12px ;
+.host-name {
+  margin: 5px 0px 0px 12px;
   font-weight: 600;
   color: #212121;
 }
-.host-name:hover{
+.host-name:hover {
   text-decoration: underline;
 }
-.host-like-button{
+.host-like-button {
   justify-content: space-between;
   height: 30px;
   width: 113px;
@@ -365,20 +357,20 @@ input[type="datetime"]{
   background-color: #f5f5f5;
 }
 
-.tour-name{
+.tour-name {
   color: #ff9800;
   font-weight: 500;
 }
-.tour-info{
+.tour-info {
   display: flex;
   justify-content: space-between;
 }
-.tour-schedule{
+.tour-schedule {
   height: 64px;
   width: 475px;
-  font-size: 20px
+  font-size: 20px;
 }
-.tour-long{
+.tour-long {
   height: 40px;
   width: 60px;
   background-color: #0ac46b;
@@ -388,28 +380,28 @@ input[type="datetime"]{
   padding-top: 5px;
 }
 
-.tour-loc{
+.tour-loc {
   display: flex;
 }
-.tour-loc i{
+.tour-loc i {
   font-size: 16px;
   margin: 0px 14px 0px 0px;
 }
-.tour-loc1{
+.tour-loc1 {
   font-size: 16px;
 }
-.w-temper-saclesalendar{
+.w-temper-saclesalendar {
   display: flex;
 }
-.w-temper-saclesalendar i{
+.w-temper-saclesalendar i {
   font-size: 16px;
   margin: 0px 14px 0px 0px;
 }
-.w-temper-saclesalendar1{
+.w-temper-saclesalendar1 {
   font-size: 16px;
 }
 
-.h-price{
+.h-price {
   display: flex;
   justify-content: space-between;
 }
@@ -424,7 +416,7 @@ input[type="datetime"]{
   color: black;
   font-weight: 600;
 }
-.h-price2{
+.h-price2 {
   height: 36px;
   width: 130px;
   background-color: #ffffff;
@@ -433,25 +425,24 @@ input[type="datetime"]{
   border-radius: 50px;
   margin-top: 15px;
 }
-.h-price2:hover{
+.h-price2:hover {
   background-color: #f6fcfe;
 }
 
-.h-interactive{
+.h-interactive {
   display: flex;
   justify-content: space-between;
 }
-.h-interactive1{
+.h-interactive1 {
   display: flex;
   font-weight: 200;
   color: #979696;
-  
 }
-.h-interactive2{
+.h-interactive2 {
   font-weight: 200;
   color: #979696;
 }
-.h-interactive1 i{
+.h-interactive1 i {
   background-color: rgb(137, 137, 240);
   height: 24px;
   width: 24px;
@@ -460,27 +451,26 @@ input[type="datetime"]{
   color: white;
   margin-right: 6px;
 }
-.h-interactive1:hover{
+.h-interactive1:hover {
   text-decoration: underline;
 }
-.h-interactive2-iteam:hover{
+.h-interactive2-iteam:hover {
   text-decoration: underline;
 }
-.btn-interactive{
+.btn-interactive {
   justify-content: space-between;
   text-align: center;
 }
 
-.btn-interactive1{
+.btn-interactive1 {
   height: 36px;
   width: 178px;
   background-color: white;
   border: none;
 }
-.btn-interactive1:hover{
+.btn-interactive1:hover {
   background-color: rgb(236, 233, 233);
 }
-
 
 .exp1 {
   color: #83cee9;
@@ -553,49 +543,47 @@ input[type="datetime"]{
   font-size: 12px;
 }
 
-
 /* css content index */
 
-.container{
-  display: flex;
-  justify-content: space-between;                         
+.container {
+  justify-content: space-between;
 }
 
-.m-img-tour{
+.m-img-tour {
   display: block;
   height: 499px;
   width: 870px;
   text-align: center;
 }
-.m-img-tour1{
+.m-img-tour1 {
   background-color: red;
   height: 120px;
   width: 870px;
 }
-.ct-tour-name{
+.ct-tour-name {
   color: #ff9800;
   font-weight: 500;
 }
-.ct-tour-schedule{
+.ct-tour-schedule {
   height: 32px;
   width: 870px;
-  font-size: 26px
+  font-size: 26px;
 }
-.ct-startend{
+.ct-startend {
   display: flex;
   justify-content: space-between;
 }
-.ct-start{
+.ct-start {
   height: 142px;
   width: 456px;
   font-size: 18px;
   text-align: center;
   font-weight: 500;
 }
-.ct-start1{
+.ct-start1 {
   color: #0ac46b;
 }
-.ct-start2{
+.ct-start2 {
   height: 38px;
   width: 38px;
   border-radius: 50%;
@@ -603,7 +591,7 @@ input[type="datetime"]{
   border: 1px solid #0ac46b;
   background-color: white;
 }
-.ct-end{
+.ct-end {
   height: 142px;
   width: 456px;
   font-size: 18px;
@@ -622,10 +610,10 @@ input[type="datetime"]{
 ::before{
   box-sizing: inherit;
 } */
-.ct-end1{
+.ct-end1 {
   color: red;
 }
-.ct-end2{
+.ct-end2 {
   height: 38px;
   width: 38px;
   border-radius: 50%;
@@ -633,10 +621,10 @@ input[type="datetime"]{
   border: 1px solid red;
   background-color: white;
 }
-.ct-startend-time{
+.ct-startend-time {
   color: #909090;
 }
-.ct-Tourcode{
+.ct-Tourcode {
   display: flex;
 }
 
@@ -656,35 +644,35 @@ input[type="datetime"]{
   display: flex;
   margin: 0;
 }
-.ct-changedate{
+.ct-changedate {
   display: flex;
 }
-.ct-changedate-btn{
+.ct-changedate-btn {
   border: none;
   color: #83cee9;
   background-color: white;
   margin-left: 8px;
 }
-.ct-changedate-btn:hover{
+.ct-changedate-btn:hover {
   text-decoration: underline;
 }
-.ct-muitab{
+.ct-muitab {
   width: 870px;
   height: 40px;
 }
-.ct-muitab-btn{
+.ct-muitab-btn {
   border: none;
   background-color: white;
   margin: 0px 40px 0px 0px;
   align-items: center;
   color: #8f8f8f;
 }
-.ct-detail{
+.ct-detail {
   display: flex;
   text-align: center;
 }
 
-.ct-detail-icon{
+.ct-detail-icon {
   font-size: 16px;
   height: 26px;
   width: 26px;
@@ -693,31 +681,30 @@ input[type="datetime"]{
   color: #0ac46b;
   background-color: white;
 }
-.ct-detail-icon1{
+.ct-detail-icon1 {
   border: 1px solid #24a8d8;
   color: #24a8d8;
 }
-.ct-detail-icon2{
+.ct-detail-icon2 {
   border: 1px solid red;
   color: red;
 }
 
-.ct-detail-font{
+.ct-detail-font {
   font-weight: 500;
   margin-left: 10px;
   font-size: 16px;
 }
-.ct-detail-vehicle{
+.ct-detail-vehicle {
   font-size: 18px;
   height: 24px;
   width: 24px;
   display: flex;
-
 }
-.ct-detail-vehicle i{
+.ct-detail-vehicle i {
   margin: 0px 0px 0px 10px;
 }
-.ct-departuremonth{
+.ct-departuremonth {
   height: 36px;
   width: 134px;
   background-color: #43bae6;
@@ -725,22 +712,22 @@ input[type="datetime"]{
   border: none;
   border-radius: 5px;
 }
-.ct-departuremonth:hover{
+.ct-departuremonth:hover {
   background-color: #0e698a;
 }
-.ct-departureschedule{
+.ct-departureschedule {
   height: 80px;
   width: 870px;
   border: 1px solid #8f8f8f;
   display: flex;
   border-radius: 5px;
 }
-.ct-time-start{
+.ct-time-start {
   height: 64px;
   width: 163px;
   margin-left: 16px;
 }
-.ct-departureschedule-icon{
+.ct-departureschedule-icon {
   margin-left: 16px;
   height: 26px;
   width: 26px;
@@ -751,12 +738,12 @@ input[type="datetime"]{
   border-radius: 50%;
   border: 1px solid #606060;
 }
-.ct-time-end{
+.ct-time-end {
   margin-left: 50px;
   height: 64px;
   width: 163px;
 }
-.ct-price{
+.ct-price {
   height: 48px;
   width: 298px;
   font-size: 22px;
@@ -765,7 +752,7 @@ input[type="datetime"]{
   display: flex;
   justify-content: center;
 }
-.ct-Booknow{
+.ct-Booknow {
   width: 145px;
   height: 52px;
   align-items: center;
@@ -773,7 +760,7 @@ input[type="datetime"]{
   justify-content: center;
   text-align: center;
 }
-.ct-booknow{
+.ct-booknow {
   height: 36px;
   width: 92px;
   align-items: center;
@@ -784,10 +771,10 @@ input[type="datetime"]{
   color: white;
   background-color: #24a8d8;
 }
-.ct-booknow:hover{
+.ct-booknow:hover {
   background-color: #0e698a;
 }
-.ct-btn-changesearch{
+.ct-btn-changesearch {
   height: 42px;
   width: 296px;
   border: none;
@@ -795,82 +782,94 @@ input[type="datetime"]{
   background-color: #43bae6;
   color: white;
 }
-.ct-btn-changesearch:hover{
+.ct-btn-changesearch:hover {
   background-color: #0e698a;
 }
-.ct-interactive i{
+.ct-interactive i {
   font-size: 18px;
   margin-right: 15px;
 }
-.ct-introduce{
+.ct-introduce {
   justify-content: space-between;
   display: flex;
 }
-.ct-introduce1:hover{
+.ct-introduce1:hover {
   text-decoration: underline;
   cursor: pointer;
 }
-.ct-introduce1{
+.ct-introduce1 {
   color: #24a8d8;
 }
 
-.ct-radiosgrid i{
+.ct-radiosgrid i {
   font-size: 18px;
   margin-right: 15px;
 }
 /* css index sign-up */
-.su-sign-up{
+.su-sign-up {
   display: flex;
   justify-content: center;
 }
 
-.su-logos{
+.su-logos {
   display: flex;
 }
-.su-logo{
+.su-logo {
   height: 76px;
   width: 76px;
 }
-.su-logo-font{
+.su-logo-font {
   font-size: 24px;
   color: #43bae6;
   font-weight: 500;
   padding: 20px 10px 20px 10px;
 }
 
-
-.su-signup-form{
+.su-signup-form {
   text-align: center;
 }
 
-
-.su-signup-formsu{
+.su-signup-formsu {
   font-size: 26px;
   font-weight: 320;
 }
-.su-signup-formmktk button{
+.su-signup-formmktk button {
   background-color: white;
   border: 1px solid #bdb5b8;
   font-size: 16px;
   text-align: left;
   border-radius: 5px;
 }
-.su-signup-formmktk button:hover{
+.su-signup-formmktk button:hover {
   border: 1px solid black;
 }
 
-.su-signup-name{
+.su-signup-name {
   height: 56px;
   width: 188px;
 }
-.su-signup-mktk{
+.su-signup-mktk {
   height: 56px;
   width: 380px;
 }
-.su-signup-formmktk-iteam{
+.su-signup-formmktk-iteam {
   margin-left: 16px;
+  display: flex;
+  justify-content: space-between;
 }
-.su-signup-dk{
+.su-signup-formmktk-iteam i {
+  font-size: 20px;
+  margin-right: 16px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  text-align: center;
+}
+.su-signup-formmktk-iteam i:hover {
+  background-color: #e9e6e6;
+}
+
+.su-signup-dk {
   height: 40px;
   width: 380px;
   font-size: 16px;
@@ -879,31 +878,31 @@ input[type="datetime"]{
   border-radius: 30px;
   border: none;
 }
-.su-signup-dk:hover{
+.su-signup-dk:hover {
   background-color: #1f82a7;
 }
-.su-rules{
+.su-rules {
   font-size: 16px;
   text-align: left;
 }
-.su-rules-iteam{
+.su-rules-iteam {
   text-decoration: none;
   color: #43bae6;
 }
-.su-rules-iteam:hover{
+.su-rules-iteam:hover {
   text-decoration: underline;
   color: #43bae6;
 }
 
-.su-footer{
+.su-footer {
   justify-content: center;
   display: flex;
 }
-.su-footer-btn{
+.su-footer-btn {
   justify-content: space-between;
   display: flex;
 }
-.su-footer-btn-iteam{
+.su-footer-btn-iteam {
   height: 36px;
   width: 134px;
   font-size: 16px;
@@ -912,20 +911,20 @@ input[type="datetime"]{
   background-color: white;
   color: #8f8f8f;
 }
-.su-footer-btn-iteam:hover{
+.su-footer-btn-iteam:hover {
   background-color: #f0f0f1;
 }
-.su-footer-btn-icon{
+.su-footer-btn-icon {
   border: none;
   height: 30px;
   width: 73px;
   font-size: 14px;
   background-color: white;
 }
-.su-footer-btn-icon:hover{
+.su-footer-btn-icon:hover {
   background-color: #f0f0f1;
 }
-.su-footer-btn-icon1{
+.su-footer-btn-icon1 {
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -933,14 +932,16 @@ input[type="datetime"]{
   background-color: white;
   font-size: 12px;
 }
-.su-footer-btn-icon1:hover{
+.su-footer-btn-icon1:hover {
   background-color: #ada9a9;
 }
-.su-footer-left1{
+.su-footer-left1 {
   display: flex;
   justify-content: center;
 }
-.su-footer-left{
+.su-footer-left {
   font-size: 14px;
   color: #8f8f8f;
 }
+
+/* css-sign-in */
