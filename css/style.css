@@ -804,6 +804,7 @@ input[type="datetime"]{
   border: 1px solid #bdb5b8;
   font-size: 16px;
   text-align: left;
+  border-radius: 5px;
 }
 .su-signup-formmktk button:hover{
   border: 1px solid black;
@@ -831,4 +832,65 @@ input[type="datetime"]{
 }
 .su-signup-dk:hover{
   background-color: #1f82a7;
+}
+.su-rules{
+  font-size: 16px;
+}
+.su-rules-iteam{
+  text-decoration: none;
+  color: #43bae6;
+}
+.su-rules-iteam:hover{
+  text-decoration: underline;
+  color: #43bae6;
+}
+
+.su-footer{
+  justify-content: center;
+  display: flex;
+}
+.su-footer-btn{
+  justify-content: space-between;
+  display: flex;
+}
+.su-footer-btn-iteam{
+  height: 36px;
+  width: 134px;
+  font-size: 16px;
+  border-radius: 50px;
+  border: 1px solid #8f8f8f;
+  background-color: white;
+  color: #8f8f8f;
+}
+.su-footer-btn-iteam:hover{
+  background-color: #f0f0f1;
+}
+.su-footer-btn-icon{
+  border: none;
+  height: 30px;
+  width: 73px;
+  font-size: 14px;
+  background-color: white;
+}
+.su-footer-btn-icon:hover{
+  background-color: #f0f0f1;
+}
+.su-footer-btn-icon1{
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #ada9a9;
+  background-color: white;
+  font-size: 12px;
+}
+.su-footer-btn-icon1:hover{
+  background-color: #ada9a9;
+}
+.su-footer-left1{
+  display: flex;
+  justify-content: center;
+}
+.su-footer-left{
+  font-size: 14px;
+  color: #8f8f8f;
 }
