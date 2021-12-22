@@ -835,22 +835,10 @@ input[type="datetime"]{
   font-size: 24px;
   color: #43bae6;
   font-weight: 500;
-  margin: 20px 40px;
+  padding: 20px 10px 20px 10px;
 }
-.su-youlike{
-  font-size: 26px;
-}
-.su-youlike1{
-  font-size: 40px;
-}
-.su-youlike2{
-  height: 57px;
-  width: 595px;
-}
-.su-youlike2-1{
-  font-size: 24px;
-  font-weight: 400;
-}
+
+
 .su-signup-form{
   text-align: center;
 }
