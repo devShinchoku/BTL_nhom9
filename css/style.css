@@ -103,6 +103,67 @@ header {
   background-color: rgb(236, 233, 233);
   cursor: pointer;
 }
+.footer-Bottom{
+  justify-content: space-between;
+  display: flex;
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0 1px 6px rgba(0 , 0 ,0 , 0.3);
+}
+.footer-bottom1{
+  margin-left: 20px;
+}
+
+.text-left{
+  margin: 8px;
+  font-weight: 450;
+  font-size: 14px;
+
+}
+.price-tour-footer{
+  margin: 8px;
+  color: red;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.footer-bottom2{
+  display: flex;
+}
+
+.footer-bottom2{
+  align-items: center;
+  margin-right: 50px;
+}
+
+/*footer btn right*/
+.btn-booknow{
+  height: 36px;
+  width: 92px;
+  margin-right: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 40px;
+  border: none;
+  color: white;
+  background-color: #24a8d8;
+  
+}
+
+.btn-start-day{
+  height: 36px;
+  width: 196px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 40px;
+  color: #24a8d8;
+  background-color: white;
+  border: 1px solid rgba(36, 168, 216, 0.5);
+}
 
 /* CSS for main */
 main{
