@@ -757,3 +757,78 @@ input[type="datetime"]{
   font-size: 18px;
   margin-right: 15px;
 }
+/* css index sign-up */
+.su-sign-up{
+  display: flex;
+  justify-content: center;
+}
+
+.su-logos{
+  display: flex;
+}
+.su-logo{
+  height: 76px;
+  width: 76px;
+}
+.su-logo-font{
+  font-size: 24px;
+  color: #43bae6;
+  font-weight: 500;
+  margin: 20px 40px;
+}
+.su-youlike{
+  font-size: 26px;
+}
+.su-youlike1{
+  font-size: 40px;
+}
+.su-youlike2{
+  height: 57px;
+  width: 595px;
+}
+.su-youlike2-1{
+  font-size: 24px;
+  font-weight: 400;
+}
+.su-signup-form{
+  text-align: center;
+}
+
+
+.su-signup-formsu{
+  font-size: 26px;
+  font-weight: 320;
+}
+.su-signup-formmktk button{
+  background-color: white;
+  border: 1px solid #bdb5b8;
+  font-size: 16px;
+  text-align: left;
+}
+.su-signup-formmktk button:hover{
+  border: 1px solid black;
+}
+
+.su-signup-name{
+  height: 56px;
+  width: 188px;
+}
+.su-signup-mktk{
+  height: 56px;
+  width: 380px;
+}
+.su-signup-formmktk-iteam{
+  margin-left: 16px;
+}
+.su-signup-dk{
+  height: 40px;
+  width: 380px;
+  font-size: 16px;
+  color: white;
+  background-color: #43bae6;
+  border-radius: 30px;
+  border: none;
+}
+.su-signup-dk:hover{
+  background-color: #1f82a7;
+}
