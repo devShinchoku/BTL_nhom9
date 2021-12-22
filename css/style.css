@@ -884,6 +884,7 @@ input[type="datetime"]{
 }
 .su-rules{
   font-size: 16px;
+  text-align: left;
 }
 .su-rules-iteam{
   text-decoration: none;
