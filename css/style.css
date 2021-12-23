@@ -854,7 +854,20 @@ input{
   border: 1px solid #8f8f8f;
   border-radius: 5px;
   font-size: 18px;
-  
+}
+input:hover{
+  border: 1px solid #4a4a4a;
+}
+input:focus { 
+  outline: none !important;
+  border-color: #24a8d8;
+}
+.su-name-input input:hover{
+  border: 1px solid #4a4a4a;
+}
+.su-name-input input:focus{
+  outline: none !important;
+  border-color: #24a8d8;
 }
 .su-name-input input{
   height: 56px;
