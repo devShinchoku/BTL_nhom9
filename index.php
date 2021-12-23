@@ -75,9 +75,13 @@
                 <form class="m-search card" style="width: 584px; height: 176px; border-radius: 10px;">
                     <div class="card-body">
                         <div class="search-datetime">
-                            <div class="search-form">
-                                <input class="m-search-input" type="search" id="m-search-loc"
-                                    placeholder="Bạn muốn đi đâu">
+                            <div class="inputdecor btn-login">
+                                <input type="text" name="name" autocomplete="off" required style="margin-left: -20px;border-radius: 0px;" />
+                                <label for="name" class="lable-name"> 
+                                    <span class="content-name2">
+                                        Bạn muốn đi đâu
+                                    </span>
+                                </label>
                             </div>
                             <div>
                                 <label class="m-search-label">Ngày khởi hành</label>
