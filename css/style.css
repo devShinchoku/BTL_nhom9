@@ -159,6 +159,11 @@ header {
   background-color: white;
   border: 1px solid rgba(36, 168, 216, 0.5);
 }
+.btn-start-day:hover{
+  background-color: #f6fcfe;
+  border: 1px solid #24a8d8;
+
+}
 
 /* CSS for main */
 main {
@@ -549,6 +554,10 @@ input[type="datetime"] {
 .container {
   justify-content: space-between;
 }
+.container1{
+
+  display: flex;
+}
 
 .m-img-tour {
   display: block;
@@ -834,40 +843,40 @@ input[type="datetime"] {
   font-size: 26px;
   font-weight: 320;
 }
-.su-signup-formmktk button {
-  background-color: white;
-  border: 1px solid #bdb5b8;
-  font-size: 16px;
-  text-align: left;
-  border-radius: 5px;
-}
-.su-signup-formmktk button:hover {
-  border: 1px solid black;
+.su-name{
+  display: flex;
+  justify-content: center;
 }
 
-.su-signup-name {
-  height: 56px;
-  width: 188px;
-}
-.su-signup-mktk {
+input{
   height: 56px;
   width: 380px;
+  padding: 15px;
+  border: 1px solid #8f8f8f;
+  border-radius: 5px;
+  font-size: 18px;
 }
-.su-signup-formmktk-iteam {
-  margin-left: 16px;
-  display: flex;
-  justify-content: space-between;
+input:hover{
+  border: 1px solid #4a4a4a;
 }
-.su-signup-formmktk-iteam i {
-  font-size: 20px;
-  margin-right: 16px;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  text-align: center;
+input:focus { 
+  outline: none !important;
+  border-color: #24a8d8;
 }
-.su-signup-formmktk-iteam i:hover {
-  background-color: #e9e6e6;
+.su-name-input input:hover{
+  border: 1px solid #4a4a4a;
+}
+.su-name-input input:focus{
+  outline: none !important;
+  border-color: #24a8d8;
+}
+.su-name-input input{
+  height: 56px;
+  width: 188px;
+  padding: 15px;
+  border: 1px solid #8f8f8f;
+  border-radius: 5px;
+  font-size: 18px;
 }
 
 .su-signup-dk {
@@ -885,6 +894,7 @@ input[type="datetime"] {
 .su-rules {
   font-size: 16px;
   text-align: left;
+  text-align: center;
 }
 .su-rules-iteam {
   text-decoration: none;
