@@ -1057,3 +1057,53 @@ background-color: #f5f5f5;
   height: 100%;
   left: 0;
 }
+.info-lh2 b{
+ font-weight: 600;
+}
+.info-lh2 h6{
+  font-size: 1.3rem;
+  margin: 0 0 8.4px;
+}
+.info-lh3{
+  padding-left: 8px;
+}
+
+/* .inputdecor{
+  border-radius: 0px;
+  padding: 12px;
+}
+.inputdecor input:hover{
+
+  border: none;
+  border-bottom: 1px solid #313131;
+
+}
+.inputdecor input:focus{
+  outline: none !important;
+  border-color: #24a8d8;
+  border: none;
+  border-bottom: 1px solid #24a8d8;
+}
+.inputdecor input{
+  height: 48px;
+  width: 260px;
+  padding: 0px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #ada9a9;
+}
+
+.content-name2{
+  position: absolute;
+  bottom: 16px;
+  left: -36px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+.btn-login input:focus + .lable-name .content-name2,
+.btn-login input:valid + .lable-name .content-name2 {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #43bae6;
+  background-color: none;
+} */
