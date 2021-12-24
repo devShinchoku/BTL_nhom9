@@ -1146,3 +1146,20 @@ background-color: #f5f5f5;
   color: #43bae6;
   background-color: none;
 } */
+
+
+
+/* css cart */
+.cart-iteam i{
+  font-size: 120px;
+  color: #8f8f8f;
+}
+.cart-background{
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARwAAAC0AgMAAAA7ontEAAAACVBMVEWR8f9HcEyQ8P8BmmoHAAAAA3RSTlMlAEXCRvXKAAACgElEQVRo3u3TMZITMRAF0C8KJUQQKKcI9xQO2NyB+z4KOYaKaMqnJDDYw1gtdWu+S2ZZHeDV798tnP2v4O4FPJcTR5xMypMfl2eqg7fpLBUnvTut70VzZGKeTMrDcvA4J0x0ljfq1M4wTnTyP+CkAQccZ3mkI/Oc8mROrn6veQ4e6ES/szyZU+rfwu3kJ3NQP+dZzqKcodcpT+Zk5QxnOeA41XUhTXOKdoZOJ5McaOczx1lITlHPZ46T1fPxOeA49ZohXqc81AluJ5Mc6Gv3OAvJKY21e5xMctBYu8NR6glep5Cc3FqXwwHHUer5vS67U0hObq7d7qC5LrOzkJzSXpfZye2azQ44jjbWn3VZnUxy0FmX0dG2fl2X0cm9mo0OOI461rVmm5O7NdsccBx9rOhycr9mk4N+zRankBwYajY4esurmg2O3vKq5r7TiLOqp+8UkgNTzV2nFSc6nAazrrnntOKs6+k5MNbTcZpxotlp3Y7HybDW03TacTbOy1jJm7EEGJzqzvkwsqvNFYoA+DRSzt/XIwKgWlEvTc2pJOql2Y51ce6gbhrF2Wzta5/ZjHV1VpF+wvCi5gD49nI+/8gwvdRwPE84TiA5keQkjnM31mQnkRzhOIHkJJIjHCeQnERyhOMEkpNIjnCcSHISx6m2POBEkiMcJ5KcxHGUlt1OIjmiOgdGyyI4UeII5MiII5ATI45A7IFS27HuLEjHOe6PIzAfUTPOxTntjnNx5LBr5zdHdk51dY77pro6vck6U90c2TXVyjkNfoit04LE4+hQ8jna0kScTjVRSH6nAgWRAedutlcZdEQ+35QvIuOOyPcDAHx8FdnnjLx35/90fgHmSrcG+F7gzwAAAABJRU5ErkJggg==);
+  background-repeat: no-repeat;
+}
+
+
+
+
+
