@@ -1,3 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .spacing{
     padding: 8px;
+}
+/* css for header */
+
+
+/* Css for side bar */
+.sidebar{
+    padding: 0;
+    width: 280px;
+    height: 100%;
+    position: fixed;
+    top:0;
+    z-index: 2;
+    overflow-y: auto;
+    outline: 0;
+    box-shadow: 0px 0px 20px 0px rgb(44 101 144 / 10%);
+}
+.sidebar::-webkit-scrollbar{
+    width: 6px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background: #e0e0e0;
+    border-radius: 10px;
+    -webkit-border-radius: 10;
+}
+.menu-item {
+    width: 250px;
+    text-align: left;
+    padding: 6px 12px;
+}
+.btn:focus{
+    box-shadow: none;
+}
+
+.selected{
+    background-color: rgba(0, 0, 0, 0.08);
+}
+.category-item{
+    margin: 0px 12px;
+    padding: 6px 12px;
 }
