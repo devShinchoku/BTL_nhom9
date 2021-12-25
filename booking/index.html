@@ -210,11 +210,60 @@
                     </div>
                 </div>
             </div>
-            <div class="sl-customer card">
+            <div class="sl-customer card" style="width: 754px;">
                  <div class="customer">
                      <h6>
                          <b>Số lượng khách hàng</b>
                     </h6>
+                </div>
+                <div class="person-sl">
+                    <div class="adult-sl" style="padding: 16px;">
+                        <h6 class="adult-text">
+                            <b>Người lớn</b>
+                        </h6>
+                            <p>(Trên 10 tuổi)</p>
+                        <div class="tab-sl">
+                                <div class="dash-tab">
+                                    <button class="dash-sl">
+                                        <i class="bi bi-dash-circle"></i>
+                                    </button>
+                                </div>
+                                <input class="text-sl-person" type="text">
+                                <div class="dash-tab">
+                                    <button class="plus-sl">
+                                        <i class="bi bi-plus-circle"></i>
+                                    </button>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="adult-info card" style="padding: 16px;">
+                        <div>
+                            <p class="adult-info-1">
+                                <b>Thông tin người lớn</b>
+                                <span>
+                                    (Trên 10 tuổi)
+                                </span>
+                            </p>
+                        </div>
+                        <div class="adult-info-2" style="display: flex;">
+                            <div class="inputdecor-book btn-login-book">
+                                <input type="text" name="name" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />
+                                    <label for="name" class="lable-name-book"> 
+                                        <span class="content-name2-book">
+                                                Họ và tên*
+                                        </span>
+                                    </label>
+                            </div>
+                            <div class="inputdecor-book btn-login-book">
+                                <input type="date" name="name" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />
+                                    <label for="name" class="lable-name-book"> 
+                                        <span class="birth-day-adult">
+                                                Ngày sinh
+                                        </span>
+                                    </label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -228,6 +277,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
+        <script src="booking.js"></script>
 </body>
         <script>
             const phoneInputField = document.querySelector("#phone");
