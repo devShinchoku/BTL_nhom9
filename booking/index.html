@@ -122,7 +122,7 @@
         <div class="container-fluid-booking" style="width: 100%; height: 2560px;padding: 0 24px;background-color: #FAFAFB;">
             <div class="top-info-tour" style="padding: 8px;">
                 <div class="back-up">
-                    <button class="btn-back-up">
+                    <button class="btn-back-up" style="border: none; font-size: 19px; background-color: #fafafb;">
                         <i class="bi bi-chevron-double-left"></i>
                         Quay lại
                     </button>
@@ -133,7 +133,7 @@
                     </h5>
                 </div>
             </div>
-            <div class="info-lh1 card"> 
+            <div class="info-lh1 card col-md-6"> 
                 <div class="info-lh2">
                     <h6>
                         <b>Thông tin liên hệ</b>
@@ -236,115 +236,256 @@
                                 </div>
                         </div>
                     </div>
-                    <div class="adult-info card" style="padding: 28px 28px 16px 28px;">
-                        <div>
-                            <p class="adult-info-1">
-                                <b>Thông tin người lớn</b>
-                                <span>
-                                    (Trên 10 tuổi)
+            <div class="adult-info card" style="padding: 28px 28px 16px 28px;">
+                <div>
+                    <p class="adult-info-1">
+                        <b>Thông tin người lớn</b>
+                        <span>
+                            (Trên 10 tuổi)
+                        </span>
+                    </p>
+                </div>
+                <div class="adult-info-2" style="display: flex;">
+                    <div class="inputdecor-book btn-login-book">
+                        <input type="text" name="name" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />
+                                <label for="name" class="lable-name-book"> 
+                                    <span class="content-name2-book">
+                                        Họ và tên*
+                                    </span>
+                                </label>
+                     </div>
+                    <div class="inputdecor-book btn-login-book">
+                        <input type="date" name="name" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />
+                            <label for="name" class="lable-name-book"> 
+                                <span class="birth-day-adult">
+                                        Ngày sinh
                                 </span>
-                            </p>
+                            </label>
+                    </div>
+                </div>
+                <div class="info-lh4">
+                    <div class="gender">
+                        <p>Giới tính</p>
+                    </div>
+                    <div class="male-female">
+                        <div class="gender-lh4">
+                            <input class="fe-male" type="radio" name="chooseone" value="Nam" style="height:20px; width:20px; vertical-align: middle;" checked>
+                            <label for="Nam">Nam</label>
                         </div>
-                        <div class="adult-info-2" style="display: flex;">
-                            <div class="inputdecor-book btn-login-book">
-                                <input type="text" name="name" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />
+                        <div class="gender-lh4">
+                            <input class="fe-male" type="radio" name="chooseone" value="Nu" style="height:20px; width:20px; vertical-align: middle;">
+                            <label for="Nu">Nữ</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bonus-dv card" style="padding: 8px;">
+                <div class="bonus-dv-0">
+                    <div class="bonus-dv-1" style="margin-bottom: 16px;">
+                        <h6 class="dv-1-h6" style="font-size: 21px; margin-top: 21px;">
+                            Dịch vụ đi kèm
+                        </h6>
+                    </div>
+                    <div class="bonus-dv-2" style="padding-left: 8px;">
+                        <div class="bonus-dv-3">
+                            <p class="text-bonus-dv" style="margin-bottom: 16px; font-size: 16px;">Vui lòng chọn dịch vụ đi kèm và số lượng tương ứng</p>
+                        </div>
+                    </div>
+                    <div class="bonus-dv-4">
+                        <div class="bonus-dv-6" style="padding: 12px; display: flex;">
+                            <div class="bonus-dv-7">
+                                <div class="bonus-dv-number" style="padding: 12px;">
+                                    <h6 class="numer-p">
+                                        <b>1.</b>
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="bonus-dv-8" style="padding: 12px;" >
+                                <div class="inputdecor-dv btn-login-dv">
+                                    <input type="text" name="name" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />
+                                        <label for="name" class="lable-name-dv"> 
+                                            <span class="content-name2-dv">
+                                                    Dịch vụ đi kèm
+                                            </span>
+                                        </label>
+                                </div>
+                                <!-- <div class="dv-icon">
+                                    <i class="bi bi-caret-down-fill"></i>
+                                </div> -->
+                            </div>
+                            <div class="bonus-dv-8" style="padding: 12px;" >
+                                <div class="inputdecor-dv btn-login-dv">
+                                    <input type="text" name="name" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />
+                                        <label for="name" class="lable-name-dv"> 
+                                            <span class="content-name2-dv">
+                                                    Số hành khách
+                                            </span>
+                                        </label>
+                                </div>
+                                <!-- <div class="dv-icon">
+                                    <i class="bi bi-caret-down-fill"></i>
+                                </div> -->
+                            </div>
+                            <div class="close-dv">
+                                <button class="btn-close-dv">
+                                    <i class="bi bi-x-lg"></i>
+                                    </button>
+                            </div>
+                        </div>
+                        <div class="dv-plus" style="padding: 12px;">
+                            <button>
+                                <i class="bi bi-plus-lg"></i>
+                                <h6 class="dv-plus-p" style=" margin-bottom: 8px;">Thêm dịch vụ</h6>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-abate card">
+                <div class="info-abate-1" style="padding: 16px;">
+                    <div class="bonus-dv-1" style="margin-bottom: 16px;">
+                        <h6 class="dv-1-h6" style="font-size: 21px; margin-top: 21px;">
+                            Thông tin người thanh toán
+                        </h6>
+                    </div>
+                    <div class="bonus-dv-2" style="padding-left: 8px;">
+                        <div class="bonus-dv-3" style="display: flex; padding: 8px;">
+                            <input type="checkbox" style="height: 22px; width: 40px;">
+                            <p class="text-bonus-dv" style="margin-bottom: 16px; font-size: 16px;">Sử dụng thông tin người liên hệ</p>
+                        </div>
+                    </div>
+                    <div class="info-abate-2" style="display: flex;">
+                        <div class="inputdecor-abate btn-login-abate">
+                            <input type="text" name="name" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />
+                                <label for="name" class="lable-name-abate"> 
+                                    <span class="content-name2-abate">
+                                        Họ*
+                                    </span>
+                                </label>
+                                <h6 style="font-size: 10px; color: rgba(0, 0, 0, 0.54);text-align: left;margin-top: 2px;">Họ và tên như trong CMND/CCCD/Hộ chiếu</h6>
+                        </div>
+                        <div class="inputdecor-abate btn-login-abate">
+                            <input type="text" name="name" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />
+                                <label for="name" class="lable-name-abate"> 
+                                    <span class="content-name2-abate">
+                                        Tên đệm & tên*
+                                    </span>
+                                </label>
+                        </div>
+                    </div>
+                    <div class="info-abate-3" style="display: flex;">
+                        <div class="inputdecor-book btn-login-book">
+                            <input type="text" name="name" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />
                                     <label for="name" class="lable-name-book"> 
                                         <span class="content-name2-book">
-                                                Họ và tên*
+                                            Email*
+                                        </span>
+                                    </label>
+                        </div>
+                        <div class="ma-quoc-gia">
+                            <meta name="viewport" content="width=device-width, initial-scale=1" />
+                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+                            <div class="container-phone-number">
+                                <form id="login-phone-number" onsubmit="process(event)">
+                                  <input id="phone" type="tel" name="phone" />
+                                </form>
+                               </div>
+                        </div>
+                    </div>
+                    <div class="info-abate-4">
+                        <div class="inputdecor-book-location btn-login-book">
+                            <input type="text" name="name" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />
+                            <label for="name" class="lable-name-book"> 
+                                <span class="content-name2-book">
+                                        Địa chỉ*
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="info-able-5" style="display: flex; padding: 12px 0px;">
+                        <div class="bonus-dv-8" style="padding: 12px;" >
+                            <div class="inputdecor-dv btn-login-dv">
+                                <input type="text" name="name" autocomplete="off" required style="margin-left: -36px;border-radius: 0px;" />
+                                    <label for="name" class="lable-name-dv"> 
+                                        <span class="content-name2-dv">
+                                                Quốc gia
                                         </span>
                                     </label>
                             </div>
-                            <div class="inputdecor-book btn-login-book">
-                                <input type="date" name="name" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />
-                                    <label for="name" class="lable-name-book"> 
-                                        <span class="birth-day-adult">
-                                                Ngày sinh
+                            <!-- <div class="dv-icon">
+                                <i class="bi bi-caret-down-fill"></i>
+                            </div> -->
+                        </div>
+                        <div class="bonus-dv-8" style="padding: 12px;" >
+                            <div class="inputdecor-dv btn-login-dv">
+                                <input type="text" name="name" autocomplete="off" required style="margin-left: -36px;border-radius: 0px;" />
+                                    <label for="name" class="lable-name-dv"> 
+                                        <span class="content-name2-dv">
+                                                Tỉnh/Thành phố
                                         </span>
                                     </label>
+                            </div>
+                            <!-- <div class="dv-icon">
+                                <i class="bi bi-caret-down-fill"></i>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-abate card" style="display: flex; padding: 16px;">
+                <div class="form-abate-1">
+                    <div class="bonus-dv-1" style="margin-bottom: 16px;">
+                        <h6 class="dv-1-h6" style="font-size: 21px; margin-top: 21px;">
+                            Hình thức thanh toán
+                        </h6>
+                    </div>
+                    <div class="bonus-dv-2" style="padding-left: 8px;">
+                        <div class="bonus-dv-3">
+                            <p class="text-bonus-dv" style="margin-bottom: 16px; font-size: 16px;">(Ghi chú: Phí thanh toán 0 ₫)</p>
+                        </div>
+                        <div class="note-abate" style="padding: 8px">
+                            <div class="note-abate-1">
+                                <div class="note-abate-2" style="padding: 16px; border: ridge;">
+                                    <div class="note-abate-2" style="display: flex;">
+                                        <i class="bi bi-caret-down-fill" style="padding: 4px 8px 8px 8px; font-size: 20px;"></i>
+                                        <h6 style="padding: 8px;">Thẻ ATM hoặc thẻ iBanking của các ngân hàng</h6>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="info-lh4">
-                            <div class="gender">
-                                <p>Giới tính</p>
-                            </div>
-                            <div class="male-female">
-                                <div class="gender-lh4">
-                                    <input class="fe-male" type="radio" name="chooseone" value="Nam" style="height:20px; width:20px; vertical-align: middle;" checked>
-                                    <label for="Nam">Nam</label>
-                                </div>
-                                <div class="gender-lh4">
-                                    <input class="fe-male" type="radio" name="chooseone" value="Nu" style="height:20px; width:20px; vertical-align: middle;">
-                                    <label for="Nu">Nữ</label>
+                        <div class="note-abate" style="padding: 8px">
+                            <div class="note-abate-1">
+                                <div class="note-abate-2" style="padding: 16px; border: ridge;">
+                                    <div class="note-abate-2" style="display: flex;">
+                                        <i class="bi bi-caret-down-fill" style="padding: 4px 8px 8px 8px; font-size: 20px;"></i>
+                                        <h6 style="padding: 8px;">Thẻ thanh toán quốc tế (Visa/Master)</h6>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="bonus-dv card" style="padding: 8px;">
-                        <div class="bonus-dv-0">
-                            <div class="bonus-dv-1" style="margin-bottom: 16px;">
-                                <h6>
-                                    <b>Dịch vụ đi kèm</b>
-                            </h6>
-                            </div>
-                            <div class="bonus-dv-2" style="padding-left: 8px;">
-                                <div class="bonus-dv-3">
-                                    <p class="text-bonus-dv" style="margin-bottom: 16px;">Vui lòng chọn dịch vụ đi kèm và số lượng tương ứng</p>
-                                </div>
-                            </div>
-                            <div class="bonus-dv-4">
-                                <div class="bonus-dv-6" style="padding: 12px; display: flex;">
-                                    <div class="bonus-dv-7">
-                                        <div class="bonus-dv-number" style="padding: 12px;">
-                                            <h6 class="numer-p">
-                                                <b>1.</b>
-                                            </h6>
-                                        </div>
-                                    </div>
-                                    <div class="bonus-dv-8" style="padding: 12px;" >
-                                        <div class="inputdecor-dv btn-login-dv">
-                                            <input type="text" name="name" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />
-                                                <label for="name" class="lable-name-dv"> 
-                                                    <span class="content-name2-dv">
-                                                            Dịch vụ đi kèm
-                                                    </span>
-                                                </label>
-                                        </div>
-                                        <!-- <div class="dv-icon">
-                                            <i class="bi bi-caret-down-fill"></i>
-                                        </div> -->
-                                    </div>
-                                    <div class="bonus-dv-8" style="padding: 12px;" >
-                                        <div class="inputdecor-dv btn-login-dv">
-                                            <input type="text" name="name" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />
-                                                <label for="name" class="lable-name-dv"> 
-                                                    <span class="content-name2-dv">
-                                                            Số hành khách
-                                                    </span>
-                                                </label>
-                                        </div>
-                                        <!-- <div class="dv-icon">
-                                            <i class="bi bi-caret-down-fill"></i>
-                                        </div> -->
-                                    </div>
-                                    <div class="close-dv">
-                                        <button class="btn-close-dv">
-                                            <i class="bi bi-x-lg"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="dv-plus" style="padding: 12px;">
-                                    <button>
-                                        <i class="bi bi-plus-lg"></i>
-                                        <h6 class="dv-plus-p" style=" margin-bottom: 8px;">Thêm dịch vụ</h6>
-                                    </button>
-                                </div>
-                            </div>
+                    <div class="rule-abate" style="padding: 8px;margin-top: 24px;">
+                        <div class="rule-abate-1" style="display: flex;">
+                            <i class="bi bi-megaphone" style="padding: 4px; font-size: 20px; color: #24a8d8;"></i>
+                            <h6 style="padding: 4px;">Tiếp tục thực hiện bước tiếp theo, tôi xác nhận đã xem và chấp thuận các Điều khoản & Chính sách và Chính sách riêng tư của Hahalolo</h6>
+                        </div>
+                        <div class="rule-abate-1">
+                            <button class="btn-abate" style="height: 46px; width: 154px; border: none;">
+                                Thanh toán
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+        </div>
+        <form action="" class="col-md-3">
+            <div class="bill-info card">
+                <h6>Nam mõm</h6>
+            </div>
+        </form>
+        </div>   
     </main>
 
 

@@ -1409,3 +1409,79 @@ input[type="datetime"] {
   font-size: 15px;
   padding: 12px;
 }
+
+
+
+/* info-abate */
+.btn-login-abate{
+  width: 45%;
+  position: relative;
+  margin-left: 34px;
+}
+.btn-login-abate label{
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  margin-left: 16px;
+  pointer-events: none;
+}
+
+.inputdecor-abate{
+  border-radius: 0px;
+  padding: 12px;
+}
+.inputdecor-abate input:hover{
+  
+  border: none;
+  border-bottom: 1px solid #313131;
+  
+}
+.inputdecor-abate input:focus{
+  outline: none !important;
+  border-color: #24a8d8;
+  border: none;
+  border-bottom: 1px solid #24a8d8;
+}
+.inputdecor-abate input{
+  height: 48px;
+  width: 260px;
+  padding: 0px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #ada9a9;
+}
+
+.content-name2-abate{
+  position: absolute;
+  bottom: 34px;
+  left: -36px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+.btn-login-abate input:focus + .lable-name-abate .content-name2-abate,
+.btn-login-abate input:valid + .lable-name-abate .content-name2-abate {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #43bae6;
+  background-color: white;
+}
+/*info abate*/
+
+
+/* rule abate */
+
+.rule-abate-1{
+  padding: 16px;
+  text-align: center;
+}
+.rule-abate-1 button{
+  font-weight: 400;
+  padding-left: 16px;
+  border-radius: 99px;
+  padding-right: 16px;
+  text-transform: none;
+  color: #fff;
+  background-color: #24a8d8;
+}
