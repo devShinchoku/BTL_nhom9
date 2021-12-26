@@ -936,11 +936,10 @@ input[type="datetime"] {
 }
 
 
-/* test */
+/* css btn sign in and sign up */
 
 
-
-input{
+.btn-login input{
   height: 56px;
   width: 380px;
   padding: 15px;
@@ -948,10 +947,10 @@ input{
   border-radius: 5px;
   font-size: 18px;
 }
-input:hover{
+.btn-login input:hover{
   border: 1px solid #4a4a4a;
 }
-input:focus { 
+.btn-login input:focus { 
   outline: none !important;
   border-color: #24a8d8;
 }
@@ -1250,7 +1249,7 @@ input:focus {
   background-repeat: no-repeat;
 }
 
-<<<<<<< Updated upstream
+/* <<<<<<< Updated upstream */
 .cart-tour-1{
   display: flex;
   height: 100%;
