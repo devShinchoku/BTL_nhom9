@@ -1330,3 +1330,82 @@ input[type="datetime"] {
 }
 
 /* sl-people */
+
+
+
+/*bonus-dv*/
+.dv-11-01{
+    transform: translate(0, -8px) scale(1);
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.btn-login-dv{
+  width: 45%;
+  position: relative;
+  margin-left: 34px;
+}
+.inputdecor-dv{
+  border-radius: 0px;
+  padding: 1px;
+}
+.inputdecor-dv input:hover{
+  border: none;
+  border-bottom: 1px solid #313131;
+  
+}
+.inputdecor-dv input:focus{
+  outline: none !important;
+  border-color: #24a8d8;
+  border: none;
+  border-bottom: 1px solid #24a8d8;
+}
+.inputdecor-dv input{
+  height: 18px;
+  width: 260px;
+  padding: 0px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #ada9a9;
+}
+
+.content-name2-dv{
+  position: absolute;
+  bottom: 21px;
+  left: -36px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+.btn-login-dv input:focus + .lable-name-dv .content-name2-dv,
+.btn-login-dv input:valid + .lable-name-dv .content-name2-dv {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #43bae6;
+  background-color: white;
+}
+
+/*bonus-dv*/
+.dv-plus button{
+  display: flex;
+  padding: 6px 8px;
+  border:none; 
+  background-color: #FAFAFB;
+}
+.dv-plus i{
+  padding: 8px;
+  font-size: 20px;
+  color: #24a8d8;
+}
+.dv-plus-p{
+  text-align: center;
+  padding-top: 14px;
+  color: #24a8d8;
+}
+.close-dv button{
+  border: none;
+  background-color: #FAFAFB;
+  font-size: 15px;
+  padding: 12px;
+}
