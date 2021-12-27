@@ -52,3 +52,37 @@
     margin: 0px 24px;
     padding: 6px 12px;
 }
+
+.tourpage-title{
+    font-size: 20px;
+    margin-left: 22px;
+}
+.form-group input{
+    display: flex;
+    height: 33px;
+    width: 450px;
+    border-radius: 5px;
+}
+.tour-descript{
+    height: 200px;
+    width: 80%;
+}
+.tourpage-img{
+    width: 300px;
+    height: 115px;
+}
+.tourpage-img button{
+    width: 85px;
+    height: 33px;
+    margin-top: 5%;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+.tourpage-btn:hover{
+    background-color: #ecebeb;
+}
+.tourpage-img-title{
+    color: rgb(77, 77, 218);
+    margin-left: 10px;
+}

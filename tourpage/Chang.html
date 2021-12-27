@@ -132,99 +132,73 @@
   </div>
   <div>
     <div class="container mt-5" style="margin-top: 7rem!important;">
-      <div class="card" style="height: 80px;">
-        <b class="tourpage-title mt-4">
-          Tổng quan
-        </b>
-      </div>
-      <div class="card mt-4">
-        <b class="tourpage-title mt-4">
-          Doanh thu
-        </b>
-          <div class="container row row-cols-1 row-cols-md-3 g-4 mt-4 mb-4">
-            <div class="col">
-              <div class="card">
-                <div class="card-body" style="text-align: center;">
-                  <h5 class="card-title">Thành công</h5>
-                  <b style="color: rgb(36, 168, 216);">0 ₫</b>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                
-                <div class="card-body" style="text-align: center;">
-                  <h5 class="card-title">Huỷ</h5>
-                  <b style="color: red;">0 ₫</b>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                
-                <div class="card-body" style="text-align: center;">
-                  <h5 class="card-title">Tổng doanh thu</h5>
-                  <b>0 ₫</b>
-                </div>
-              </div>
-            </div>
+      <div>
+        <b class="mt-4 card" style="font-size: 18px;color: rgb(19, 20, 20);width: 73%;height: 42px ;background-color: rgb(233, 236, 239); ">
+          <div class="mt-1">
+              Xem danh sách chặng
           </div>
-      </div>
-      <div class="card mt-4">
-        <b class="tourpage-title mt-4">
-          Đơn hàng
         </b>
-          <div class="container row row-cols-1 row-cols-md-3 g-4 mt-4 mb-4">
-            <div class="col">
-              <div class="card">
-                <div class="card-body" style="text-align: center;">
-                  <h5 class="card-title">Đơn hàng cần xác nhận</h5>
-                  <b style="color: rgb(9, 194, 9);">0</b>
+ 
+        <div style=" display: flex;">      
+            <div class="col-sm-11">
+                <div style="display: flex;">
+                    <div class="col-sm-5">
+                        <div class="form-group mt-3">
+                            <label for="fullname" class="form-lable">Tên chặng</label>
+                            <input id="fullname" name="fullname" placeholder="Nhập tên chặng" type="text">
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="fullname" class="form-lable">Ngày thứ</label>
+                            <input id="fullname" name="fullname" placeholder="Nhập ngày thứ" type="text">
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="form-group mt-3 mb-3">
+                            <label for="fullname" class="form-lable">Địa chỉ</label>
+                            <input id="fullname" name="fullname" placeholder="Nhập Địa chỉ" type="text">
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="form-group mt-3 mb-3">
+                            <label for="fullname" class="form-lable">Thành phố</label>
+                            <input id="fullname" name="fullname" placeholder="Nhập thành phố" type="text">
+                            <span class="form-message"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group mt-3">
+                            <label for="fullname" class="form-lable">Thời gian bắt đầu</label>
+                            <input id="fullname" name="fullname" type="text">
+                            <span class="form-message"></span>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="fullname" class="form-lable">Quận/Huyện</label>
+                            <input id="fullname" name="fullname" placeholder="Quận/Huyện" type="text">
+                            <span class="form-message"></span>
+                        </div>
+                    </div>               
                 </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">               
-                <div class="card-body" style="text-align: center;">
-                  <h5 class="card-title">Đơn hàng đang chờ phục vụ</h5>
-                  <b style="color: rgb(9, 194, 9);">0</b>
+                <div class="mt-2">
+                    <div>
+                        Mô tả ngắn
+                    </div>
+                    <textarea class="tour-descript" placeholder="Nhập thông tin ở đây..." name="" id="" cols="" rows=""></textarea>
                 </div>
-              </div>
             </div>
-            <div class="col">
-              <div class="card">             
-                <div class="card-body" style="text-align: center;">
-                  <h5 class="card-title">Đơn hàng trong quá trình phục vụ</h5>
-                  <b style="color: rgb(9, 194, 9);">0</b>
+ 
+            <div class="col-sm-3">
+                <div class="container">
+                    <div class="card tourpage-img">
+                        <label class="tourpage-img-title mt-2" for="">Ảnh chặng</label>
+                        <div style="text-align: center;">
+                            <button class="tourpage-btn">Thêm ảnh</button>
+                        </div>
+
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="col">
-              <div class="card">               
-                <div class="card-body" style="text-align: center;">
-                  <h5 class="card-title">Đơn hàng hoàn tất phục vụ</h5>
-                  <b style="color: rgb(9, 194, 9);">0</b>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">               
-                <div class="card-body" style="text-align: center;">
-                  <h5 class="card-title">Đơn hàng đã huỷ</h5>
-                  <b style="color: rgb(9, 194, 9);">0</b>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">               
-                <div class="card-body" style="text-align: center;">
-                  <h5 class="card-title">Tổng đơn hàng</h5>
-                  <b style="color: rgb(241, 12, 31);">0</b>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
       </div>
+      
     
     </div>
   </div>
