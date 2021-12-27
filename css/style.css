@@ -1493,3 +1493,9 @@ input[type="datetime"] {
   font-weight: 400;
   line-height: 1.5;
 }
+.money-all{
+  margin-top: 14px;
+  font-size: 25px;
+  color: red;
+  margin-left: 155px;
+}
