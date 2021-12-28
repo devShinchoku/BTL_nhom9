@@ -12,23 +12,22 @@ body {
 /* CSS for header */
 header {
   height: 64px;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+
 }
 .navbar {
   height: 64px;
+  padding: 0 12px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
-.container-fluid {
-  width: 100%;
-  height: 64px;
-  padding-right: 0px;
-  padding-left: 0px;
-}
 .h-logo {
   width: 48px;
   height: 48px;
-  margin: 24px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  margin-right: 160px;
 }
 .h-logo:hover {
   cursor: pointer;
@@ -39,36 +38,33 @@ header {
 }
 
 .h-menu-logo {
-  padding-top: 10px;
-  padding-bottom: 24px;
+  padding: 4px 12px;
   display: inline-flex;
   text-align: center;
   flex-direction: column;
   justify-content: center;
   color: black;
   font-size: 0.75rem;
+  min-width: 80px;
 }
 
 .h-menu i {
-  font-size: 20px;
+  font-size: 24px;
   z-index: 1;
 }
-.background-icon {
+
+.background-icon::before {
   content: "";
   z-index: 0;
-  top: 32px;
-  left: 32px;
+  top: 16px;
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  position: relative;
+  position: absolute;
   background-color: rgb(134 243 255 / 30%);
   box-sizing: inherit;
 }
-.nav-link {
-  width: 89px;
-  height: 64px;
-}
+
 
 .h-menu-logo:hover {
   background-color: #f6fcfe;
@@ -93,7 +89,7 @@ header {
 .h-user img {
   width: 40px;
   height: 40px;
-  margin: 0px 45px 0px 0px;
+  margin: 0px 10px 0px 0px;
   border-radius: 50%;
 }
 .h-user img:hover {

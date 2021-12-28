@@ -13,8 +13,8 @@
 </head>
 
 <body>
-    <header class="container-fluid fixed-top">
-        <nav class="navbar navbar-expand-lg">
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container-fluid">
                 <a href="/" class="h-logo navbar-brand"><svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
                         <path fill="#24a8d8" d="M22 11.5c0-1-.2-1.9-.6-2.8-1.4-4.2-5.6-7-10-6.8h-.1c-1.7.2-3.4.7-4.9 1.8-4.6 3-5.8 9.2-2.8 13.9v.1c.2.2.3.6.6.8l.1.1c1.9 2.2 4.7 3.6 7.7 3.6h8.7c.8 0 1.3-.6 1.3-1.3v-9.4z">
@@ -23,12 +23,13 @@
                         </path>
                     </svg>
                 </a>
-                <ul class="h-menu navbar-nav justify-content-center">
+                <ul class="h-menu navbar-nav justify-content-between">
                     <li class="nav-item">
-                        <a href="/" class="h-menu-logo nav-link">
+                        <a href="/" class="h-menu-logo nav-link black">
                             <div class="h-menu-logo-icon">
-                                <div class="background-icon"></div>
-                                <i class="bi bi-newspaper"></i>
+                                <i class="bi bi-newspaper">
+                                    <div class="background-icon"></div>
+                                </i>
                             </div>
                             Bảng tin
                         </a>
@@ -36,8 +37,9 @@
                     <li class="nav-item">
                         <a href="/" class="h-menu-logo nav-link">
                             <div class="h-menu-logo-icon">
-                                <div class="background-icon"></div>
-                                <i class="bi bi-binoculars"></i>
+                                <i class="bi bi-binoculars">
+                                    <div class="background-icon"></div>
+                                </i>
                             </div>
                             Trải nghiệm
                         </a>
@@ -45,8 +47,9 @@
                     <li class="nav-item">
                         <a href="/" class="h-menu-logo nav-link selected">
                             <div class="h-menu-logo-icon">
-                                <div class="background-icon"></div>
-                                <i class="bi bi-geo-alt"></i>
+                                <i class="bi bi-geo-alt">
+                                    <div class="background-icon"></div>
+                                </i>
                             </div>
                             Tour
                         </a>
@@ -54,8 +57,9 @@
                     <li class="nav-item">
                         <a href="/" class="h-menu-logo nav-link">
                             <div class="h-menu-logo-icon">
-                                <div class="background-icon"></div>
-                                <i class="bi bi-building"></i>
+                                <i class="bi bi-building">
+                                    <div class="background-icon"></div>
+                                </i>
                             </div>
                             Khách sạn
                         </a>
@@ -63,8 +67,9 @@
                     <li class="nav-item">
                         <a href="/" class="h-menu-logo nav-link">
                             <div class="h-menu-logo-icon">
-                                <div class="background-icon"></div>
-                                <i class="bi bi-ticket"></i>
+                                <i class="bi bi-ticket">
+                                    <div class="background-icon"></div>
+                                </i>
                             </div>
                             Vé máy bay
                         </a>
@@ -72,8 +77,9 @@
                     <li class="nav-item">
                         <a href="/" class="h-menu-logo nav-link">
                             <div class="h-menu-logo-icon">
-                                <div class="background-icon"></div>
-                                <i class="bi bi-bicycle"></i>
+                                <i class="bi bi-bicycle">
+                                    <div class="background-icon"></div>
+                                </i>
                             </div>
                             Thuê xe
                         </a>
