@@ -3,8 +3,8 @@
 ?>
     <main class="container mt-3">
         <div class="row">
-            <div class="m-weather col-md-3">
-                <div class="card" style="width: 297px; height: 346px; border-radius: 10px;">
+            <div class="sidebar col-md-3">
+                <div class="card">
                     <div class="card-body">
                         <h5 class="card-title location">Salavan, LA</h5>
                         <h5 class="card-title day mt-3">Thứ 2, 06/12/2021</h5>
@@ -14,8 +14,7 @@
                                 <div class="temperture">
                                     <h2 style="font-size: 25px;"> 16 </h2>
                                     <div style="display: flex;">
-                                        <h5 class="w-temper-sacles w-temper-sacles-separate">°C </h5>
-                                        <h5 class="w-temper-sacles">°F </h5>
+                                        <h5 class="w-temper-sacles">°C | °F</h5>
                                     </div>
                                 </div>
                                 <h5 class="w-status">Mây rải rác</h5>
@@ -72,11 +71,11 @@
                 </div>
             </div>
             <div class="m-tour col-md-6">
-                <form class="m-search card" style="width: 584px; height: 176px; border-radius: 10px;">
+                <form class="m-search card">
                     <div class="card-body">
                         <div class="search-datetime">
                             <div class="inputdecor btn-login">
-                                <input type="text" name="name" autocomplete="off" required style="margin-left: -20px;border-radius: 0px;" />
+                                <input type="text" name="name" autocomplete="off" required>
                                 <label for="name" class="lable-name"> 
                                     <span class="content-name2">
                                         Bạn muốn đi đâu
@@ -97,8 +96,8 @@
                         </button>
                     </div>
                 </form>
-                <div class="m-content">
-                    <div class="card " style="width: 590px; height: 880px; border-radius: 10px;">
+                <div class="m-content mt-3">
+                    <div class="card ">
                         <div class="card-body">
                             <div class="m-host">
                                 <a class="host" href="#">
@@ -234,10 +233,10 @@
                 </div>
             </div>
             <div class="sidebar col-md-3">
-                <div class="card" style="width: 296px; height: 296px; border-radius: 10px;">
+                <div class="card">
                     <img src="https://www.hahalolo.com/507f4286f025cc6eda4e27bd01644cb9.jpg" alt="" class="h_ads">
                 </div>
-                <div class="card mt-3" style="width: 297px; height: 52px; border-radius: 10px 10px 0 0 ;">
+                <div class="card mt-3">
                     <div class="card-body experience">
                         <div>
                             <h5 class="card-title exp">Trải nghiệm nổi bật</h5>
@@ -247,7 +246,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card" style="width: 297px; height: 256px; border-radius: 0 0 10px 10px;">
+                <div class="card">
                     <div class="card-body">
                         <img class="jss294" alt="Note ngay 4 Resort siêu ưu đãi cho kỳ du lịch cuối năm" loading="lazy"
                             width="264" height="149"
@@ -262,7 +261,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card mt-3" style="width: 297px; height: 139px; border-radius: 10px;">
+                <div class="card mt-3">
                     <div class="card-body h_papers">
                         <img src="data:image/png;base64,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"
                             alt="">
@@ -271,7 +270,7 @@
                             alt="">
                     </div>
                 </div>
-                <div class="card mt-3" style="width: 297px; height: 170px; border-radius: 10px;">
+                <div class="card mt-3">
                     <div class="card-body copyright">
                         <ul class="copyright_list">
                             <li class="copyright_list-item">

@@ -9,6 +9,7 @@ html {
 body {
   font-size: 0.75rem;
 }
+
 /* CSS for header */
 header {
   height: 64px;
@@ -89,7 +90,6 @@ header {
 .h-user img {
   width: 40px;
   height: 40px;
-  margin: 0px 10px 0px 0px;
   border-radius: 50%;
 }
 .h-user img:hover {
@@ -162,11 +162,6 @@ header {
 }
 
 /* CSS for main */
-main {
-  position: relative;
-  top: 60px;
-}
-
 .card {
   box-shadow: 0 1px 6px rgba(0.1, 0.1, 0.1, 0.1);
   border: none;
@@ -196,29 +191,16 @@ main {
   color: #8f8f8f;
   font-size: 14px;
   margin: 0px 10px;
-  width: 20px;
-  height: 20px;
 }
 .w-temper-sacles:hover {
   background-color: rgb(236, 233, 233);
   cursor: pointer;
 }
 
-.w-temper-sacles-separate::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 1px;
-  height: 10px;
-  background-color: #8f8f8f;
-  height: 15px;
-  right: 150px;
-  top: 25%;
-}
-
 .w-detail {
   padding: 0px;
   display: flex;
+  font-size: 15px;
 }
 .w-detail-list {
   padding: 0px;
@@ -237,8 +219,8 @@ main {
   margin: 0;
 }
 .w-cr {
-  margin: 5px 0px 20px 30px;
-  display: block;
+  width: 100%;
+
   color: #909090;
   font-size: 14px;
 }
@@ -314,8 +296,10 @@ input[type="datetime"] {
   justify-content: space-between;
 }
 .sidebar {
-  height: 100vh;
+  height: calc(100vh - 80px);
   overflow-y: scroll;
+  position: sticky;
+  top: 80px;
 }
 .sidebar::-webkit-scrollbar {
   width: 6px;
