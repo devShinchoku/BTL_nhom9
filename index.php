@@ -97,10 +97,10 @@
                     </div>
                 </form>
                 <div class="m-content mt-3">
-                    <div class="card ">
+                    <div class="card">
                         <div class="card-body">
                             <div class="m-host">
-                                <a class="host" href="#">
+                                <a class="host text-decoration-none" href="#">
                                     <img src="https://media.hahalolo.com/2020/06/17/13/5ee2d8913862a170cb80d8d1200617134632zV_40x40_high.jpg.webp"
                                         alt="">
                                     <span class="host-name">
@@ -175,7 +175,7 @@
                                 <i class="bi bi-calendar"></i>
                                 <h5 class="w-temper-saclesalendar1">CN, 19/12/2021</h5>
                             </div>
-                            <div class="mt-2">
+                            <div class="mt-2 tour-sort-info" style="font-size: 0.95rem;">
                                 -Tham quan Bà Nà - Làng Pháp trong tương lai, đi cáp treo đạt 3 kỷ lục thế giới
                                 -Vừa được tắm biển vừa chiêm ngưỡng quang cảnh đồi núi hoang sơ tuyệt đẹp
                                 -Chiêm ngưỡng các cây cầu nổi tiếng của TP Du lịch Đà Nẵng: cầu quay sông Hàn, cầu Rồng,
