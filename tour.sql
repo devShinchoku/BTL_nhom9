@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 26, 2021 lúc 03:04 AM
+-- Thời gian đã tạo: Th12 29, 2021 lúc 05:49 PM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 8.0.10
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Cơ sở dữ liệu: `tour`
 --
+CREATE DATABASE IF NOT EXISTS `tour` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE `tour`;
 
 -- --------------------------------------------------------
 
@@ -27,8 +29,9 @@ SET time_zone = "+00:00";
 -- Cấu trúc bảng cho bảng `db_order`
 --
 
-CREATE TABLE `db_order` (
-  `order_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `db_order`;
+CREATE TABLE IF NOT EXISTS `db_order` (
+  `order_id` int(11) NOT NULL AUTO_INCREMENT,
   `tour_id` int(11) DEFAULT NULL,
   `total` decimal(10,2) DEFAULT NULL,
   `order_date` date DEFAULT NULL,
@@ -37,8 +40,10 @@ CREATE TABLE `db_order` (
   `customer_lname` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `customer_phonenum` varchar(13) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `customer_email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `customer_address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `customer_address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`order_id`),
+  KEY `tour_id` (`tour_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `db_order`
@@ -54,6 +59,7 @@ INSERT INTO `db_order` (`order_id`, `tour_id`, `total`, `order_date`, `status`, 
 --
 -- Bẫy `db_order`
 --
+DROP TRIGGER IF EXISTS `delete_order`;
 DELIMITER $$
 CREATE TRIGGER `delete_order` BEFORE DELETE ON `db_order` FOR EACH ROW DELETE FROM db_passenger
     WHERE db_passenger.order_id = old.order_id
@@ -66,14 +72,17 @@ DELIMITER ;
 -- Cấu trúc bảng cho bảng `db_passenger`
 --
 
-CREATE TABLE `db_passenger` (
-  `passenger_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `db_passenger`;
+CREATE TABLE IF NOT EXISTS `db_passenger` (
+  `passenger_id` int(11) NOT NULL AUTO_INCREMENT,
   `order_id` int(11) NOT NULL,
   `type` int(1) DEFAULT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `birthday` date DEFAULT NULL,
-  `sex` int(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `sex` int(1) DEFAULT NULL,
+  PRIMARY KEY (`passenger_id`,`order_id`),
+  KEY `oder_id` (`order_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `db_passenger`
@@ -104,8 +113,9 @@ INSERT INTO `db_passenger` (`passenger_id`, `order_id`, `type`, `name`, `birthda
 -- Cấu trúc bảng cho bảng `db_tour`
 --
 
-CREATE TABLE `db_tour` (
-  `tour_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `db_tour`;
+CREATE TABLE IF NOT EXISTS `db_tour` (
+  `tour_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `tour_long` int(11) DEFAULT NULL,
   `tour_loc` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -118,8 +128,10 @@ CREATE TABLE `db_tour` (
   `category_id` int(11) DEFAULT NULL,
   `man_price` decimal(10,2) DEFAULT 0.00,
   `kid_price` decimal(10,2) DEFAULT 0.00,
-  `child_price` decimal(10,2) DEFAULT 0.00
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `child_price` decimal(10,2) DEFAULT 0.00,
+  PRIMARY KEY (`tour_id`),
+  KEY `category_id` (`category_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `db_tour`
@@ -144,11 +156,13 @@ INSERT INTO `db_tour` (`tour_id`, `name`, `tour_long`, `tour_loc`, `starttime`, 
 --
 -- Bẫy `db_tour`
 --
+DROP TRIGGER IF EXISTS `delete_tour_order`;
 DELIMITER $$
 CREATE TRIGGER `delete_tour_order` BEFORE DELETE ON `db_tour` FOR EACH ROW DELETE FROM db_order
     WHERE db_order.tour_id = old.tour_id
 $$
 DELIMITER ;
+DROP TRIGGER IF EXISTS `delete_tour_part`;
 DELIMITER $$
 CREATE TRIGGER `delete_tour_part` BEFORE DELETE ON `db_tour` FOR EACH ROW DELETE FROM db_tourpart
         WHERE db_tourpart.tour_id = old.tour_id
@@ -161,11 +175,14 @@ DELIMITER ;
 -- Cấu trúc bảng cho bảng `db_tourcategory`
 --
 
-CREATE TABLE `db_tourcategory` (
-  `category_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `db_tourcategory`;
+CREATE TABLE IF NOT EXISTS `db_tourcategory` (
+  `category_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `host_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `host_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`category_id`),
+  KEY `host_id` (`host_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `db_tourcategory`
@@ -189,6 +206,7 @@ INSERT INTO `db_tourcategory` (`category_id`, `name`, `host_id`) VALUES
 --
 -- Bẫy `db_tourcategory`
 --
+DROP TRIGGER IF EXISTS `delete_tourcategory`;
 DELIMITER $$
 CREATE TRIGGER `delete_tourcategory` BEFORE DELETE ON `db_tourcategory` FOR EACH ROW DELETE FROM db_tour
     WHERE db_tour.category_id = old.category_id
@@ -201,11 +219,13 @@ DELIMITER ;
 -- Cấu trúc bảng cho bảng `db_tourhost`
 --
 
-CREATE TABLE `db_tourhost` (
+DROP TABLE IF EXISTS `db_tourhost`;
+CREATE TABLE IF NOT EXISTS `db_tourhost` (
   `host_id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `website` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `website` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`host_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -225,6 +245,7 @@ INSERT INTO `db_tourhost` (`host_id`, `name`, `address`, `website`) VALUES
 --
 -- Bẫy `db_tourhost`
 --
+DROP TRIGGER IF EXISTS `delete_tourhost`;
 DELIMITER $$
 CREATE TRIGGER `delete_tourhost` BEFORE DELETE ON `db_tourhost` FOR EACH ROW DELETE FROM db_tourcategory
     WHERE db_tourcategory.host_id = old.host_id
@@ -237,12 +258,14 @@ DELIMITER ;
 -- Cấu trúc bảng cho bảng `db_tourpart`
 --
 
-CREATE TABLE `db_tourpart` (
+DROP TABLE IF EXISTS `db_tourpart`;
+CREATE TABLE IF NOT EXISTS `db_tourpart` (
   `tour_id` int(11) NOT NULL,
   `part_num` int(11) NOT NULL,
   `start_time` time DEFAULT NULL,
   `loc` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `info` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `info` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`tour_id`,`part_num`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -271,15 +294,18 @@ INSERT INTO `db_tourpart` (`tour_id`, `part_num`, `start_time`, `loc`, `info`) V
 -- Cấu trúc bảng cho bảng `db_user`
 --
 
-CREATE TABLE `db_user` (
-  `account_id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `db_user`;
+CREATE TABLE IF NOT EXISTS `db_user` (
+  `account_id` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `phonenum` varchar(13) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `first_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `last_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `permission` int(1) DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `permission` int(1) DEFAULT 0,
+  PRIMARY KEY (`account_id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `db_user`
@@ -313,96 +339,12 @@ INSERT INTO `db_user` (`account_id`, `email`, `phonenum`, `password`, `first_nam
 --
 -- Bẫy `db_user`
 --
+DROP TRIGGER IF EXISTS `delete_user`;
 DELIMITER $$
 CREATE TRIGGER `delete_user` BEFORE DELETE ON `db_user` FOR EACH ROW DELETE FROM db_tourhost
     WHERE db_tourhost.host_id = OLD.account_id
 $$
 DELIMITER ;
-
---
--- Chỉ mục cho các bảng đã đổ
---
-
---
--- Chỉ mục cho bảng `db_order`
---
-ALTER TABLE `db_order`
-  ADD PRIMARY KEY (`order_id`),
-  ADD KEY `tour_id` (`tour_id`);
-
---
--- Chỉ mục cho bảng `db_passenger`
---
-ALTER TABLE `db_passenger`
-  ADD PRIMARY KEY (`passenger_id`,`order_id`),
-  ADD KEY `oder_id` (`order_id`);
-
---
--- Chỉ mục cho bảng `db_tour`
---
-ALTER TABLE `db_tour`
-  ADD PRIMARY KEY (`tour_id`),
-  ADD KEY `category_id` (`category_id`);
-
---
--- Chỉ mục cho bảng `db_tourcategory`
---
-ALTER TABLE `db_tourcategory`
-  ADD PRIMARY KEY (`category_id`),
-  ADD KEY `host_id` (`host_id`);
-
---
--- Chỉ mục cho bảng `db_tourhost`
---
-ALTER TABLE `db_tourhost`
-  ADD PRIMARY KEY (`host_id`);
-
---
--- Chỉ mục cho bảng `db_tourpart`
---
-ALTER TABLE `db_tourpart`
-  ADD PRIMARY KEY (`tour_id`,`part_num`);
-
---
--- Chỉ mục cho bảng `db_user`
---
-ALTER TABLE `db_user`
-  ADD PRIMARY KEY (`account_id`),
-  ADD UNIQUE KEY `email` (`email`);
-
---
--- AUTO_INCREMENT cho các bảng đã đổ
---
-
---
--- AUTO_INCREMENT cho bảng `db_order`
---
-ALTER TABLE `db_order`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT cho bảng `db_passenger`
---
-ALTER TABLE `db_passenger`
-  MODIFY `passenger_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
---
--- AUTO_INCREMENT cho bảng `db_tour`
---
-ALTER TABLE `db_tour`
-  MODIFY `tour_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
---
--- AUTO_INCREMENT cho bảng `db_tourcategory`
---
-ALTER TABLE `db_tourcategory`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
---
--- AUTO_INCREMENT cho bảng `db_user`
---
-ALTER TABLE `db_user`
-  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
@@ -443,6 +385,44 @@ ALTER TABLE `db_tourhost`
 --
 ALTER TABLE `db_tourpart`
   ADD CONSTRAINT `db_tourpart_ibfk_1` FOREIGN KEY (`tour_id`) REFERENCES `db_tour` (`tour_id`);
+
+
+--
+-- Siêu dữ liệu
+--
+USE `phpmyadmin`;
+
+--
+-- Siêu dữ liệu cho bảng db_order
+--
+
+--
+-- Siêu dữ liệu cho bảng db_passenger
+--
+
+--
+-- Siêu dữ liệu cho bảng db_tour
+--
+
+--
+-- Siêu dữ liệu cho bảng db_tourcategory
+--
+
+--
+-- Siêu dữ liệu cho bảng db_tourhost
+--
+
+--
+-- Siêu dữ liệu cho bảng db_tourpart
+--
+
+--
+-- Siêu dữ liệu cho bảng db_user
+--
+
+--
+-- Siêu dữ liệu cho cơ sở dữ liệu tour
+--
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
