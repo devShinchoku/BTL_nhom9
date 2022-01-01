@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+    <script src="./js/booking.js"></script>
 </head>
 
 <body>
@@ -200,7 +202,7 @@
                                             src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
                                         <div class="container-phone-number">
                                             <form id="login-phone-number" onsubmit="process(event)">
-                                                <input id="phone" type="tel" name="phone" />
+                                                <input id="phone" type="number" name="phone" step="number" />
                                             </form>
                                         </div>
                                     </div>
@@ -233,54 +235,70 @@
                         </div>
                     </div>
                     <div class="person-sl">
-                        <div class="person-sl-1" style="padding: 16px; display: flex;">
-                            <div class="adult-sl">
-                                <div class="adult-d">
-                                    <h6 class="adult-text">
-                                        <b>Người lớn</b>
-                                    </h6>
-                                </div>
-                                <div class="adult-p">
-                                    <p>(Trên 11 tuổi)</p>
-                                </div>
-                                <div class="tab-sl">
-                                    <div class="dash-tab-1" style="display: flex;">
-                                        <div class="dash-tab" style="padding: 4px;">
-                                            <button class="dash-sl" style="padding: 1px;">
-                                                <i class="bi bi-dash-circle"></i>
-                                            </button>
+                        <div class="person-sl=0">
+                            <div class="person-sl-1" style="padding: 16px 16px 0px 16px; display: flex;">
+                                <div class="adult-sl">
+                                    <div class="adult-d">
+                                        <h6 class="adult-text">
+                                            <b>Người lớn</b>
+                                        </h6>
+                                    </div>
+                                    <div class="adult-p">
+                                        <p>(Trên 11 tuổi)</p>
+                                    </div>
+                                    <div class="tab-sl">
+                                        <div class="dash-tab-1" style="display: flex;">
+                                            <div id="minus1" class="dash-tab" style="padding: 4px;">
+                                                <button class="dash-sl minus" style="padding: 1px;">
+                                                    <i class="bi bi-dash-circle"></i>
+                                                </button>
+                                            </div>
+                                                <input id="qty1" class="text-sl-person qty" type="text" style="border: none;" value="1" readonly>
+                                            <div class="dash-tab" style="padding: 4px;">
+                                                <button id="add1" class="plus-sl add">
+                                                    <i class="bi bi-plus-circle"></i>
+                                                </button>
+                                            </div>
                                         </div>
-                                            <input class="text-sl-person" type="text" style="border: none;" value="1">
-                                        <div class="dash-tab" style="padding: 4px;">
-                                            <button class="plus-sl">
-                                                <i class="bi bi-plus-circle"></i>
-                                            </button>
+                                    </div>
+                                </div>
+                                <div class="adult-sl">
+                                    <div class="adult-d">
+                                        <h6 class="adult-text">
+                                            <b>Trẻ em</b>
+                                        </h6>
+                                    </div>
+                                    <div class="adult-p">
+                                        <p>(6 - 11 tuổi)</p>
+                                    </div>
+                                    <div class="tab-sl">
+                                        <div class="dash-tab-1" style="display: flex;">
+                                            <div class="dash-tab" style="padding: 4px;">
+                                                <button class="dash-sl" style="padding: 1px;">
+                                                    <i class="bi bi-dash-circle"></i>
+                                                </button>
+                                            </div>
+                                                <input class="text-sl-person" type="text" style="border: none;" value="0" readonly>
+                                            <div class="dash-tab" style="padding: 4px;">
+                                                <button class="plus-sl">
+                                                    <i class="bi bi-plus-circle"></i>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="adult-sl">
-                                <div class="adult-d">
-                                    <h6 class="adult-text">
-                                        <b>Trẻ em</b>
-                                    </h6>
+                            <div class="choose-enter" style="padding:0px 16px 16px 16px;">
+                                <div class="choose-enter-1" style="margin-left: 20px;">
+                                    <div class="choose-enter-lb" style="padding: 0px;">
+                                        <input id="id_delivery_2" class="choose-enter-ip" type="radio" name="chooseone-enter" value="ntt-2" style="vertical-align: middle;">
+                                        <label for="ntt-2" style="font-size: 17px;">Yêu cầu được hỗ trợ nhập thông tin hành khách sau</label>
+                                    </div>
                                 </div>
-                                <div class="adult-p">
-                                    <p>(6 - 11 tuổi)</p>
-                                </div>
-                                <div class="tab-sl">
-                                    <div class="dash-tab-1" style="display: flex;">
-                                        <div class="dash-tab" style="padding: 4px;">
-                                            <button class="dash-sl" style="padding: 1px;">
-                                                <i class="bi bi-dash-circle"></i>
-                                            </button>
-                                        </div>
-                                            <input class="text-sl-person" type="text" style="border: none;" value="1">
-                                        <div class="dash-tab" style="padding: 4px;">
-                                            <button class="plus-sl">
-                                                <i class="bi bi-plus-circle"></i>
-                                            </button>
-                                        </div>
+                                <div class="choose-enter-1" style="margin-left: 20px;">
+                                    <div class="choose-enter-lb">
+                                        <input id="id_delivery_0" class="choose-enter-ip" type="radio" name="chooseone-enter" value="ntt-1" style="vertical-align: middle;" checked>
+                                        <label for="ntt-1" style="font-size: 17px;">Nhập thông tin hành khách</label>
                                     </div>
                                 </div>
                             </div>
@@ -288,7 +306,7 @@
                     </div>
                 </div>
 
-                <div class="adult-info card" style="padding: 8px; margin-bottom: 16px;">
+                <div class="formInput adult-info card" style="padding: 8px; margin-bottom: 16px;">
                     <div style="padding: 16px;">
                         <p class="adult-info-1">
                             <b>Thông tin người lớn</b>
