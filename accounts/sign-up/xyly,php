@@ -1,0 +1,58 @@
+<?php
+include 'db.php';
+    $err = [];
+    if(isset($_POST['ok'])){
+        $first_name = $_POST['first_name'];
+        $last_name = $_POST['last_name'];
+        $email=trim(stripslashes($_POST['email']));
+        $password = $_POST['password'];
+        $rpassword = $_POST['rpassword'];
+
+        $checkEmail = mysqli_query($conn,"SELECT email from users Where email='$email'");
+        if(mysqli_num_rows($checkEmail) ==1){
+            echo '<b class = "text-danger"> co roi</b>';
+        }else{
+            echo '<b class = "text-success">ok dc day</b>';
+        }
+    }
+
+        if(is_numeric($email))
+        {
+            if(!preg_match('/^\d{10}$/',$email))
+            {
+                // echo "invalid phone";
+                $pass = password_hash($password, PASSWORD_DEFAULT);
+                $sql = "INSERT INTO users(first_name,last_name,phone,password) VALUES ('$first_name','$last_name','$email','$pass')";
+                $query = mysqli_query($conn,$sql);
+                if($query){
+                    // header('location: sign-up.php');
+        }
+
+            }
+        }
+        else 
+        {
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                // echo "Invalid email format"; 
+                $pass = password_hash($password, PASSWORD_DEFAULT);
+                $sql = "INSERT INTO users(first_name,last_name,email,password) VALUES ('$first_name','$last_name','$email','$pass')";
+                $query = mysqli_query($conn,$sql);
+                if($query){
+                    // header('location: sign-up.php');
+        }
+            }
+        }
+
+
+
+
+        // $pass = password_hash($password, PASSWORD_DEFAULT);
+        // $sql = "INSERT INTO users(first_name,last_name,email,password) VALUES ('$first_name','$last_name','$email','$pass')";
+        // $query = mysqli_query($conn,$sql);
+        // if($query){
+        //     header('location: sign-up.php');
+        // }
+    
+
+    
+// ?>

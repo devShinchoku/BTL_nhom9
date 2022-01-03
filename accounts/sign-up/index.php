@@ -1,38 +1,3 @@
-<?php
-    $err = [];
-    if(isset($_POST['name'])){
-        $first_name = $_POST['first_name'];
-        $last_name = $_POST['last_name'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $rpassword = $_POST['rpassword'];
-
-
-        if(empty($first_name)){
-            $err['first_name'] = 'ban chua nhap ten';
-        }
-        if(empty($last_name)){
-            $err['last_name'] = 'ban chua nhap ten';
-        }
-        if(empty($email)){
-            $err['email'] = 'ban chua nhap email';
-        }
-        if(empty($password)){
-            $err['password'] = 'ban chua nhap pass';
-        }
-        if(empty($password != $password )){
-            $err['rpassword'] = 'nhap lai sai';
-        }
-        if(empty($err)){
-            $pass = password_hash($password, PASSWORD_DEFAULT);
-            $sql = "INSERT INTO users(first_name,last_name,email,password) VALUES ('$first_name','$last_name','$email','$pass')";
-            $query = mysqli_query($conn,$sql);
-            if($query){
-                header('location: sign-in.php');
-            }
-        }
-    }
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,11 +13,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="sign-up.php">
-    <style>
-        .has-error{
-            color: red
-        }
-    </style>
+    <script src="js.js"></script>
 </head>
 
 <body>
@@ -125,11 +86,7 @@
                                         Họ
                                     </span>
                                 </label>
-                                <div class="has-error">
-                                    <span>
-                                        <?php echo (isset($err['first_name']))?$err['first_name']:"" ?>
-                                    </span>
-                                </div>
+                                <small id="emailHelp"></small> 
                             </div>
                             <div class="su-name-input btn-login mt-5 mb-1">
                                 <input type="text" name="name" autocomplete="off" required style="margin-left: -50px;" name = 'last_name'/>
@@ -138,11 +95,7 @@
                                         Tên
                                     </span>
                                 </label>
-                                <div class="has-error">
-                                    <span>
-                                        <?php echo (isset($err['last_name']))?$err['last_name']:"" ?>
-                                    </span>
-                                </div>
+                                <small id="emailHelp"></small> 
                             </div>
                         </div>
 
@@ -153,12 +106,7 @@
                                     Email hoặc số điện thoại
                                 </span>
                             </label>
-                            <div class="has-error">
-                                <span>
-                                    <?php echo (isset($err['email']))?$err['email']:"" ?>
-                                </span>
-                            </div>
-                                                 
+                            <small id="emailHelp"></small>          
                         </div>
                         
 
@@ -170,11 +118,7 @@
                                     Mật khẩu
                                 </span>
                             </label>
-                            <div class="has-error">
-                                <span>
-                                    <?php echo (isset($err['password']))?$err['password']:"" ?>
-                                </span>
-                            </div>
+                            <small id="emailHelp"></small> 
 
                         </div>
 
@@ -185,16 +129,12 @@
                                     Xác nhận mật khẩu
                                 </span>
                             </label>
-                            <div class="has-error">
-                                <span>
-                                    <?php echo (isset($err['rpassword']))?$err['rpassword']:"" ?>
-                                </span>
-                            </div>
+                            <small id="emailHelp"></small> 
                         </div>                   
 
                     </div>
                     <div class="mt-5">
-                        <button class="su-signup-dk">
+                        <button class="su-signup-dk" type="submit" name ='ok'>
                             Đăng kí
                         </button>
                     </div>
