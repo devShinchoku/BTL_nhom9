@@ -442,6 +442,7 @@
             </div>
         </div>
     </main>
+    <script src="js/lazyload.js"></script>
 <?php
     include("template/footer.php");
 ?>
