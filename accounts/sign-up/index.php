@@ -69,7 +69,7 @@
             </div>
             
             <div class="col-md-6">
-                <form class="su-signup-form" style=" height: 452px; width: 448px;border: 1px solid rgb(227, 252, 252)">
+                <form class="su-signup-form" action = "sign-up.php" method="POST" style=" height: 452px; width: 448px;border: 1px solid rgb(227, 252, 252)">
                     <div class="su-signup-formsu">
                         <span>
                             <b>
@@ -80,56 +80,56 @@
                     <div class="su-signup-form">
                         <div class="mt-5 su-name">
                             <div class="su-name-input btn-login mt-5 mb-1">
-                                <input type="text" name="name" autocomplete="off" required style="margin-left: -14px;" name = 'first_name' />
+                                <input type="text" autocomplete="off" required style="margin-left: -14px;" name = 'first_name' />
                                 <label for="name" class="lable-name"> 
                                     <span class="content-name1">
                                         Họ
                                     </span>
                                 </label>
-                                <small id="emailHelp"></small> 
+                                
                             </div>
                             <div class="su-name-input btn-login mt-5 mb-1">
-                                <input type="text" name="name" autocomplete="off" required style="margin-left: -50px;" name = 'last_name'/>
+                                <input type="text" autocomplete="off" required style="margin-left: -50px;" name = 'last_name'/>
                                 <label for="name" class="lable-name" style="margin-left: 0px;"> 
                                     <span class="content-name1">
                                         Tên
                                     </span>
                                 </label>
-                                <small id="emailHelp"></small> 
+                                
                             </div>
                         </div>
 
                         <div class="btn-login mt-4 mb-4">
-                            <input type="text" name="name" autocomplete="off" required name = 'email' />
+                            <input type="text" autocomplete="off" required name = 'email' />
                             <label for="name" class="lable-name"> 
                                 <span class="content-name1">
                                     Email hoặc số điện thoại
                                 </span>
                             </label>
-                            <small id="emailHelp"></small>          
+                                     
                         </div>
                         
 
 
                         <div class="btn-login mt-4 mb-4">
-                            <input type="password" name="name" autocomplete="off" required name = 'password' />
+                            <input type="password" autocomplete="off" required name = 'password' />
                             <label for="name" class="lable-name"> 
                                 <span class="content-name1">
                                     Mật khẩu
                                 </span>
                             </label>
-                            <small id="emailHelp"></small> 
+                            
 
                         </div>
 
                         <div class="btn-login mt-4 mb-4">
-                            <input type="password" name="name" autocomplete="off" required name = 'rpassword'/>
+                            <input type="password" autocomplete="off" required name = 'rpassword'/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name1">
                                     Xác nhận mật khẩu
                                 </span>
                             </label>
-                            <small id="emailHelp"></small> 
+                            
                         </div>                   
 
                     </div>
