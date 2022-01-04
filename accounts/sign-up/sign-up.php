@@ -1,6 +1,5 @@
 <?php
-    session_start();
-    include('db.php');
+    require('../../config/constants.php');
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
     $email = $_POST['email'];
@@ -11,7 +10,8 @@
     $result01 = mysqli_query($conn,$sql01);
     if(mysqli_num_rows($result01)>0){
         $error = "email is existed";
-        header("location:sign-up.php?error=$error");
+        // header("location:sign-up.php?error=$error");
+        echo $error;
 
     }else{
         $pass_md5 =md5($password);
@@ -20,10 +20,12 @@
         $result02 = mysqli_query($conn,$sql02);
     }
     if($result02 == true){
-        header("location:../sign-in/index.html");
+        // header("location:index.php");
+        echo("b");
     }else{
         $error = "Can...";
-        header("location:sign.php?error=$error");
+        // header("location:index.php?error=$error");
+        echo("a");
     }
 
 
