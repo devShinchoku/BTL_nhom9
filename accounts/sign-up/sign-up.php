@@ -14,18 +14,15 @@
         echo $error;
 
     }else{
-        $pass_md5 =md5($password);
-        $pass_hard = password_hash($password,PASSWORD_DEFAULT);
-        $sql02 = "INSERT INTO db_user (first_name,last_name,email,password) values ('first_name','last_name','email','pass_hard')";
+        $pass_hash = password_hash($password,PASSWORD_DEFAULT);
+        $sql02 = "INSERT INTO db_user (first_name,last_name,email,password) values ('$first_name','$last_name','$email','$pass_hash')";
         $result02 = mysqli_query($conn,$sql02);
     }
     if($result02 == true){
-        // header("location:index.php");
-        echo("b");
+        header("location:../sign-in");
     }else{
         $error = "Can...";
-        // header("location:index.php?error=$error");
-        echo("a");
+        header("location:index.php?error=$error");
     }
 
 

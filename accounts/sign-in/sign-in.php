@@ -1,39 +1,12 @@
-<?php
-// lấy dữ liệu từ form 
-    $u = $_POST['username'];
-    $p = $_POST['password'];
-
-    //  ket noi den csdl 
-    $db = mysli_connect("localhost", "root", "", "csdldemo" );
-
-    // Truy vấn dũ liệu tìm tk mk có trong csdl ko
-    $sql = "select * from users where username" = '$u' and password = '$p'";
-
-
-
-    $rs = mysqli_query($db,$sql);
-
-    if (mysqli_num_rows($rs) > 0){
-        // echo "<h1>dang nhap thanh cong</h1>";
-        header("location:admin/admin_page.php");
-
-    }   else {
-        echo "<h1>dang nhap that bai</h1>";
-        require_once 'login.html'
-    }
-
-?>
-
-
 
 <?php
 
-    include('connect.php');
-    if (isset($_POST['btn_submit'])) {
-        $email = $_POST['txtEmail'];
-        $pass = $_POST['txtPass'];
+    require('../../config/constants.php');
+    if (isset($_POST['ok'])) {
+        $email = $_POST['email'];
+        $pass = $_POST['password'];
 
-        $sql = "SELECT * FROM user WHERE email = '$email' AND pass = '$pass'";
+        $sql = "SELECT * FROM db_user WHERE email = '$email' AND pass = '$password'";
         echo $sql;
         $result = mysqli_query($conn,$sql);
         if(mysqli_num_rows($result) > 0){
