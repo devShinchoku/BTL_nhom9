@@ -8,6 +8,9 @@
 
     $sql01 = "SELECT * from db_user where email = '$email'";
     $result01 = mysqli_query($conn,$sql01);
+
+
+
     if(mysqli_num_rows($result01)>0){
         $error = "email is existed";
         // header("location:sign-up.php?error=$error");

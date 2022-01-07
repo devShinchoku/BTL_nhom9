@@ -103,7 +103,7 @@
                             <i class="bi bi-wallet2"></i>
                         </span></li>
                     <li class="nav-item"><span class="h-user-iteam">
-                        <a href="../sign-in/index.html">
+                        <a href="accounts/sign-up">
                             <i class="bi bi-arrow-down-circle"></i>
                         </a>
                         </span></li>

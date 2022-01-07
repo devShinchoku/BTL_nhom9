@@ -98,37 +98,37 @@
                         </div>
 
                         <div class="btn-login mt-4 mb-4">
-                            <input type="text" autocomplete="off" required name = 'email' />
+                            <input type="text" autocomplete="off" required name = 'email' id="inputEmail"/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name1">
                                     Email hoặc số điện thoại
                                 </span>
-                            </label>
-                                     
+                            </label>    
                         </div>
+                        <small id="emailHelp"></small> 
                         
 
 
                         <div class="btn-login mt-4 mb-4">
-                            <input type="password" autocomplete="off" required name = 'password' />
+                            <input type="password" autocomplete="off" required name = 'password' id = "inputPassword1"/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name1">
                                     Mật khẩu
                                 </span>
                             </label>
-                            
-
                         </div>
+                        <p id="passlHelp"></p> 
 
                         <div class="btn-login mt-4 mb-4">
-                            <input type="password" autocomplete="off" required name = 'rpassword'/>
+                            <input type="password" autocomplete="off" required name = 'rpassword' id = "inputPassword2"/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name1">
                                     Xác nhận mật khẩu
                                 </span>
                             </label>
                             
-                        </div>                   
+                        </div>  
+                        <p id="sr_pass1"></p>                 
 
                     </div>
                     <div class="mt-5">
@@ -167,7 +167,7 @@
                     </div>
                     <div class="su-rules mt-5" style="text-align: center;">
                             Bạn đã có tài khoản?
-                            <a href="" class="su-rules-iteam">
+                            <a href="../sign-in/index.php" class="su-rules-iteam">
                                     Đăng nhập
                                     </a>
                     </div>
@@ -224,14 +224,15 @@
     </footer>
 
 
-    <script src="./sign-up.js"></script>
+    <!-- <script src="./sign-up.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
-        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="sign-up.js"></script>
 </body>
 
 </html>

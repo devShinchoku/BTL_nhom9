@@ -124,7 +124,7 @@
                     <div class="su-rules mt-5 mb-5">
                         <span>
                             Bạn chưa có tài khoản? 
-                            <a href="" class="su-rules-iteam">
+                            <a href="../sign-up/index.php" class="su-rules-iteam">
                                 <span>
                                     Đăng ký tại đây!
                                 </span>
