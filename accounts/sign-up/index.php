@@ -18,7 +18,7 @@
 <body>
     <main class="container">
         <div class="row mt-5">
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <div class="su-logos">
                     <a href="../../" class="su-logo">
                         <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
@@ -67,9 +67,9 @@
                 </div>
             </div>
             
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <form class="su-signup-form" action = "sign-up.php" method="POST" style=" height: 452px; width: 448px;border: 1px solid rgb(227, 252, 252)">
-                    <div class="su-signup-formsu">
+                    <div class="su-signup-formsu mt-3">
                         <span>
                             <b>
                                 Đăng Ký
@@ -180,7 +180,7 @@
         </div>
     </main>
 
-    <footer style = "margin-top: 410px;">
+    <footer style = "margin-top: 430px;">
         <div class="su-footer mt-5" >
             <div class="" style="width: 1248px; height: 52px;">
                 <div class="su-footer-btn">

@@ -66,71 +66,35 @@
                 </div>
             </div>
 
-            <form class="col-md-4" action="sign-in.php" method="post" role="form" >
+            <form class="col-md-4" action="forgot.php" method="post" role="form" >
                 <div class="su-signup-form" style=" height: 452px; width: 448px;border: 1px solid rgb(227, 252, 252) ;">
                     <div class="su-signup-formsu">
                         <span>
                             <b>
-                                Đăng Nhập
+                                Tìm tài khoản của bạn
                             </b>
                         </span>
                     </div>
                     <div>                  
-                       
-                        <div class="btn-login mt-5 mb-5">
-                            <input type="text" name="email" autocomplete="off" required />
+                    <div class="su-rules mt-5" style ="text-align: left;margin-left: 33px">
+                        <span>
+                            Vui lòng nhập email để tìm tài khoản.
+                        </span>
+                    </div>
+                        <div class="btn-login mt-3 mb-5">
+                            <input type="text" name="email" autocomplete="off" required id= "inputEmail"/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name">
                                     Email hoặc số điện thoại
                                 </span>
                             </label>
-                            <small id="emailHelp"></small> 
                         </div>
-
-                        
-                        <!-- test -->
-                        <div class="btn-login mt-3">
-                            <input id="password" type="password" name="password" autocomplete="off" required/>
-                            
-                            <label for="name" class="lable-name"> 
-                                <span class="content-name" style="display: flex;">
-                                    <div>
-                                        Mật Khẩu
-                                    </div>
-                                </span>
-                            </label>
-                            <div id="eye" style="text-align: right; margin-top: -39px; padding-left: 336px;font-size: 24px; ">
-                                <i class="bi bi-eye-slash"></i>
-                            </div>
-                        </div>
-
-                        <!-- test -->
-
-
+                        <small id="emailHelp"></small> 
                     </div>
                     <div class="mt-5 ">
                         <button class="su-signup-dk" name ="ok">
-                            Đăng Nhập
+                            Tìm kiếm
                         </button>
-                    </div>
-                    <div class="su-rules mt-5">
-                        <span>                       
-                            <a href="../forgot/index.php" class="su-rules-iteam">
-                                <span>
-                                    Quên mật khẩu?
-                                </span>
-                            </a>                          
-                        </span>
-                    </div>
-                    <div class="su-rules mt-5 mb-5">
-                        <span>
-                            Bạn chưa có tài khoản? 
-                            <a href="../sign-up/index.php" class="su-rules-iteam">
-                                <span>
-                                    Đăng ký tại đây!
-                                </span>
-                            </a>
-                        </span>
                     </div>
                 </div>
             </form>
@@ -188,7 +152,7 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="sign-in.js"></script>
+    <script src="forgot.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
 
