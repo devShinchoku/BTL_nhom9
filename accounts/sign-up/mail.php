@@ -18,7 +18,7 @@ require '../../documents/PHPMailer/SMTP.php';
 
 //Create an instance; passing `true` enables exceptions
 
-function sendmail($email ,$last_name){
+function sendmail($email ,$last_name,$subject, $body ){
 
     $mail = new PHPMailer(true);
     $username= 'huynamnn1@gmail.com';
@@ -47,8 +47,8 @@ function sendmail($email ,$last_name){
     
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = 'Chào mừng';
-        $mail->Body    = 'Chúc mừng bạn đã đăng kí thành công';
+        $mail->Subject = $subject;
+        $mail->Body    = $body;
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
     
         $mail->send();

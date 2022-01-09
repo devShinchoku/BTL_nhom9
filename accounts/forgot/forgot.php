@@ -1,15 +1,10 @@
 <?php
     require('../../config/constants.php');
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
-    $rpassword = $_POST['rpassword'];
+    
 
     $sql01 = "SELECT * from db_user where email = '$email'";
     $result01 = mysqli_query($conn,$sql01);
-
-
 
     if(mysqli_num_rows($result01)>0){
         $error = "email is existed";

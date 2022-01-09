@@ -66,36 +66,38 @@
                 </div>
             </div>
 
-            <form class="col-md-4" action="sign-in.php" method="post" role="form" >
+            <form class="col-md-4" action="forgot.php" method="post" role="form" >
                 <div class="su-signup-form" style=" height: 452px; width: 448px;border: 1px solid rgb(227, 252, 252) ;">
                     <div class="su-signup-formsu">
                         <span>
                             <b>
-                                Đăng Nhập
+                            Thiết Lập Mật Khẩu Mới
                             </b>
                         </span>
                     </div>
                     <div>                  
-                       
-                        <div class="btn-login mt-5 mb-5">
-                            <input type="text" name="email" autocomplete="off" required />
+                    <div class="su-rules mt-5" style ="text-align: left;margin-left: 33px">
+                        <span>
+                        Vui lòng kiểm tra mã xác minh của bạn trên Số điện thoại của bạn. Mã xác minh của bạn gồm 6 số. 
+                        
+                        </span>
+                    </div>
+                        <div class="btn-login mt-3 mb-5">
+                            <input type="text" name="email" autocomplete="off" required id= "inputEmail"/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name">
-                                    Email hoặc số điện thoại
+                                    Nhập mã xác minh
                                 </span>
                             </label>
-                            <small id="emailHelp"></small> 
                         </div>
-
-                        
-                        <!-- test -->
+                        <small id="emailHelp"></small> 
                         <div class="btn-login mt-3">
                             <input id="password" type="password" name="password" autocomplete="off" required/>
                             
                             <label for="name" class="lable-name"> 
                                 <span class="content-name" style="display: flex;">
                                     <div>
-                                        Mật Khẩu
+                                        Mật khẩu mới
                                     </div>
                                 </span>
                             </label>
@@ -103,35 +105,19 @@
                                 <i class="bi bi-eye-slash"></i>
                             </div>
                         </div>
-
-                        <!-- test -->
-
-
                     </div>
-                    <div class="mt-5 ">
-                        <button class="su-signup-dk" name ="ok">
-                            Đăng Nhập
+                    <div class="su-rules mt-5" style ="text-align: left;margin-left: 33px;font-size: 12px;">
+                        <span>
+                        Nhập mật khẩu mới có tối thiểu 6 kí tự, bao gồm ít nhất 1 số 1 chữ hoa 1 chữ thường và 1 kí tự đặc biệt.
+                        </span>
+                    </div>
+                    <button type="button" class="btn btn-secondary mt-2" style="float: left;margin-left: 33px; ">Gửi lại mã</button>
+                    <div class="mt-3">
+                        <button class="su-signup-dk mt-3" name ="ok">
+                            Tiếp tục
                         </button>
                     </div>
-                    <div class="su-rules mt-5">
-                        <span>                       
-                            <a href="../forgot/index.php" class="su-rules-iteam">
-                                <span>
-                                    Quên mật khẩu?
-                                </span>
-                            </a>                          
-                        </span>
-                    </div>
-                    <div class="su-rules mt-5 mb-5">
-                        <span>
-                            Bạn chưa có tài khoản? 
-                            <a href="../sign-up/index.php" class="su-rules-iteam">
-                                <span>
-                                    Đăng ký tại đây!
-                                </span>
-                            </a>
-                        </span>
-                    </div>
+
                 </div>
             </form>
         </div>
@@ -188,7 +174,8 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="sign-in.js"></script>
+    <script src="forgot.js"></script>
+    <script src="../sign-in/sign-in.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
 
