@@ -23,8 +23,8 @@
     }
     
     
-    if($result02 == true){
-        require 'register.php';
+    if($result02){
+        require 'mail.php';
         sendmail($email, $last_name);
         header("location:../sign-in");
     }else{

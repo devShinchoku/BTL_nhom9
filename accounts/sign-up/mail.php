@@ -13,18 +13,17 @@ require '../../documents/PHPMailer/Exception.php';
 require '../../documents/PHPMailer/PHPMailer.php';
 require '../../documents/PHPMailer/SMTP.php';
 
-$username= 'huynamnn1@gmail.com';
-$password = 'vfqrrgseejtdsvsr';
 
 
 
 //Create an instance; passing `true` enables exceptions
 
-
 function sendmail($email ,$last_name){
 
     $mail = new PHPMailer(true);
-    
+    $username= 'huynamnn1@gmail.com';
+    $password = 'vfqrrgseejtdsvsr';
+
     try {
         //Server settings
         $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
