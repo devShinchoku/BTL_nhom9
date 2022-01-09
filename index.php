@@ -98,141 +98,6 @@
                 </form>
                 <div class="m-content mt-3">
                     <div class="card">
-                        <div class="card-body">
-                            <div class="m-host">
-                                <a class="host text-decoration-none" href="#">
-                                    <img src="https://media.hahalolo.com/2020/06/17/13/5ee2d8913862a170cb80d8d1200617134632zV_40x40_high.jpg.webp"
-                                        alt="">
-                                    <span class="host-name">
-                                        Tuấn Dũng Travel
-                                    </span>
-                                </a>
-                                <button class="host-like-button">
-                                    <i class="bi bi-emoji-heart-eyes"></i>
-                                    HaHa trang
-                                </button>
-                            </div>
-
-                            <div id="carouselExampleControls" class="carousel slide mt-2" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="https://media.hahalolo.com/2021/01/05/07/04/f1c7a859c510aff81a14bafcf12cf97d-1609830240_640xauto_high.jpg.webp"
-                                            class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="https://media.hahalolo.com/2021/01/05/07/04/fbffe78170600953993703b1845c45e8-1609830240_640xauto_high.jpg.webp"
-                                            class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="https://media.hahalolo.com/2021/01/05/07/04/4885429e7b5d0690dac4799ac3c5e9bf-1609830240_640xauto_high.jpg.webp"
-                                            class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="https://media.hahalolo.com/2021/01/05/07/04/cc47dc746d0f2e60f8dda43a206338a8-1609830240_640xauto_high.jpg.webp"
-                                            class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="https://media.hahalolo.com/2021/01/05/07/04/faa32a5b56388d84757c4b66c6cc6d81-1609830240_640xauto_high.jpg.webp"
-                                            class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="https://media.hahalolo.com/2021/01/05/07/04/0e0fdce1f172aded9d71edfca5700019-1609830240_640xauto_high.jpg.webp"
-                                            class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="https://media.hahalolo.com/2021/01/05/07/04/88dd80066bc10f878abf1bd2dbfcb675-1609830240_640xauto_high.jpg.webp"
-                                            class="d-block w-100" alt="...">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button"
-                                    data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button"
-                                    data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                            <div class="tour-name mt-3">
-                                Tour miền Trung
-                            </div>
-                            <div class="tour-info mt-2">
-
-                                <h6 class="tour-schedule">
-                                    001: Đà Nẵng - Bà Nà - Ngũ Hành Sơn - Hội An (3N2Đ)
-                                </h6>
-                                <div class="tour-long">
-                                    3 ngày
-                                </div>
-                            </div>
-                            <div class="tour-loc">
-                                <i class="bi bi-signpost"></i>
-                                <h5 class="tour-loc1">Thành phố Đà Nẵng - Thành phố Đà Nẵng</h5>
-                            </div>
-                            <div class="w-temper-saclesalendar">
-                                <i class="bi bi-calendar"></i>
-                                <h5 class="w-temper-saclesalendar1">CN, 19/12/2021</h5>
-                            </div>
-                            <div class="mt-2 tour-sort-info" style="font-size: 0.95rem;">
-                                -Tham quan Bà Nà - Làng Pháp trong tương lai, đi cáp treo đạt 3 kỷ lục thế giới
-                                -Vừa được tắm biển vừa chiêm ngưỡng quang cảnh đồi núi hoang sơ tuyệt đẹp
-                                -Chiêm ngưỡng các cây cầu nổi tiếng của TP Du lịch Đà Nẵng: cầu quay sông Hàn, cầu Rồng,
-                                cầu
-                                treo Thuận Phước, đặc biệt check in Cầu Vàng tại Bà Nà
-                                -Khám phá không gian nghệ thuật với Bảo Tàng tranh 3D, nhà Đảo Ngược, Phố cổ Hội An...
-                            </div>
-                            <div class="h-price">
-                                <div>
-                                    <div class="h-price1">
-                                        <b>Giá chỉ từ</b>
-                                        <span>2.020.000 ₫</span>
-                                    </div>
-                                </div>
-                                <button class="h-price2">
-                                    Xem nhanh
-                                    <i class="bi bi-caret-right"></i>
-                                </button>
-                            </div>
-
-                            <div class="h-interactive mt-4">
-                                <div class="h-interactive1">
-                                    <i class="bi bi-emoji-heart-eyes"></i>
-                                    <div>
-                                        Tuaño Sheila, Sa Rương và 55 người khác
-                                    </div>
-                                </div>
-                                <div class="h-interactive2">
-                                    <span class="h-interactive2-iteam">
-                                        7 Bình luận
-                                    </span>
-                                    <span class="h-interactive2-iteam">
-                                        6 Lượt chia sẻ
-                                    </span>
-                                </div>
-                            </div>
-                            <hr class="mb-1">
-                            <div class="btn-interactive">
-                                <button class="btn-interactive1">
-                                    <i class="bi bi-emoji-heart-eyes"></i>
-                                    haha
-                                </button>
-                                <button class="btn-interactive1">
-                                    <i class="bi bi-chat-dots-fill"></i>
-                                    bình luận
-                                </button>
-                                <button class="btn-interactive1">
-                                    <i class="bi bi-send"></i>
-                                    chia sẻ
-                                </button>
-                            </div>
-                            <hr class="mt-1 mb-1">
-                        </div>
-                    </div>
-                </div>
-                <div class="m-content mt-3">
-                    <div class="card">
                         <div class="card-header">
                             <div class="m-host">
                                 <a class="host text-decoration-none" href="#">
@@ -366,6 +231,7 @@
                             <hr class="mt-1 mb-1">
                         </div>
                     </div>
+                    <div class="clearfix" id="clearfix_id"></div>
                 </div>
             </div>
             <div class="sidebar col-md-3">
