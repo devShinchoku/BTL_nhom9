@@ -11,7 +11,8 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../sign-up-in.css">
+
 </head>
 
 <body>
@@ -55,9 +56,9 @@
                             </b>
                         </span>
                     </div>
-                    <div class="su-youlike2 mt-3" style="  height: 57px; width: 595px;">
+                    <div class="mt-3" style="  height: 57px; width: 595px;">
                         <span>
-                            <h6 class="su-youlike2-1" style="font-size: 24px; font-weight: 400;">
+                            <h6 class="" style="font-size: 24px; font-weight: 400;">
                                 Chỉ với vài thao tác, hãy nhanh chóng đăng nhập để trải nghiệm và cảm nhận các tiện ích
                                 tuyệt vời của chúng tôi.
                             </h6>
@@ -179,8 +180,8 @@
         </div>
     </main>
 
-    <footer>
-        <div class="su-footer mt-5">
+    <footer style = "margin-top: 410px;">
+        <div class="su-footer mt-5" >
             <div class="" style="width: 1248px; height: 52px;">
                 <div class="su-footer-btn">
                     <div>

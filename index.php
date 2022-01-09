@@ -233,7 +233,7 @@
                 </div>
                 <div class="m-content mt-3">
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-header">
                             <div class="m-host">
                                 <a class="host text-decoration-none" href="#">
                                     <img src="https://media.hahalolo.com/2020/06/17/13/5ee2d8913862a170cb80d8d1200617134632zV_40x40_high.jpg.webp"
@@ -247,7 +247,8 @@
                                     HaHa trang
                                 </button>
                             </div>
-
+                        </div>    
+                        <div class="card-body">
                             <div id="carouselExampleControls" class="carousel slide mt-2" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
