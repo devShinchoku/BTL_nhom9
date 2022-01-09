@@ -21,7 +21,11 @@
         $sql02 = "INSERT INTO db_user (first_name,last_name,email,password) values ('$first_name','$last_name','$email','$pass_hash')";
         $result02 = mysqli_query($conn,$sql02);
     }
+    
+    
     if($result02 == true){
+        require 'register.php';
+        sendmail($email, $last_name);
         header("location:../sign-in");
     }else{
         $error = "Can...";
