@@ -11,8 +11,6 @@ $(document).ready(function () {
 
     $(window).scroll(function () {
         var last_id = $('#clearfix_id').data('last_id');
-        console.log(last_id);
-        console.log(typeof(last_id));
         if ($(window).scrollTop() + $(window).height() > $(".m-content").height() && action == 'inactive') {
             action = 'active';
             make_skeleton();
@@ -65,7 +63,6 @@ $(document).ready(function () {
         output+='</div>';
         output+='</div>';
         output+='</div>';
-        output+=output;
         output+=output;
         $('.m-content').append(output);
     }

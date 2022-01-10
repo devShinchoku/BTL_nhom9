@@ -14,7 +14,6 @@ if (isset($_POST["last_id"])) {
     $total_row = mysqli_num_rows($result);
 
     $output = '';
-    $last_id = 0;
     if ($total_row > 0) {
         $datas = mysqli_fetch_all($result,MYSQLI_ASSOC);
         $mydate=getdate(date("U"));
