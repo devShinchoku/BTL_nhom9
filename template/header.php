@@ -101,10 +101,12 @@
                             <i class="bi bi-cart3"></i>
                         </span></li>
                     <li class="nav-item"><span class="h-user-iteam">
+                        <a href="accounts/change">
                             <i class="bi bi-wallet2"></i>
+                        </a>
                         </span></li>
                     <li class="nav-item"><span class="h-user-iteam">
-                        <a href="accounts/sign-up">
+                        <a href="accounts/sign-in">
                             <i class="bi bi-arrow-down-circle"></i>
                         </a>
                         </span></li>

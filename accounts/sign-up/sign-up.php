@@ -1,5 +1,5 @@
 <?php
-    require('../../config/constants.php');
+    require('../../config/db.php');
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
     $email = $_POST['email'];

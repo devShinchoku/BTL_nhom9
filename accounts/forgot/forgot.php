@@ -1,32 +1,30 @@
 <?php
-    require('../../config/constants.php');
+include_once '../../config/db.php';
+if(isset($_POST['ok']))
+{
     $email = $_POST['email'];
-    
+    $result = mysqli_query($conn,"SELECT * FROM db_user where email='" . $_POST['email'] . "'");
+    $row = mysqli_fetch_assoc($result);
+	$account_id=$row['email'];
+    $last_name=$row['last_name'];
+	if($email==$account_id) {
+            require '../sign-up/mail.php';
+            $passbam = generatePassword();
+            $last_name = "$last_name";
+                $subject = "Password";
+                $body = "Your password is : $passbam";
+                sendmail($email,$last_name,$subject,$body);
 
-    $sql01 = "SELECT * from db_user where email = '$email'";
-    $result01 = mysqli_query($conn,$sql01);
-
-    if(mysqli_num_rows($result01)>0){
-        $error = "email is existed";
-        // header("location:sign-up.php?error=$error");
-        echo $error;
-
-    }else{
-        $pass_hash = password_hash($password,PASSWORD_DEFAULT);
-        $sql02 = "INSERT INTO db_user (first_name,last_name,email,password) values ('$first_name','$last_name','$email','$pass_hash')";
-        $result02 = mysqli_query($conn,$sql02);
-    }
-    
-    
-    if($result02){
-        require 'mail.php'; 
-        $subject = "Chào mừng";
-        $body = "Chúc mừng bạn đã đăng kí thành công";
-        sendmail($email, $last_name, $subject, $body);
-        header("location:../sign-in");
-    }else{
-        $error = "Can...";
-        header("location:index.php?error=$error");
-    }
-  
+                $pass_hash = password_hash($passbam,PASSWORD_DEFAULT);
+                $sql02 = "UPDATE db_user SET password ='$pass_hash' WHERE email='$email'";
+                $result02 = mysqli_query($conn,$sql02);
+                header("location:setnewpass.php");
+			}
+				else{
+					// echo 'invalid userid';
+                    header("location:index.php");
+				}
+}
 ?>
+
+

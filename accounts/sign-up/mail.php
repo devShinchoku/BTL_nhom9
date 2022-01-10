@@ -14,7 +14,23 @@ require '../../documents/PHPMailer/PHPMailer.php';
 require '../../documents/PHPMailer/SMTP.php';
 
 
+function generatePassword() {
 
+    $_alphaSmall = 'abcdefghijklmnopqrstuvwxyz';            // small letters
+    $_alphaCaps  = strtoupper($_alphaSmall);                // CAPITAL LETTERS
+    $_numerics   = '1234567890';                            // numerics
+    $_specialChars = '`~!@#$%^&*()-_=+]}[{;:,<.>/?\'"\|';   // Special Characters
+
+    $_container = $_alphaSmall.$_alphaCaps.$_numerics.$_specialChars;   // Contains all characters
+    $passbam = '';         // will contain the desired pass
+
+    for($i = 0; $i < 10; $i++) {                                 // Loop till the length mentioned
+        $_rand = rand(0, strlen($_container) - 1);                  // Get Randomized Length
+        $passbam .= substr($_container, $_rand, 1);                // returns part of the string [ high tensile strength ;) ] 
+    }
+
+    return $passbam;       // Returns the generated Pass
+}
 
 //Create an instance; passing `true` enables exceptions
 

@@ -41,7 +41,7 @@
 
 
 <?php
-    require('../../config/constants.php');
+    require('../../config/db.php');
     if (isset($_POST['ok']) && isset($_POST['email'])) {
         $email = $_POST['email'];
         $pass = $_POST['password'];
