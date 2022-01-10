@@ -6,7 +6,7 @@ $(document).ready(function () {
 
         setTimeout(function () {
             load_data();
-        }, 3000);
+        }, 1200);
     }
 
     $(window).scroll(function () {
@@ -18,7 +18,7 @@ $(document).ready(function () {
             make_skeleton();
             setTimeout(function () {
                 load_data(last_id);
-            }, 3000);
+            }, 400);
         }
     });
 
@@ -46,6 +46,16 @@ $(document).ready(function () {
         output+='<div class="ph-row">';
         output+='<div class="ph-col-10 big"></div>';
         output+='<div class="ph-col-2 empty big"></div>';
+        output+='<div class="ph-col-4"></div>';
+        output+='<div class="ph-col-8 empty"></div>';
+        output+='<div class="ph-col-6"></div>';
+        output+='<div class="ph-col-6 empty"></div>';
+        output+='<div class="ph-col-12"></div>';
+        output+='<div class="ph-col-4"></div>';
+        output+='<div class="ph-col-8 empty"></div>';
+        output+='<div class="ph-col-6"></div>';
+        output+='<div class="ph-col-6 empty"></div>';
+        output+='<div class="ph-col-12"></div>';
         output+='<div class="ph-col-4"></div>';
         output+='<div class="ph-col-8 empty"></div>';
         output+='<div class="ph-col-6"></div>';
