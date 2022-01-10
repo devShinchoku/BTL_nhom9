@@ -168,6 +168,10 @@ header {
   box-shadow: 0 1px 6px rgba(0.1, 0.1, 0.1, 0.1);
   border: none;
 }
+.m-content-header{
+  background-color: #fff; 
+  border-bottom: none;
+}
 .location {
   font-size: 16px;
 }
@@ -179,7 +183,6 @@ header {
   font-size: 36px;
   color: #f2f2f1;
   display: flex;
-  margin: 0px 13px;
 }
 .temper-container {
   margin: 0px 20px;
@@ -222,11 +225,12 @@ header {
 }
 .w-cr {
   width: 100%;
-
+  text-decoration: none;
   color: #909090;
   font-size: 14px;
 }
 .w-cr:hover {
+  color: #909090;
   text-decoration: underline;
 }
 .search-datetime {

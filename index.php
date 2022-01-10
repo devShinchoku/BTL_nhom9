@@ -4,70 +4,7 @@ include("template/header.php");
 <main class="container mt-3">
     <div class="row">
         <div class="sidebar col-md-3">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title location">Salavan, LA</h5>
-                    <h5 class="card-title day mt-3">Thứ 2, 06/12/2021</h5>
-                    <div class="w-cloud mt-3">
-                        <i class="bi bi-cloud-fill"></i>
-                        <div class="temper-container">
-                            <div class="temperture">
-                                <h2 style="font-size: 25px;"> 16 </h2>
-                                <div style="display: flex;">
-                                    <h5 class="w-temper-sacles">°C | °F</h5>
-                                </div>
-                            </div>
-                            <h5 class="w-status">Mây rải rác</h5>
-                        </div>
-                    </div>
-                    <div class="w-detail">
-                        <ul class="w-detail-list">
-                            <li class="w-detail-list-item">
-                                <p>Khoảng nhiệt</p>
-                                <span>20°C - 20°C</span>
-                            </li>
-                            <li class="w-detail-list-item">
-                                <p>Tốc độ gió</p>
-                                <span>2.82m/s</span>
-                            </li>
-                            <li class="w-detail-list-item">
-                                <p>Lượng mưa</p>
-                                <span>1.57mm</span>
-                            </li>
-                        </ul>
-                        <ul class="w-detail-list">
-                            <li class="w-detail-list-item">
-                                <p>Độ ẩm</p>
-                                <span>78%</span>
-                            </li>
-                            <li class="w-detail-list-item">
-                                <p>Khả năng mưa</p>
-                                <span>100%</span>
-                            </li>
-                            <li class="w-detail-list-item">
-                                <p>Bình Minh</p>
-                                <span>06:16 AM</span>
-                            </li>
-                        </ul>
-                        <ul class="w-detail-list">
-                            <li class="w-detail-list-item">
-                                <p>Áp suất</p>
-                                <span>1015hPa</span>
-                            </li>
-                            <li class="w-detail-list-item">
-                                <p>Tầm nhìn</p>
-                                <span>10Km</span>
-                            </li>
-                            <li class="w-detail-list-item">
-                                <p>Hoàng hôn</p>
-                                <span>05:27 PM</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <p class="w-cr">
-                        Cập nhật lúc 06:50 PM. Openm-weather
-                    </p>
-                </div>
+            <div id="weather">
             </div>
         </div>
         <div class="m-tour col-md-6">
@@ -171,6 +108,7 @@ include("template/header.php");
     </div>
 </main>
 <script src="js/lazyload.js"></script>
+<script src="js/weather.js"></script>
 <?php
 include("template/footer.php");
 ?>

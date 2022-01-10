@@ -20,7 +20,7 @@ if (isset($_POST["last_id"])) {
         foreach ($datas as $row) {
             $output .= '
                 <div class="card mt-3">
-                    <div class="card-header">
+                    <div class="card-header m-content-header">
                         <div class="m-host">
                             <a class="host text-decoration-none" href="#">
                                 <img src="https://media.hahalolo.com/2020/06/17/13/5ee2d8913862a170cb80d8d1200617134632zV_40x40_high.jpg.webp" alt="">
