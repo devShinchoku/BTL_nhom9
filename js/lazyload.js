@@ -1,58 +1,5 @@
 $(document).ready(function () {
     var action = 'inactive';
-    function load_data(last_id = '') {
-        $.ajax({
-            type: "post",
-            url: "lazyload.php",
-            data: { last_id: last_id },
-            dataType: "json",
-            success: function (data) {
-                setTimeout(function () {
-                    $('.removeCard').remove();
-                    $('#clearfix_id').remove();
-                    $('.m-content').append(data.content_output);
-                    if (data.no_data_output != '') {
-                        $('#no_more_data').html(data.no_data_output);
-                    }
-                    action = 'inactive';
-                }, 1000);
-            }
-        });
-    }
-    function make_skeleton() {
-        var output = '';
-        $('#clearfix_id').remove();
-        for (var count = 0; count < 2; count++) {
-            output += "<div class='card removeCard mt-3'>";
-            output += "<div class='ph-item m-0'>";
-            output += "<div class='ph-row'>";
-            output += "<div class='ph-col-2'>";
-            output += "<div class='ph-avatar'></div>"
-            output += "</div>";
-            output += "<div class='ph-col-2'>";
-            output += "<div class='ph-row'><div class='ph-col-12'></div><div class='ph-col-12'></div></div>"
-            output += "</div>";
-            output += "</div>";
-            output += "</div>";
-            output += "<div>";
-            output += "<div class='ph-row'>";
-            output += "<div class='ph-col-12'></div>";
-            output += "<div class='ph-col-12'></div>";
-            output += "<div class='ph-col-12'></div>";
-            output += "</div>";
-            output += "<div>";
-            output += "<div class='ph-col-4'></div>";
-            output += "<div class='ph-col-4'></div>";
-            output += "<div class='ph-col-4'></div>";
-            output += "<div class='ph-col-4'></div>";
-            output += "</div>";
-            output += "</div>";
-            output += "</div>";
-            output += "</div>";
-        }
-        output += '<div class="clearfix" id="clearfix_id"></div>';
-        $('.m-content').append(output);
-    }
 
     if (action == 'inactive') {
         make_skeleton();
@@ -64,16 +11,67 @@ $(document).ready(function () {
 
     $(window).scroll(function () {
         var last_id = $('#clearfix_id').data('last_id');
-        if (last_id != '') {
-            if ($(window).scrollTop() + $(window).height() > $(".timeline").height() && action == 'inactive') {
-                action = 'active';
-                make_skeleton();
-
-                setTimeout(function () {
-                    load_data(last_id);
-                }, 5000);
-            }
+        console.log(last_id);
+        console.log(typeof(last_id));
+        if ($(window).scrollTop() + $(window).height() > $(".m-content").height() && action == 'inactive') {
+            action = 'active';
+            make_skeleton();
+            setTimeout(function () {
+                load_data(last_id);
+            }, 3000);
         }
     });
 
+    function make_skeleton() {
+        var output = '';
+        output+='<div class="card mt-3 ph-card">';
+        output+='<div class="ph-item m-0">';
+        output+='<div class="ph-col-2">';
+        output+='<div class="ph-avatar"></div>';
+        output+='</div>';
+        output+='<div>';
+        output+='<div class="ph-row">';
+        output+='<div class="ph-col-4"></div>';
+        output+='<div class="ph-col-8 empty"></div>';
+        output+='<div class="ph-col-6"></div>';
+        output+='<div class="ph-col-6 empty"></div>';
+        output+='<div class="ph-col-2"></div>';
+        output+='<div class="ph-col-10 empty"></div>';
+        output+='</div>';
+        output+='</div>';
+        output+='<div class="ph-col-12">';
+        output+='<div class="ph-picture"></div>';
+        output+='</div>';
+        output+='<div class="ph-col-12">';
+        output+='<div class="ph-row">';
+        output+='<div class="ph-col-10 big"></div>';
+        output+='<div class="ph-col-2 empty big"></div>';
+        output+='<div class="ph-col-4"></div>';
+        output+='<div class="ph-col-8 empty"></div>';
+        output+='<div class="ph-col-6"></div>';
+        output+='<div class="ph-col-6 empty"></div>';
+        output+='<div class="ph-col-12"></div>';
+        output+='</div>';
+        output+='</div>';
+        output+='</div>';
+        output+='</div>';
+        output+=output;
+        output+=output;
+        $('.m-content').append(output);
+    }
+
+    function load_data(last_id = 0) {
+        $.ajax({
+            type: "post",
+            url: "lazyload.php",
+            data: { last_id: last_id },
+            dataType: "json",
+            success: function (datas) {
+                $('.ph-card').remove();
+                $('#clearfix_id').remove();
+                $('.m-content').append(datas);
+                action = 'inactive';
+            }
+        });
+    }
 });
