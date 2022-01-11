@@ -82,7 +82,7 @@
                         </span>
                     </div>
                         <div class="btn-login mt-3 mb-5">
-                            <input type="password" name="email" autocomplete="off" required id= "inputEmail"/>
+                            <input type="text" name="email" autocomplete="off" required id= "inputEmail"/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name">
                                     Nhập email

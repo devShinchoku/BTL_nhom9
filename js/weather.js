@@ -13,7 +13,7 @@ $(document).ready(function () {
         output+='<div class="card">';
         output+='<div class="card-body">';
         output+='<h5 class="card-title location">'+data.name+', '+data.sys.country+'</h5>';
-        output+='<h5 class="card-title day mt-3">'+new Date(data.dt).toLocaleDateString("vi-VN",{weekday:'long', day:'numeric', month:'2-digit',year:'numeric'})+'</h5>';
+        output+='<h5 class="card-title day mt-3">'+new Date(data.dt*1000).toLocaleDateString("vi-VN",{weekday:'long', day:'numeric', month:'2-digit',year:'numeric'})+'</h5>';
         output+='<div class="w-cloud mt-2">';
         output+='<img with="64px" height="64px" src="http://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png">';
         output+='<div class="temper-container">';
@@ -36,7 +36,7 @@ $(document).ready(function () {
         output+='</li>';
         output+='<li class="w-detail-list-item">';
         output+='<p>Bình Minh</p>';
-        output+='<span>'+new Date(data.sys.sunrise).toLocaleTimeString("vi-VN",{hour:'2-digit',minute:'2-digit'})+' AM</span>';
+        output+='<span>'+new Date(data.sys.sunrise*1000).toLocaleTimeString("vi-VN",{hour:'2-digit',minute:'2-digit'})+' AM</span>';
         output+='</li>';
         output+='</ul>';
         output+='<ul class="w-detail-list">';
@@ -50,7 +50,7 @@ $(document).ready(function () {
         output+='</li>';
         output+='<li class="w-detail-list-item">';
         output+='<p>Hoàng hôn</p>';
-        output+='<span>'+new Date(data.sys.sunset).toLocaleTimeString("vi-VN",{hour:'2-digit',minute:'2-digit'})+' PM</span>';
+        output+='<span>'+new Date(data.sys.sunset*1000).toLocaleTimeString("vi-VN",{hour:'2-digit',minute:'2-digit'})+' PM</span>';
         output+='</li>';
         output+='</ul>';
         output+='<ul class="w-detail-list">';
