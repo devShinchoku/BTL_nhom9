@@ -1,15 +1,23 @@
 <?php
-session_start();
-$id = $_SESSION["id"];/* userid of the user */
-$con = mysqli_connect('127.0.0.1:3306','root','','admin') or die('Unable To connect');
-if(count($_POST)>0) {
-$result = mysqli_query($con,"SELECT *from student WHERE name='" . $id . "'");
-$row=mysqli_fetch_array($result);
-if($_POST["currentPassword"] == $row["password"] && $_POST["newPassword"] == $row["confirmPassword"] ) {
-mysqli_query($con,"UPDATE student set password='" . $_POST["newPassword"] . "' WHERE name='" . $id . "'");
-$message = "Password Changed Sucessfully";
-} else{
- $message = "Password is not correct";
-}
-}
+    session_start();
+    $email = $_POST["email"];
+    $passcu = $_POST["password_cu"];
+    $passmoi = $_POST["password_moi"];
+
+    $conn = mysqli_connect('localhost','root','','tour') or die('Unable To connect');
+    if(count($_POST)>0) {
+    $result = mysqli_query($conn,"SELECT * from db_user WHERE email='" . $email . "'");
+    $row=mysqli_fetch_array($result);
+
+
+        if(password_verify($_POST["password_cu"],$row["password"])){ 
+        // if($_POST["password_cu"] == $row["password"]) {
+            $pass_hash = password_hash($passmoi,PASSWORD_DEFAULT);
+            $sql02 = "UPDATE db_user SET password ='$pass_hash' WHERE email='$email'";
+            $result02 = mysqli_query($conn,$sql02);
+            header("location:../forgot/setnewpass.php");
+        } else{
+            header("location:index.php");
+        }
+    }
 ?>
