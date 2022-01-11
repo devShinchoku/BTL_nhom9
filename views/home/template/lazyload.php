@@ -1,5 +1,5 @@
 <?php
-require('config/db.php');
+require('configs/db.php');
 if (isset($_POST["last_id"])) {
     if ($_POST["last_id"] != 0) {
         $query = " SELECT * FROM view_tour 

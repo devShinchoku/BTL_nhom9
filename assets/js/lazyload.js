@@ -70,7 +70,7 @@ $(document).ready(function () {
     function load_data(last_id = 0) {
         $.ajax({
             type: "post",
-            url: "lazyload.php",
+            url: "mvc/home/index",
             data: { last_id: last_id },
             dataType: "json",
             success: function (datas) {
@@ -78,6 +78,7 @@ $(document).ready(function () {
                 $('#clearfix_id').remove();
                 $('.m-content').append(datas);
                 action = 'inactive';
+                console.log(datas);
             }
         });
     }
