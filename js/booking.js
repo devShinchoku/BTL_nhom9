@@ -9,14 +9,7 @@ $(document).ready(function() {
     });
 });
 
-$(document).ready(function() {
-  $("#id_delivery_3").click(function() {
-      $(".formInput33").show();
-  });
-  $("#id_delivery_4").click(function() {
-      $(".formInput44").hide();
-  });
-});
+
 // thêm thẻ
 document.getElementById("newsectionbtn").onclick = function() {
     var container = document.getElementById("container-99");
@@ -30,7 +23,14 @@ document.getElementById("newsectionbtn").onclick = function() {
     });
  });
 
-
+ $(document).ready(function(){
+	$('.showbtn').click(function(){
+  		$('#showhideForm').show();
+  	});
+    $('.hidebtn').click(function(){
+  		$('#showhideForm').hide();
+  	});
+});
  //remove thẻ
  $(document).ready(function(){
   $(".remove").click(function(){

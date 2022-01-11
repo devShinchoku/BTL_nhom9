@@ -429,51 +429,53 @@
                                                 chọn dịch vụ đi kèm và số lượng tương ứng</p>
                                 </div>
                             </div>
-                            <div class="bonus-dv-4 formInput33">
-                                <div id="bonus-dv-hide" class="bonus-dv-6 " style="padding: 12px 12px 0px 12px; display: flex; align-items: center; display:none">
-                                    <div class="bonus-dv-7">
-                                        <div class="bonus-dv-number" style="padding: 12px;">
-                                            <h6 class="numer-p">
-                                                <b>1.</b>
-                                            </h6>
+                            <div class="bonus-dv-4">
+                                <div id="showhideForm" style=" display:none;">
+                                    <div class="bonus-dv-6 " style="padding: 12px 12px 0px; display:flex; align-items: center;">
+                                        <div class="bonus-dv-7">
+                                            <div class="bonus-dv-number" style="padding: 12px;">
+                                                <h6 class="numer-p">
+                                                    <b>1.</b>
+                                                </h6>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="bonus-dv-8" style="padding: 12px; width: 50%;">
-                                        <div class="inputdecor-book btn-login-book full-w" style="margin-bottom:33px ">
-                                            <input class="full-w" type="text" name="name" autocomplete="off" required
-                                                style="margin-left: -33px;border-radius: 0px;" />
-                                            <label for="name" class="lable-name-book">
-                                                <span class="content-name2-book">
-                                                    Dịch vụ đi kèm
-                                                </span>
-                                            </label>
+                                        <div class="bonus-dv-8" style="padding: 12px; width: 50%;">
+                                            <div class="inputdecor-book btn-login-book full-w" style="margin-bottom:33px ">
+                                                    <input class="full-w" type="text" name="name" autocomplete="off" required
+                                                        style="margin-left: -33px;border-radius: 0px;" />
+                                                    <label for="name" class="lable-name-book">
+                                                        <span class="content-name2-book">
+                                                            Dịch vụ đi kèm
+                                                        </span>
+                                                    </label>
+                                            </div>
+                                            <!-- <div class="dv-icon">
+                                            <i class="bi bi-caret-down-fill"></i>
+                                            </div> -->
                                         </div>
-                                        <!-- <div class="dv-icon">
-                                        <i class="bi bi-caret-down-fill"></i>
-                                        </div> -->
-                                    </div>
-                                    <div class="bonus-dv-8" style="padding: 12px; width: 40%;">
-                                        <div class="inputdecor-book btn-login-book full-w" style="margin-bottom:33px ">
-                                            <input class="full-w" type="text" name="name" autocomplete="off" required
-                                                style="margin-left: -33px;border-radius: 0px;" />
-                                            <label for="name" class="lable-name-book">
-                                                <span class="content-name2-book">
-                                                    Số hành khách
-                                                </span>
-                                            </label>
+                                        <div class="bonus-dv-8" style="padding: 12px; width: 40%;">
+                                            <div class="inputdecor-book btn-login-book full-w" style="margin-bottom:33px ">
+                                                <input class="full-w" type="text" name="name" autocomplete="off" required
+                                                    style="margin-left: -33px;border-radius: 0px;" />
+                                                <label for="name" class="lable-name-book">
+                                                    <span class="content-name2-book">
+                                                        Số hành khách
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <!-- <div class="dv-icon">
+                                            <i class="bi bi-caret-down-fill"></i>
+                                            </div> -->
                                         </div>
-                                        <!-- <div class="dv-icon">
-                                        <i class="bi bi-caret-down-fill"></i>
-                                        </div> -->
-                                    </div>
-                                    <div class="close-dv">
-                                        <button id="bonus-dv-hide-btn" class="btn-close-dv">
-                                            <i class="bi bi-x-lg"></i>
-                                        </button>
+                                        <div class="close-dv">
+                                            <button class="btn-close-dv hidebtn">
+                                                <i class="bi bi-x-lg"></i>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="dv-plus" style="padding: 0px 12px 12px 12px;">
-                                    <button id="id_delivery_3">
+                                    <button class="showbtn">
                                         <i class="bi bi-plus-lg"></i>
                                         <h6 class="dv-plus-p" style=" margin-bottom: 8px;">Thêm dịch vụ</h6>
                                     </button>
