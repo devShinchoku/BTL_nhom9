@@ -15,9 +15,19 @@
             $pass_hash = password_hash($passmoi,PASSWORD_DEFAULT);
             $sql02 = "UPDATE db_user SET password ='$pass_hash' WHERE email='$email'";
             $result02 = mysqli_query($conn,$sql02);
-            header("location:../forgot/setnewpass.php");
+            ?>
+            <script>
+                alert("Bạn đã đổi mật khẩu thành công");
+                location.href = "index.php";      
+            </script>
+            <?php 
         } else{
-            header("location:index.php");
+            ?>
+            <script>
+                alert("Sai tài khoản hoặc mật khẩu");
+                location.href = "index.php";      
+            </script>
+            <?php 
         }
     }
 ?>

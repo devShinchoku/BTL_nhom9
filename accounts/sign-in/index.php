@@ -78,19 +78,19 @@
                     <div>                  
                        
                         <div class="btn-login mt-5 mb-5">
-                            <input type="text" name="email" autocomplete="off" required />
+                            <input type="text" name="email" autocomplete="off" required id= "inputEmailsign-in"/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name">
                                     Email hoặc số điện thoại
                                 </span>
                             </label>
-                            <small id="emailHelp"></small> 
                         </div>
+                        <small id="emailHelpsign-in"></small> 
 
                         
                         <!-- test -->
                         <div class="btn-login mt-3">
-                            <input id="password" type="password" name="password" autocomplete="off" required/>
+                            <input type="password" name="password" autocomplete="off" required id= "inputPasswordsign-in"/>
                             
                             <label for="name" class="lable-name"> 
                                 <span class="content-name" style="display: flex;">
@@ -103,12 +103,12 @@
                                 <i class="bi bi-eye-slash"></i>
                             </div>
                         </div>
-
                         <!-- test -->
-
-
+                        
+                        
                     </div>
                     <div class="mt-5 ">
+                        <small style = "mb-2" id="passlHelpsign-in"></small> 
                         <button class="su-signup-dk" name ="ok">
                             Đăng Nhập
                         </button>
@@ -188,7 +188,7 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="sign-in.js"></script>
+    <script src="../accounts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
 
