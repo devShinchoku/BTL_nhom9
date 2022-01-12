@@ -78,7 +78,7 @@
                     <div>                  
                        
                         <div class="btn-login mt-5 mb-5">
-                            <input type="text" name="email" autocomplete="off" required id= "inputEmailsign-in"/>
+                            <input type="email" name="email" autocomplete="off" required id= "inputEmailsign-in"/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name">
                                     Email hoặc số điện thoại

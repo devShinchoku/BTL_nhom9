@@ -12,22 +12,34 @@ include("template/header.php");
                 <div class="card-body">
                     <form class="m-search">
                         <div class="search-item">
-                            <div class="inputdecor">
-                                <input type="text" name="search1" id="search1">
-                                <label for="search1" class="lable-name">
-                                    <span class="content-name2">
-                                        Bạn muốn đi đâu
-                                    </span>
-                                </label>
+                            <div class = "col-md-6">
+                                <div class="inputdecor input-effect">
+                                    <input type="text" name="search1" id="search1" class = "effect-17">
+                                    <label for="search1" class="lable-name">
+                                        <span class="content-name2 focus-border">
+                                            Bạn muốn đi đâu
+                                        </span>
+                                    </label>
+                                </div>
                             </div>
-                            <div class="inputdecor">
+
+                            <div class="col-3 input-effect">
+                                <input class="effect-17" type="text" placeholder="">
+                                <label>First Name</label>
+                                <span class="focus-border"></span>
+                            </div>
+
+
+
+<!-- 
+                            <div class="inputdecor col-md-6 inputdecor-them">
                                 <label class="m-search-label">Ngày khởi hành</label>
                                 <input type="date" class="m-search-input" id="search2">
                             </div>
                         </div>
                         <div class="addon-item">
                             <div class="search-item">
-                                <div class="inputdecor">
+                                <div class="inputdecor col-md-6">
                                     <input type="text" name="search3" id="search3">
                                     <label for="search3" class="lable-name">
                                         <span class="content-name2">
@@ -35,7 +47,7 @@ include("template/header.php");
                                         </span>
                                     </label>
                                 </div>
-                                <div class="inputdecor">
+                                <div class="inputdecor col-md-6">
                                     <input type="text" name="search4" id="search4">
                                     <label for="search4" class="lable-name">
                                         <span class="content-name2">
@@ -45,7 +57,7 @@ include("template/header.php");
                                 </div>
                             </div>
                             <div class="search-item">
-                                <div class="inputdecor">
+                                <div class="inputdecor col-md-6">
                                     <input type="text" name="search5" id="search5">
                                     <label for="search5" class="lable-name">
                                         <span class="content-name2">
@@ -53,8 +65,8 @@ include("template/header.php");
                                         </span>
                                     </label>
                                 </div>
-                                <div class="inputdecor">
-                                    <select name="search6" id="search6">
+                                <div class="inputdecor col-md-6">
+                                    <select name="search6" id="search6" class = "search-location">
                                         <option value="2">Tất cả</option>
                                         <option value="1">Nước ngoài</option>
                                         <option value="0">Trong nước</option>
@@ -67,7 +79,7 @@ include("template/header.php");
                                 </div>
                             </div>
                             <div class="search-item">
-                                <div class="inputdecor">
+                                <div class="inputdecor col-md-6">
                                     <input type="number" name="search5" id="search5" min="0">
                                     <label for="search5" class="lable-name">
                                         <span class="content-name2">
@@ -75,7 +87,7 @@ include("template/header.php");
                                         </span>
                                     </label>
                                 </div>
-                                <div class="inputdecor">
+                                <div class="inputdecor col-md-6">
                                     <input type="text" name="search6" id="search6">
                                     <label for="search6" class="lable-name">
                                         <span class="content-name2">
@@ -84,25 +96,25 @@ include("template/header.php");
                                     </label>
                                 </div>
                             </div>
-                            <div class="search-item">
-                                <div class="inputdecor">
+                            <div class="search-item1">
+                                <div class="inputdecor1 col-md-6">
                                     <input type="checkbox" name="search7" id="search7">
                                     <label for="search7" class="lable-name">
-                                        <span class="content-name2">
+                                        <span class="content-name3">
                                             Có áp dụng khuyến mãi
                                         </span>
                                     </label>
                                 </div>
-                                <div class="inputdecor">
+                                <div class="inputdecor1 col-md-6">
                                     <input type="checkbox" name="search8" id="search8">
                                     <label for="search8" class="lable-name">
-                                        <span class="content-name2">
+                                        <span class="content-name3">
                                             Tour trả góp
                                         </span>
                                     </label>
                                 </div>
-                            </div>
-                        </div>
+                            </div>-->
+                        </div> 
                     </form>
                     <div class="btn">
                         <button class="btn1" id="btnAddon" data-btn_addon="">Tìm kiếm nâng cao</button>
@@ -190,6 +202,7 @@ include("template/header.php");
 <script src="js/addon.js"></script>
 <script src="js/fetch.js"></script>
 <script src="js/weather.js"></script>
+<script src="js/js.js"></script>
 <?php
 include("template/footer.php");
 ?>

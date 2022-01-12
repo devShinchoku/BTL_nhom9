@@ -84,8 +84,7 @@
                                     <span class="content-name1">
                                         Họ
                                     </span>
-                                </label>
-                                
+                                </label> 
                             </div>
                             <div class="su-name-input btn-login mt-5 mb-1">
                                 <input type="text" autocomplete="off" required style="margin-left: -50px;" name = 'last_name'/>
