@@ -2,8 +2,7 @@
 require('config/db.php');
 if (isset($_POST["last_id"])) {
     if ($_POST["last_id"] != 0) {
-        $query = " SELECT * FROM view_tour 
-                WHERE tour_id < {$_POST["last_id"]}";
+        $query = " SELECT * FROM view_tour WHERE tour_id < {$_POST["last_id"]}";
     } else {
         $query = "SELECT * FROM view_tour";
     }
@@ -12,17 +11,36 @@ if (isset($_POST["last_id"])) {
         if ($_POST["last_id"] != 0)
             $query .=" AND";
         else
-        $query .=" WHERE";
+            $query .=" WHERE";
         $query .=" (tour_name LIKE '%{$_POST['search_arr'][0]}%' OR country LIKE '%{$_POST['search_arr'][0]}%' OR city LIKE '%{$_POST['search_arr'][0]}%' OR district LIKE '%{$_POST['search_arr'][0]}%' OR address LIKE '%{$_POST['search_arr'][0]}%')";
+        
+        if($_POST['search_arr'][1] != '')
+            $query .=" AND starttime < '{$_POST['search_arr'][1]}'";
     }
     
+    if(isset($_POST['search_arr'][2])){
+        if($_POST['search_arr'][2] != '')
+            $query .=" AND (tour_name LIKE '%{$_POST['search_arr'][2]}%' OR country LIKE '%{$_POST['search_arr'][2]}%' OR city LIKE '%{$_POST['search_arr'][2]}%' OR district LIKE '%{$_POST['search_arr'][2]}%' OR address LIKE '%{$_POST['search_arr'][2]}%')";
+        if($_POST['search_arr'][2] != '')
+            $query .=" AND (tour_name LIKE '%{$_POST['search_arr'][3]}%' OR country LIKE '%{$_POST['search_arr'][3]}%' OR city LIKE '%{$_POST['search_arr'][3]}%' OR district LIKE '%{$_POST['search_arr'][3]}%' OR address LIKE '%{$_POST['search_arr'][3]}%')";
+        if($_POST['search_arr'][4] != '')
+            $query .=" AND category_name LIKE '%{$_POST['search_arr'][4]}%'";
+        if($_POST['search_arr'][5] != 2)
+            $query .=" AND type = {$_POST['search_arr'][5]}";
+        if($_POST['search_arr'][6] != '')
+            $query .=" AND tour_long = {$_POST['search_arr'][6]}";
+        if($_POST['search_arr'][8] == 'true')
+            $query .=" AND promotion > 0";
+        if($_POST['search_arr'][9] == 'true')
+            $query .=" AND is_installment = 1";
+        
+    }
     $query .=" ORDER BY tour_id DESC LIMIT 6";
-
+    // echo $query;
     $result = mysqli_query($conn,$query);
-    $total_row = mysqli_num_rows($result);
-
     $output = '';
-    if ($total_row > 0) {
+    $last_id = 0;
+    if (mysqli_num_rows($result) > 0) {
         $datas = mysqli_fetch_all($result,MYSQLI_ASSOC);
         $mydate=getdate(date("U"));
         foreach ($datas as $row) {
@@ -30,8 +48,8 @@ if (isset($_POST["last_id"])) {
                 <div class="card mt-3">
                     <div class="card-header m-content-header">
                         <div class="m-host">
-                            <a class="host text-decoration-none" href="#">
-                                <img src="https://media.hahalolo.com/2020/06/17/13/5ee2d8913862a170cb80d8d1200617134632zV_40x40_high.jpg.webp" alt="">
+                            <a class="host text-decoration-none">
+                                <img src="https://media.hahalolo.com/3020/06/17/13/5ee2d8913862a170cb80d8d1200617134632zV_40x40_high.jpg.webp" alt="">
                                 <span class="host-name">
                                    '.$row["host_name"].'
                                 </span>
@@ -148,7 +166,7 @@ if (isset($_POST["last_id"])) {
             $last_id = $row["tour_id"];
         }
     } else {
-        $last_id = 0;
+        $output.='<div class="card mt-3" style="min-height:100px;justify-content:center; text-align: center; font-size: 24px; color="rgba(0, 0, 0, 0.54)"> Không có kết quả nào phù hơp</div>';
     }
 
     $output .= '<div id="clearfix_id" data-last_id="'.$last_id.'"></div>';
