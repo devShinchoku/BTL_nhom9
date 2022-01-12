@@ -233,9 +233,8 @@ header {
   color: #909090;
   text-decoration: underline;
 }
-.search-item {
+.search-datetime {
   display: flex;
-  flex-direction: row;
 }
 .m-search-input {
   border: none;
@@ -1352,4 +1351,6 @@ input::-webkit-outer-spin-button {
 #eye i{
   cursor: pointer;
 }
+
+
 
