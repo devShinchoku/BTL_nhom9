@@ -20,14 +20,14 @@ if(isset($_POST['ok']))
                 $result02 = mysqli_query($conn,$sql02);
                 header("location:index.php");
 			}
-				else{
-					?>
-                            <script>
-                                alert("Sai tài khoản hoặc mật khẩu rồi!!!quay lại đi");
-                                location.href = "index.php";      
-                            </script>
-                            <?php 
-				}
+    else{
+    ?>
+        <script>
+            alert("Sai tài khoản hoặc mật khẩu rồi!!!quay lại đi");
+            location.href = "index.php";      
+        </script>
+        <?php 
+    }
 }
 ?>
 
