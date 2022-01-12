@@ -27,7 +27,7 @@ include("template/header.php");
                                 <input type="date" class="m-search-input" id="search2">
                             </div>
                         </div>
-                        <div class="addon-item">
+                        <div class="extend-item">
                             <div class="search-item">
                                 <div class="inputdecor col-md-6">
                                     <input type="text" name="search3" id="search3">
@@ -107,7 +107,7 @@ include("template/header.php");
                         </div> 
                     </form>
                     <div class="btn">
-                        <button class="btn1" id="btnAddon" data-btn_addon="">Tìm kiếm nâng cao</button>
+                        <button class="btn1" id="btnExtendSearch" data-btn_addon="">Tìm kiếm nâng cao</button>
                         <button type="submit" id="btnSearch" class="btn-m-search">Tìm kiếm</button>
                     </div>
                     <button class="btn-m-search-code">
@@ -189,7 +189,7 @@ include("template/header.php");
         </div>
     </div>
 </main>
-<script src="js/addon.js"></script>
+<script src="js/extend-search.js"></script>
 <script src="js/fetch.js"></script>
 <script src="js/weather.js"></script>
 <script src="js/js.js"></script>
