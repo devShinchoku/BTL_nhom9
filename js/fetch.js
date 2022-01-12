@@ -1,6 +1,7 @@
 $(document).ready(function () {
-    var action = 'inactive';
 
+    var action = 'inactive';
+    
     if (action == 'inactive') {
         make_skeleton();
 
@@ -70,8 +71,8 @@ $(document).ready(function () {
     function load_data(last_id = 0) {
         $.ajax({
             type: "post",
-            url: "lazyload.php",
-            data: { last_id: last_id },
+            url: "fetch.php",
+            data: { last_id: last_id ,},
             dataType: "json",
             success: function (datas) {
                 $('.ph-card').remove();
@@ -81,4 +82,7 @@ $(document).ready(function () {
             }
         });
     }
+
+    var a = $("inputaaaa").val();
+
 });

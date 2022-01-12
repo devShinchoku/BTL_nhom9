@@ -3,12 +3,14 @@ require('config/db.php');
 if (isset($_POST["last_id"])) {
     if ($_POST["last_id"] != 0) {
         $query = " SELECT * FROM view_tour 
-                WHERE tour_id < {$_POST["last_id"] }
-                ORDER BY tour_id DESC LIMIT 6";
+                WHERE tour_id < {$_POST["last_id"] }";
     } else {
-        $query = "SELECT * FROM view_tour 
-                ORDER BY tour_id DESC LIMIT 6";
+        $query = "SELECT * FROM view_tour";
     }
+
+    
+    $query .=" ORDER BY tour_id DESC LIMIT 6";
+
     $result = mysqli_query($conn,$query);
 
     $total_row = mysqli_num_rows($result);
