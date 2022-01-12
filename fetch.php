@@ -166,7 +166,7 @@ if (isset($_POST["last_id"])) {
             $last_id = $row["tour_id"];
         }
     } else {
-        $output.='<div class="card mt-3" style="min-height:100px;justify-content:center; text-align: center; font-size: 24px; color="rgba(0, 0, 0, 0.54)"> Không có kết quả nào phù hơp</div>';
+        $output.='<div class="card mt-3" style="min-height:100px;justify-content:center; text-align: center; font-size: 24px; color="rgba(0, 0, 0, 0.54)"> Không có kết quả nào phù hợp</div>';
     }
 
     $output .= '<div id="clearfix_id" data-last_id="'.$last_id.'"></div>';

@@ -1,3 +1,12 @@
+<?php 
+    if(isset($_GET['id']))
+    {
+        require '../config/db.php';
+        $sql = "SELECT * FROM view_tour WHERE tour_id = ".$_GET['id'];
+        $result = mysqli_query($conn,$sql);
+        if(mysqli_num_rows($result) > 0){
+            $data = mysqli_fetch_assoc($result);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +18,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header class="container-fluid fixed-top">
@@ -129,10 +138,10 @@
                 </div>
 
                 <div class="ct-tour-name mt-3">
-                    Vịnh Lan Hạ
+                    <?php echo $data['category_name'] ?>
                 </div>              
                 <h6 class="ct-tour-schedule mt-2">
-                    Tour du lịch Vịnh Lan Hạ 1 ngày - Du thuyền Serenity
+                    <?php echo $data['tour_name'] ?>
                 </h6>
                 <div class="ct-startend">
                     <div class="ct-start">
@@ -679,3 +688,10 @@
         crossorigin="anonymous"></script>
 </body>
 </html>
+
+<?php
+        }
+        else require '..template/error/404.php';
+    }
+    else require '..template/error/404.php';
+?>

@@ -74,7 +74,6 @@ $(document).ready(function () {
         if(isExtend){
             search_arr.push($('#search2').val(),$('#search3').val(),$('#search4').val(),$('#search5').val(),$('#search6').val(),$('#search7').val(),$('#search8').is(':checked'),$('#search9').is(':checked'));
         }
-        console.log(search_arr);
         $.ajax({
             type: "post",
             url: "fetch.php",
