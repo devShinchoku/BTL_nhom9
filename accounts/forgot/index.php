@@ -82,17 +82,17 @@
                         </span>
                     </div>
                         <div class="btn-login mt-3 mb-5">
-                            <input type="text" name="email" autocomplete="off" required id= "inputEmailforgot"/>
+                            <input type="text" name="email" autocomplete="off" required id= "inputEmail"/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name">
                                     Email hoặc số điện thoại
                                 </span>
                             </label>
                         </div>
-                        <small id="emailHelpforgot"></small> 
+                        <small id="emailHelp"></small> 
                     </div>
                     <div class="mt-5 ">
-                        <button class="su-signup-dk" name ="ok">
+                        <button class="su-signup-dk" name ="ok" id = "btnSubmitACC">
                             Tìm kiếm
                         </button>
                     </div>

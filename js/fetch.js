@@ -70,10 +70,11 @@ $(document).ready(function () {
 
     function load_data(last_id = 0) {
         var search_arr = [];
-        search_arr.push($('#search1').val(),$('#search2').val());
-        if(isAddon){
-            search_arr.push($('#search3').val(),$('#search4').val(),$('#search5').val(),$('#search6').val(),$('#search7').is(':checked'),$('#search7').is(':checked'));
+        search_arr.push($('#search0').val(),$('#search1').val());
+        if(isExtend){
+            search_arr.push($('#search2').val(),$('#search3').val(),$('#search4').val(),$('#search5').val(),$('#search6').val(),$('#search7').val(),$('#search8').is(':checked'),$('#search9').is(':checked'));
         }
+        console.log(search_arr);
         $.ajax({
             type: "post",
             url: "fetch.php",
@@ -95,6 +96,5 @@ $(document).ready(function () {
         setTimeout(function () {
             load_data(0);
         }, 400);
-        console.log(search_arr);
     });
 });

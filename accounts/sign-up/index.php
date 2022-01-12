@@ -84,8 +84,7 @@
                                     <span class="content-name1">
                                         Họ
                                     </span>
-                                </label>
-                                
+                                </label> 
                             </div>
                             <div class="su-name-input btn-login mt-5 mb-1">
                                 <input type="text" autocomplete="off" required style="margin-left: -50px;" name = 'last_name'/>
@@ -99,29 +98,29 @@
                         </div>
 
                         <div class="btn-login mt-4 mb-4">
-                            <input type="text" autocomplete="off" required name = 'email' id="inputEmailsign-up"/>
+                            <input type="text" autocomplete="off" required name = 'email' id="inputEmail"/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name1">
                                     Email hoặc số điện thoại
                                 </span>
                             </label>    
                         </div>
-                        <small id="emailHelpsign-up"></small> 
+                        <small id="emailHelp"></small> 
                         
 
 
                         <div class="btn-login mt-4 mb-4">
-                            <input type="password" autocomplete="off" required name = 'password' id = "inputPasswordsign-up1"/>
+                            <input type="password" autocomplete="off" required name = 'password' id = "inputPassword1"/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name1">
                                     Mật khẩu
                                 </span>
                             </label>
                         </div>
-                        <p id="passlHelpsign-up"></p> 
+                        <small id="passlHelp1"></small> 
 
                         <div class="btn-login mt-4 mb-4">
-                            <input type="password" autocomplete="off" required name = 'rpassword' id = "inputPasswordsign-up2"/>
+                            <input type="password" autocomplete="off" required name = 'rpassword' id = "inputPassword2"/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name1">
                                     Xác nhận mật khẩu
@@ -129,11 +128,11 @@
                             </label>
                             
                         </div>  
-                        <p id="sr_passsign-up1"></p>                 
+                        <p id="checkpass"></p>                
 
                     </div>
                     <div class="mt-5">
-                        <button class="su-signup-dk" type="submit" name ='ok'>
+                        <button class="su-signup-dk" type="submit" name ='ok' id = "btnSubmitACC">
                             Đăng kí
                         </button>
                     </div>

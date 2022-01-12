@@ -78,19 +78,19 @@
                     <div>                  
                        
                         <div class="btn-login mt-5 mb-5">
-                            <input type="text" name="email" autocomplete="off" required id= "inputEmailsign-in"/>
+                            <input type="text" name="email" autocomplete="off" required id= "inputEmail"/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name">
                                     Email hoặc số điện thoại
                                 </span>
                             </label>
                         </div>
-                        <small id="emailHelpsign-in"></small> 
+                        <small id="emailHelp"></small> 
 
                         
                         <!-- test -->
                         <div class="btn-login mt-3">
-                            <input type="password" name="password" autocomplete="off" required id= "inputPasswordsign-in"/>
+                            <input type="password" name="password" autocomplete="off" required id= "inputPassword1"/>
                             
                             <label for="name" class="lable-name"> 
                                 <span class="content-name" style="display: flex;">
@@ -108,8 +108,8 @@
                         
                     </div>
                     <div class="mt-5 ">
-                        <small style = "mb-2" id="passlHelpsign-in"></small> 
-                        <button class="su-signup-dk" name ="ok">
+                        <small style = "mb-2" id="passlHelp1"></small> 
+                        <button class="su-signup-dk" name ="ok" id = "btnSubmitACC">
                             Đăng Nhập
                         </button>
                     </div>
