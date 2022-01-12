@@ -18,12 +18,16 @@ if(isset($_POST['ok']))
                 $pass_hash = password_hash($passbam,PASSWORD_DEFAULT);
                 $sql02 = "UPDATE db_user SET password ='$pass_hash' WHERE email='$email'";
                 $result02 = mysqli_query($conn,$sql02);
-                header("location:setnewpass.php");
+                header("location:index.php");
 			}
-				else{
-					// echo 'invalid userid';
-                    header("location:index.php");
-				}
+    else{
+    ?>
+        <script>
+            alert("Sai tài khoản hoặc mật khẩu rồi!!!quay lại đi");
+            location.href = "index.php";      
+        </script>
+        <?php 
+    }
 }
 ?>
 

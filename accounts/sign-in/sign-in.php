@@ -1,4 +1,3 @@
-
 <?php
     require('../../config/db.php');
     if (isset($_POST['ok']) && isset($_POST['email'])) {
@@ -21,52 +20,30 @@
                     if(password_verify($pass,$password)){                 
                         // if($usertype == '99'){  
                         //     // $_SESSION['isLoginOK'] = $email;
-                        //     // header("location:../admin/admin_page.php"); 
-                        //     ?>
-                                
-
-                             <?php                        
+                        //     // header("location:../admin/admin_page.php");
+                        //  ?>
+                            <?php                        
                         // }                      
                         // else{
                             ?>
                                 <script>
                                     alert("Đăng nhập thành công");
-                                    location.href = "../index.php";
-                                    
+                                    location.href = "../index.php";                                   
                                 </script>
-
                             <?php        
-                            // echo 'hello';
-                            // header("location: ../main.php"); 
                         }
                     }
                     else{
                         ?>
-                                <script>
-                                    alert("Sai mật khẩu rồi!!!quay lại đi");
-                                    location.href = "index.php";
-                                    
-                                </script>
-
+                            <script>
+                                alert("Sai tài khoản hoặc mật khẩu rồi!!!quay lại đi");
+                                location.href = "index.php";      
+                            </script>
                             <?php  
                     }
                 }
-                else{
-                    ?>
-                    <script>
-                        alert("Tài khoản không tồn tại!!!");
-                        location.href = "index.php";
-                        // alert("hshshsh");
-                    </script>
-
-                <?php  
-                }
             }
-
+            
         }
-       
-
-
-    
     //}
     ?>

@@ -82,32 +82,32 @@
                         </span>
                     </div>
                         <div class="btn-login mt-3 mb-5">
-                            <input type="text" name="email" autocomplete="off" required id= "inputEmail"/>
+                            <input type="text" name="email" autocomplete="off" required id= "inputEmailchange"/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name">
                                     Nhập email
                                 </span>
                             </label>
                         </div>
-                        <small id="emailHelp"></small> 
+                        <small id="emailHelpchange"></small> 
                         <div class="btn-login mt-3 mb-5">
-                            <input type="password" name="password_cu" autocomplete="off" required id= "inputPassword1"/>
+                            <input type="password" name="password_cu" autocomplete="off" required id= "inputPasswordchange1"/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name">
                                     Mật khẩu cũ
                                 </span>
                             </label>
                         </div>
-                        <small id="passlHelp1"></small>
+                        <small id="passlHelpchange1"></small>
                         <div class="btn-login mt-3 mb-5">
-                            <input type="password" name="password_moi" autocomplete="off" required id= "inputPassword2"/>
+                            <input type="password" name="password_moi" autocomplete="off" required id= "inputPasswordchange2"/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name">
                                     Mật khẩu mới
                                 </span>
                             </label>
                         </div>
-                        <small id="passlHelp2"></small>
+                        <small id="passlHelpchange2"></small>
                     </div>
                     <div class="mt-5 ">
                         <button class="su-signup-dk" name ="ok">
@@ -170,7 +170,7 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="change.js"></script>
+    <script src="../accounts.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
 

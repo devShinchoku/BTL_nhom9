@@ -1,6 +1,7 @@
 $(document).ready(function () {
-    var action = 'inactive';
 
+    var action = 'inactive';
+    
     if (action == 'inactive') {
         make_skeleton();
 
@@ -67,11 +68,11 @@ $(document).ready(function () {
         $('.m-content').append(output);
     }
 
-    function load_data(last_id = 0) {
+    function load_data(last_id = 0, search_arr=[]) {
         $.ajax({
             type: "post",
-            url: "lazyload.php",
-            data: { last_id: last_id },
+            url: "fetch.php",
+            data: { last_id: last_id, search_arr : search_arr},
             dataType: "json",
             success: function (datas) {
                 $('.ph-card').remove();
@@ -81,4 +82,13 @@ $(document).ready(function () {
             }
         });
     }
+
+    $('#btnSearch').click(function () {
+        var search_arr = []
+        search_arr.push($('#search1').val(),$('#search2').val());
+        if(isAddon){
+
+        }
+        console.log(search_arr);
+    });
 });

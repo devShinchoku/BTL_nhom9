@@ -8,32 +8,112 @@ include("template/header.php");
             </div>
         </div>
         <div class="m-tour col-md-6">
-            <form class="m-search card">
+            <div class="card">
                 <div class="card-body">
-                    <div class="search-datetime">
-                        <div class="inputdecor btn-login">
-                            <input type="text" name="name" autocomplete="off" required>
-                            <label for="name" class="lable-name">
-                                <span class="content-name2">
-                                    Bạn muốn đi đâu
-                                </span>
-                            </label>
+                    <form class="m-search">
+                        <div class="search-item">
+                            <div class="inputdecor">
+                                <input type="text" name="search1" id="search1">
+                                <label for="search1" class="lable-name">
+                                    <span class="content-name2">
+                                        Bạn muốn đi đâu
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="inputdecor">
+                                <label class="m-search-label">Ngày khởi hành</label>
+                                <input type="date" class="m-search-input" id="search2">
+                            </div>
                         </div>
-                        <div>
-                            <label class="m-search-label">Ngày khởi hành</label>
-                            <input class="m-search-input" type="datetime" id="m-search-date">
+                        <div class="addon-item">
+                            <div class="search-item">
+                                <div class="inputdecor">
+                                    <input type="text" name="search3" id="search3">
+                                    <label for="search3" class="lable-name">
+                                        <span class="content-name2">
+                                            Điểm khởi hành
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="inputdecor">
+                                    <input type="text" name="search4" id="search4">
+                                    <label for="search4" class="lable-name">
+                                        <span class="content-name2">
+                                            Điểm đến
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="search-item">
+                                <div class="inputdecor">
+                                    <input type="text" name="search5" id="search5">
+                                    <label for="search5" class="lable-name">
+                                        <span class="content-name2">
+                                            Chủ để tour
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="inputdecor">
+                                    <select name="search6" id="search6">
+                                        <option value="2">Tất cả</option>
+                                        <option value="1">Nước ngoài</option>
+                                        <option value="0">Trong nước</option>
+                                    </select>
+                                    <label for="search6" class="lable-name">
+                                        <span class="content-name2">
+                                            Loại tour
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="search-item">
+                                <div class="inputdecor">
+                                    <input type="number" name="search5" id="search5" min="0">
+                                    <label for="search5" class="lable-name">
+                                        <span class="content-name2">
+                                            Số ngày đi tour
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="inputdecor">
+                                    <input type="text" name="search6" id="search6">
+                                    <label for="search6" class="lable-name">
+                                        <span class="content-name2">
+                                            khoảng giá
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="search-item">
+                                <div class="inputdecor">
+                                    <input type="checkbox" name="search7" id="search7">
+                                    <label for="search7" class="lable-name">
+                                        <span class="content-name2">
+                                            Có áp dụng khuyến mãi
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="inputdecor">
+                                    <input type="checkbox" name="search8" id="search8">
+                                    <label for="search8" class="lable-name">
+                                        <span class="content-name2">
+                                            Tour trả góp
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                     <div class="btn">
-                        <button class="btn1">Tìm kiếm nâng cao</button>
-                        <button class="btn-m-search">Tìm kiếm</button>
+                        <button class="btn1" id="btnAddon" data-btn_addon="">Tìm kiếm nâng cao</button>
+                        <button type="submit" id="btnSearch" class="btn-m-search">Tìm kiếm</button>
                     </div>
                     <button class="btn-m-search-code">
                         Tra cứu mã đặt Tour
                     </button>
                 </div>
-            </form>
-            <div class="m-content">           
+            </div>
+            <div class="m-content">
                 <div id="clearfix_id" data-last_id="0"></div>
             </div>
         </div>
@@ -107,7 +187,8 @@ include("template/header.php");
         </div>
     </div>
 </main>
-<script src="js/lazyload.js"></script>
+<script src="js/addon.js"></script>
+<script src="js/fetch.js"></script>
 <script src="js/weather.js"></script>
 <?php
 include("template/footer.php");

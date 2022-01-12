@@ -99,29 +99,29 @@
                         </div>
 
                         <div class="btn-login mt-4 mb-4">
-                            <input type="text" autocomplete="off" required name = 'email' id="inputEmail"/>
+                            <input type="text" autocomplete="off" required name = 'email' id="inputEmailsign-up"/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name1">
                                     Email hoặc số điện thoại
                                 </span>
                             </label>    
                         </div>
-                        <small id="emailHelp"></small> 
+                        <small id="emailHelpsign-up"></small> 
                         
 
 
                         <div class="btn-login mt-4 mb-4">
-                            <input type="password" autocomplete="off" required name = 'password' id = "inputPassword1"/>
+                            <input type="password" autocomplete="off" required name = 'password' id = "inputPasswordsign-up1"/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name1">
                                     Mật khẩu
                                 </span>
                             </label>
                         </div>
-                        <p id="passlHelp"></p> 
+                        <p id="passlHelpsign-up"></p> 
 
                         <div class="btn-login mt-4 mb-4">
-                            <input type="password" autocomplete="off" required name = 'rpassword' id = "inputPassword2"/>
+                            <input type="password" autocomplete="off" required name = 'rpassword' id = "inputPasswordsign-up2"/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name1">
                                     Xác nhận mật khẩu
@@ -129,7 +129,7 @@
                             </label>
                             
                         </div>  
-                        <p id="sr_pass1"></p>                 
+                        <p id="sr_passsign-up1"></p>                 
 
                     </div>
                     <div class="mt-5">
@@ -233,7 +233,7 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="sign-up.js"></script>
+    <script src="../accounts.js"></script>
 </body>
 
 </html>
