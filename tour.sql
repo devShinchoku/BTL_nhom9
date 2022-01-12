@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 10, 2022 lúc 09:54 AM
+-- Thời gian đã tạo: Th1 12, 2022 lúc 11:10 AM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 8.0.10
 
@@ -83,6 +83,20 @@ CREATE TABLE `db_passenger` (
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `db_service`
+--
+
+DROP TABLE IF EXISTS `db_service`;
+CREATE TABLE `db_service` (
+  `service_id` int(11) NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `price` decimal(10,2) DEFAULT NULL,
+  `tour_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `db_tour`
 --
 
@@ -154,27 +168,28 @@ DROP TABLE IF EXISTS `db_tourcategory`;
 CREATE TABLE `db_tourcategory` (
   `category_id` int(11) NOT NULL,
   `name` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `host_id` int(11) DEFAULT NULL
+  `host_id` int(11) DEFAULT NULL,
+  `type` bit(1) DEFAULT b'0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `db_tourcategory`
 --
 
-INSERT INTO `db_tourcategory` (`category_id`, `name`, `host_id`) VALUES
-(2, 'Epoxy Flooring', 5),
-(3, 'Marlite Panels (FED)', 6),
-(4, 'Retaining Wall and Brick Pavers', 7),
-(5, 'Landscaping & Irrigation', 7),
-(6, 'Soft Flooring and Base', 7),
-(7, 'Ornamental Railings', 9),
-(8, 'Overhead Doors', 2),
-(9, 'Ornamental Railings', 4),
-(10, 'Hard Tile & Stone', 7),
-(12, 'Plumbing & Medical Gas', 4),
-(13, 'Structural & Misc Steel Erection', 6),
-(14, 'Electrical and Fire Alarm', 7),
-(15, 'Fire Sprinkler System', 9);
+INSERT INTO `db_tourcategory` (`category_id`, `name`, `host_id`, `type`) VALUES
+(2, 'Epoxy Flooring', 5, b'0'),
+(3, 'Marlite Panels (FED)', 6, b'0'),
+(4, 'Retaining Wall and Brick Pavers', 7, b'0'),
+(5, 'Landscaping & Irrigation', 7, b'0'),
+(6, 'Soft Flooring and Base', 7, b'0'),
+(7, 'Ornamental Railings', 9, b'0'),
+(8, 'Overhead Doors', 2, b'0'),
+(9, 'Ornamental Railings', 4, b'0'),
+(10, 'Hard Tile & Stone', 7, b'0'),
+(12, 'Plumbing & Medical Gas', 4, b'0'),
+(13, 'Structural & Misc Steel Erection', 6, b'0'),
+(14, 'Electrical and Fire Alarm', 7, b'0'),
+(15, 'Fire Sprinkler System', 9, b'0');
 
 --
 -- Bẫy `db_tourcategory`
@@ -334,8 +349,11 @@ CREATE TABLE `view_tour` (
 ,`endtime` date
 ,`man_price` decimal(10,2)
 ,`district` varchar(50)
+,`country` varchar(60)
 ,`city` varchar(85)
 ,`description` varchar(400)
+,`address` varchar(150)
+,`type` bit(1)
 );
 
 -- --------------------------------------------------------
@@ -346,7 +364,7 @@ CREATE TABLE `view_tour` (
 DROP TABLE IF EXISTS `view_tour`;
 
 DROP VIEW IF EXISTS `view_tour`;
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_tour`  AS SELECT `db_tour`.`tour_id` AS `tour_id`, `db_tour`.`name` AS `tour_name`, `db_tourcategory`.`name` AS `category_name`, `db_tourhost`.`name` AS `host_name`, `db_tour`.`tour_long` AS `tour_long`, `db_tour`.`endtime` AS `endtime`, `db_tour`.`man_price` AS `man_price`, `db_tour`.`district` AS `district`, `db_tour`.`city` AS `city`, `db_tour`.`description` AS `description` FROM ((`db_tour` join `db_tourcategory` on(`db_tour`.`category_id` = `db_tourcategory`.`category_id`)) join `db_tourhost` on(`db_tourcategory`.`host_id` = `db_tourhost`.`host_id`)) WHERE `db_tour`.`endtime` >= curdate() AND `db_tour`.`starttime` <= curdate() ;
+CREATE OR REPLACE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_tour`  AS SELECT `db_tour`.`tour_id` AS `tour_id`, `db_tour`.`name` AS `tour_name`, `db_tourcategory`.`name` AS `category_name`, `db_tourhost`.`name` AS `host_name`, `db_tour`.`tour_long` AS `tour_long`, `db_tour`.`endtime` AS `endtime`, `db_tour`.`man_price` AS `man_price`, `db_tour`.`district` AS `district`, `db_tour`.`country` AS `country`, `db_tour`.`city` AS `city`, `db_tour`.`description` AS `description`, `db_tour`.`address` AS `address`, `db_tourcategory`.`type` AS `type` FROM ((`db_tour` join `db_tourcategory` on(`db_tour`.`category_id` = `db_tourcategory`.`category_id`)) join `db_tourhost` on(`db_tourcategory`.`host_id` = `db_tourhost`.`host_id`)) WHERE `db_tour`.`endtime` >= curdate() AND `db_tour`.`starttime` <= curdate() AND `db_tour`.`status` = 1 ;
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -364,6 +382,12 @@ ALTER TABLE `db_order`
 --
 ALTER TABLE `db_passenger`
   ADD PRIMARY KEY (`passenger_id`);
+
+--
+-- Chỉ mục cho bảng `db_service`
+--
+ALTER TABLE `db_service`
+  ADD PRIMARY KEY (`service_id`);
 
 --
 -- Chỉ mục cho bảng `db_tour`
@@ -408,6 +432,12 @@ ALTER TABLE `db_order`
 --
 ALTER TABLE `db_passenger`
   MODIFY `passenger_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT cho bảng `db_service`
+--
+ALTER TABLE `db_service`
+  MODIFY `service_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `db_tour`

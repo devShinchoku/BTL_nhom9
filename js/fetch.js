@@ -68,7 +68,12 @@ $(document).ready(function () {
         $('.m-content').append(output);
     }
 
-    function load_data(last_id = 0, search_arr=[]) {
+    function load_data(last_id = 0) {
+        var search_arr = [];
+        search_arr.push($('#search1').val(),$('#search2').val());
+        if(isAddon){
+            search_arr.push($('#search3').val(),$('#search4').val(),$('#search5').val(),$('#search6').val(),$('#search7').is(':checked'),$('#search7').is(':checked'));
+        }
         $.ajax({
             type: "post",
             url: "fetch.php",
@@ -84,11 +89,12 @@ $(document).ready(function () {
     }
 
     $('#btnSearch').click(function () {
-        var search_arr = []
-        search_arr.push($('#search1').val(),$('#search2').val());
-        if(isAddon){
-
-        }
+        $('.m-content').empty();
+        $('.m-content').append('<div id="clearfix_id" data-last_id="0"></div>');
+        make_skeleton();
+        setTimeout(function () {
+            load_data(0);
+        }, 400);
         console.log(search_arr);
     });
 });

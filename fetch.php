@@ -3,16 +3,22 @@ require('config/db.php');
 if (isset($_POST["last_id"])) {
     if ($_POST["last_id"] != 0) {
         $query = " SELECT * FROM view_tour 
-                WHERE tour_id < {$_POST["last_id"] }";
+                WHERE tour_id < {$_POST["last_id"]}";
     } else {
         $query = "SELECT * FROM view_tour";
     }
 
-
+    if(isset($_POST['search_arr'][0])){
+        if ($_POST["last_id"] != 0)
+            $query .=" AND";
+        else
+        $query .=" WHERE";
+        $query .=" (tour_name LIKE '%{$_POST['search_arr'][0]}%' OR country LIKE '%{$_POST['search_arr'][0]}%' OR city LIKE '%{$_POST['search_arr'][0]}%' OR district LIKE '%{$_POST['search_arr'][0]}%' OR address LIKE '%{$_POST['search_arr'][0]}%')";
+    }
+    
     $query .=" ORDER BY tour_id DESC LIMIT 6";
 
     $result = mysqli_query($conn,$query);
-
     $total_row = mysqli_num_rows($result);
 
     $output = '';
