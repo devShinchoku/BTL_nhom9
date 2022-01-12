@@ -403,14 +403,14 @@
                                 </div>
                                 <div class="male-female">
                                     <div class="gender-lh4">
-                                        <input class="fe-male" type="radio" name="chooseone" value="Nam"
+                                        <input class="fe-male1" type="radio" name="chooseone1" value="Nam1"
                                             style="height:20px; width:20px; vertical-align: middle;">
-                                        <label for="Nam">Nam</label>
+                                        <label for="Nam1">Nam</label>
                                     </div>
                                     <div class="gender-lh4">
-                                        <input class="fe-male" type="radio" name="chooseone" value="Nu"
+                                        <input class="fe-male1" type="radio" name="chooseone1" value="Nu1"
                                             style="height:20px; width:20px; vertical-align: middle;">
-                                        <label for="Nu">Nữ</label>
+                                        <label for="Nu1">Nữ</label>
                                     </div>
                                 </div>
                             </div>
@@ -440,15 +440,21 @@
                                             </div>
                                         </div>
                                         <div class="bonus-dv-8" style="padding: 12px; width: 50%;">
-                                            <div class="inputdecor-book btn-login-book full-w" style="margin-bottom:33px ">
-                                                    <input class="full-w" type="text" name="name" autocomplete="off" required
-                                                        style="margin-left: -33px;border-radius: 0px;" />
-                                                    <label for="name" class="lable-name-book">
-                                                        <span class="content-name2-book">
-                                                            Dịch vụ đi kèm
-                                                        </span>
-                                                    </label>
-                                            </div>
+                                            <form action="booking.php" method="POST">
+                                                <div class="inputdecor-book btn-login-book full-w" style="margin-bottom:33px ">
+                                                        <input list="lists-dv" is="list-dv" class="full-w" type="text" name="list-dv" autocomplete="off" required
+                                                            style="margin-left: -33px;border-radius: 0px;" />
+                                                        <label for="name" class="lable-name-book">
+                                                            <span class="content-name2-book">
+                                                                Dịch vụ đi kèm
+                                                            </span>
+                                                        </label>
+                                                        <datalist id="lists-dv">
+                                                            <option value="Spa"></option>>  
+                                                            <option value="Cắm trại"></option>
+                                                        </datalist>
+                                                </div>
+                                            </form>
                                             <!-- <div class="dv-icon">
                                             <i class="bi bi-caret-down-fill"></i>
                                             </div> -->
@@ -754,6 +760,21 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="time-1" style="padding: 8px; display: flex; display:none">
+                            <div class="time-2">
+                                <div class="time-3" style="padding: 8px;">
+                                    <label for="">Trẻ em </label>
+                                    <b>x1</b>
+                                </div>
+                            </div>
+                            <div class="time-4">
+                                <div class="time-5" style="padding: 8px;">
+                                    <div class="money-bill-bottom">
+                                        <b>1.700.000 ₫</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="time-1" style="padding: 8px; display: flex;">
                             <div class="time-2">
                                 <div class="time-3" style="padding: 8px;">
@@ -868,13 +889,13 @@
         });
     });
     </script>
-    <script>
+    <!-- <script>
     document.getElementById("newsectionbtn999").onclick = function() {
     var container = document.getElementById("container-999");
     var section = document.getElementById("mainsection999");
     container.appendChild(section.cloneNode(true));
     }
-    </script>
+    </script> -->
     <script>
     </script>
 </body>
