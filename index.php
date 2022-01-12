@@ -22,16 +22,6 @@ include("template/header.php");
                                     </label>
                                 </div>
                             </div>
-
-                            <div class="col-3 input-effect">
-                                <input class="effect-17" type="text" placeholder="">
-                                <label>First Name</label>
-                                <span class="focus-border"></span>
-                            </div>
-
-
-
-<!-- 
                             <div class="inputdecor col-md-6 inputdecor-them">
                                 <label class="m-search-label">Ngày khởi hành</label>
                                 <input type="date" class="m-search-input" id="search2">
@@ -113,7 +103,7 @@ include("template/header.php");
                                         </span>
                                     </label>
                                 </div>
-                            </div>-->
+                            </div>
                         </div> 
                     </form>
                     <div class="btn">

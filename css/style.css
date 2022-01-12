@@ -1336,7 +1336,7 @@ input::-webkit-outer-spin-button {
 }
 
 
-/* test */
+/* check lại phan search */
 
 
 .inputdecor input:hover {
@@ -1368,7 +1368,7 @@ input::-webkit-outer-spin-button {
 .inputdecor1{
   margin-left: 20px;
 }
-.inputdecor-them input{
+.inputdecor-them input {
   height: 32px;
   width: 260px;
   margin-top: 2px;
@@ -1393,16 +1393,16 @@ input::-webkit-outer-spin-button {
   color: #0ac46b;
   pointer-events: none;
   transition: all 0.3s ease;
-  position: absolute;
+  position: relative;
   left: 0px;
 }
 .inputdecor lable::after{
-  position: absolute;
+  position: relative;
   left: 0px;
   top: 0px;
 }
 .content-name2 {
-  position: absolute;
+  position: relative;
   top: 0px;
   left: 0px;
   transition: all 0.3s ease;
@@ -1416,3 +1416,4 @@ input::-webkit-outer-spin-button {
   background-color: white;
 }
 
+  

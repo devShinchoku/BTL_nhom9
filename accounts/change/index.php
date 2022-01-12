@@ -82,35 +82,35 @@
                         </span>
                     </div>
                         <div class="btn-login mt-3 mb-5">
-                            <input type="text" name="email" autocomplete="off" required id= "inputEmailchange"/>
+                            <input type="text" name="email" autocomplete="off" required id= "inputEmail"/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name">
                                     Nhập email
                                 </span>
                             </label>
                         </div>
-                        <small id="emailHelpchange"></small> 
+                        <small id="emailHelp"></small> 
                         <div class="btn-login mt-3 mb-5">
-                            <input type="password" name="password_cu" autocomplete="off" required id= "inputPasswordchange1"/>
+                            <input type="password" name="password_cu" autocomplete="off" required id= "inputPassword1"/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name">
                                     Mật khẩu cũ
                                 </span>
                             </label>
                         </div>
-                        <small id="passlHelpchange1"></small>
+                        <small id="passlHelp1"></small>
                         <div class="btn-login mt-3 mb-5">
-                            <input type="password" name="password_moi" autocomplete="off" required id= "inputPasswordchange2"/>
+                            <input type="password" name="password_moi" autocomplete="off" required id= "inputPassword2"/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name">
                                     Mật khẩu mới
                                 </span>
                             </label>
                         </div>
-                        <small id="passlHelpchange2"></small>
+                        <small id="passlHelp2"></small>
                     </div>
                     <div class="mt-5 ">
-                        <button class="su-signup-dk" name ="ok">
+                        <button class="su-signup-dk" name ="ok" id = "btnSubmitACC">
                             Xác nhận
                         </button>
                     </div>
