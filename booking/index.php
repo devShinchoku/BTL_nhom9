@@ -1,3 +1,18 @@
+<?php
+if(isset($_GET['id'])){{
+    $conn = mysqli_connect('localhost','root','','tour');
+    if(!$conn){
+        die("Ket noi that bai");
+    }
+    $sql="SELECT * FROM db_tour where tour_id = '{$_GET['id']}'";
+    $result = mysqli_query($conn,$sql);
+    if(mysqli_num_rows($result)>0){
+        $data = mysqli_fetch_assoc($result);
+    }
+    else
+        echo 'Lỗi truy cập';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -670,8 +685,11 @@
                     <div class="bill-info-1" style="padding: 16px 16px 5px;">
                         <div class="name-info" style="margin-bottom: 0.35rem;">
                             <p style="margin-bottom: 5px;">
-                               <b style="font-weight: 620;">001: Đà Nẵng – Bà Nà – Ngũ Hành Sơn – Hội An (3N2Đ)</b> 
+                               <b style="font-weight: 620;"><?php echo $data['name'] ?></b> 
                             </p>
+                            <?php
+                                }
+                            ?>
                         </div>
                         <div class="full-info">
                             <a href="" class="full-info-1" style="font-size: 15px;">Xem chi tiết tour</a>
@@ -687,7 +705,7 @@
                             </div>
                             <div class="time-4">
                                 <div class="time-5" style="padding: 8px;">
-                                    <b>3 ngày</b>
+                                    <b><?php echo $data['tour_long'] ?> ngày</b>
                                 </div>
                             </div>
                         </div>
@@ -711,7 +729,7 @@
                             </div>
                             <div class="time-4">
                                 <div class="time-5" style="padding: 8px;">
-                                    <b>CN, 26/12/2021 (UTC+07:00)</b>
+                                    <b><?php echo $data['starttime']?> (UTC+07:00)</b>
                                 </div>
                             </div>
                         </div>
@@ -723,7 +741,7 @@
                             </div>
                             <div class="time-4">
                                 <div class="time-5" style="padding: 8px;">
-                                    <b>Thứ 3, 28/12/2021 (UTC+07:00)</b>
+                                    <b> <?php echo $data['endtime']?> (UTC+07:00)</b>
                                 </div>
                             </div>
                         </div>
@@ -897,6 +915,15 @@
     }
     </script> -->
     <script>
+    document.getElementById("newsectionbtn").onclick = function() {
+    var container = document.getElementById("container-99");
+    var section = document.getElementById("mainsection");
+    container.appendChild(section.cloneNode(true));
+  }
     </script>
 </body>
 </html>
+<?php
+    }
+    echo 'Lỗi truy cập';
+?>

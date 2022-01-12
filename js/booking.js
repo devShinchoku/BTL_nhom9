@@ -11,11 +11,7 @@ $(document).ready(function() {
 
 
 // thêm thẻ
-// document.getElementById("newsectionbtn").onclick = function() {
-//     var container = document.getElementById("container-99");
-//     var section = document.getElementById("mainsection");
-//     container.appendChild(section.cloneNode(true));
-//   }
+
 
 // ẩn thẻ
   $(document).ready(function(){

@@ -231,7 +231,6 @@ header {
 }
 .search-item {
   display: flex;
-  flex-direction: row;
 }
 .m-search-input {
   border: none;
@@ -1338,6 +1337,7 @@ input::-webkit-outer-spin-button {
 
 
 
+<<<<<<< HEAD
 /* test */
 
 
@@ -1417,3 +1417,5 @@ input::-webkit-outer-spin-button {
   color: #43bae6;
   background-color: white;
 }
+=======
+>>>>>>> b12485612fca4098046f4595fe140d6beca6333d

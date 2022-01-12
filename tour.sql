@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 12, 2022 lúc 11:10 AM
+-- Thời gian đã tạo: Th1 12, 2022 lúc 01:50 PM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 8.0.10
 
@@ -119,6 +119,8 @@ CREATE TABLE `db_tour` (
   `district` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `address` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status` int(1) DEFAULT 0,
+  `is_installment` bit(1) DEFAULT b'0',
+  `promotion` decimal(5,2) DEFAULT 0.00,
   `category_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -126,21 +128,21 @@ CREATE TABLE `db_tour` (
 -- Đang đổ dữ liệu cho bảng `db_tour`
 --
 
-INSERT INTO `db_tour` (`tour_id`, `name`, `tour_long`, `starttime`, `endtime`, `description`, `rules`, `policy`, `installment`, `man_price`, `kid_price`, `child_price`, `country`, `city`, `district`, `address`, `status`, `category_id`) VALUES
-(1, 'Carpet python', 6, '2021-01-30', '2022-04-05', 'Contact with hot toaster, subsequent encounter', 'quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus', 'quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio', 'potenti in eleifend quam a odio in hac habitasse platea dictumst', '2923104.00', '378456.00', '35463.00', NULL, NULL, NULL, NULL, 1, 10),
-(3, 'Lizard, desert spiny', 6, '2021-02-03', '2022-01-25', 'Maternal care for other isoimmunization, unspecified trimester, fetus 1', 'nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit', 'sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus', 'neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante', '6788603.00', '492189.00', '46130.00', NULL, NULL, NULL, NULL, 1, 7),
-(4, 'Bear, black', 2, '2022-01-13', '2022-02-05', 'Motorcycle passenger injured in collision with heavy transport vehicle or bus in nontraffic accident, initial encounter', 'nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante', 'sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in', 'posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor', '9445455.00', '317164.00', '78108.00', NULL, NULL, NULL, NULL, 1, 7),
-(5, 'Baleen whale', 3, '2021-01-04', '2021-03-07', 'Deformity of orbit due to trauma or surgery', 'libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh', 'suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus', 'dapibus dolor vel est donec odio justo sollicitudin ut suscipit', '4900305.00', '421349.00', '82086.00', NULL, NULL, NULL, NULL, 1, 9),
-(6, 'Numbat', 1, '2021-02-02', '2022-02-14', 'Unspecified injury of unspecified part of colon', 'sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing', 'platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum', 'dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam', '9214292.00', '127903.00', '92159.00', NULL, NULL, NULL, NULL, 1, 8),
-(7, 'African polecat', 1, '2021-01-19', '2022-02-06', 'Injury of right internal carotid artery, intracranial portion, not elsewhere classified with loss of consciousness of 1 hour to 5 hours 59 minutes', 'lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum', 'ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum', 'luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis', '3055753.00', '165747.00', '28250.00', NULL, NULL, NULL, NULL, 1, 4),
-(8, 'Devil, tasmanian', 3, '2021-01-01', '2022-02-02', 'War operations involving direct blast effect of nuclear weapon, civilian, initial encounter', 'penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem', 'quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices', 'potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes', '2713526.00', '413669.00', '40774.00', NULL, NULL, NULL, NULL, 1, 8),
-(9, 'Tammar wallaby', 5, '2021-02-07', '2022-02-18', 'Other nondisplaced fracture of base of first metacarpal bone, unspecified hand, subsequent encounter for fracture with nonunion', 'in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur', 'id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque', 'donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies', '652407.00', '351646.00', '75322.00', NULL, NULL, NULL, NULL, 1, 10),
-(10, 'Grey phalarope', 5, '2021-01-13', '2022-02-17', 'Corrosion of third degree of right shoulder, subsequent encounter', 'placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula', 'at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum', 'lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui', '6980668.00', '426052.00', '37677.00', NULL, NULL, NULL, NULL, 1, 9),
-(11, 'Red-knobbed coot', 6, '2021-01-09', '2022-02-14', 'Poisoning by unspecified hormone antagonists, intentional self-harm, initial encounter', 'viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac', 'rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat', 'amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum', '5310612.00', '136356.00', '26719.00', NULL, NULL, NULL, NULL, 1, 5),
-(12, 'White rhinoceros', 6, '2021-01-15', '2022-02-26', 'Unspecified injury of flexor muscle, fascia and tendon of left ring finger at wrist and hand level, sequela', 'proin at turpis a pede posuere nonummy integer non velit', 'a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra', 'justo sollicitudin ut suscipit a feugiat et eros vestibulum ac', '7117673.00', '115027.00', '96719.00', NULL, NULL, NULL, NULL, 1, 9),
-(13, 'Green-winged trumpeter', 7, '2020-12-29', '2022-01-10', 'Lead-induced chronic gout, left knee, without tophus (tophi)', 'fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis', 'at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at', 'nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede', '4094514.00', '423944.00', '93871.00', NULL, NULL, NULL, NULL, 1, 9),
-(14, 'Stork, black-necked', 5, '2021-01-05', '2021-02-11', 'Burn of cornea and conjunctival sac, right eye, subsequent encounter', 'nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo', 'nam nulla integer pede justo lacinia eget tincidunt eget tempus vel', 'in purus eu magna vulputate luctus cum sociis natoque penatibus', '3488749.00', '194957.00', '96736.00', NULL, NULL, NULL, NULL, 1, 2),
-(15, 'Indian tree pie', 6, '2021-01-20', '2020-04-07', 'Sprain of metacarpophalangeal joint of unspecified finger, subsequent encounter', 'amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at', 'tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum', 'et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis', '4763343.00', '380204.00', '46445.00', NULL, NULL, NULL, NULL, 1, 7);
+INSERT INTO `db_tour` (`tour_id`, `name`, `tour_long`, `starttime`, `endtime`, `description`, `rules`, `policy`, `installment`, `man_price`, `kid_price`, `child_price`, `country`, `city`, `district`, `address`, `status`, `is_installment`, `promotion`, `category_id`) VALUES
+(1, 'Carpet python', 6, '2021-01-30', '2022-04-05', 'Contact with hot toaster, subsequent encounter', 'quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus', 'quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio', 'potenti in eleifend quam a odio in hac habitasse platea dictumst', '2923104.00', '378456.00', '35463.00', NULL, NULL, NULL, NULL, 1, b'0', '5.00', 10),
+(3, 'Lizard, desert spiny', 6, '2021-02-03', '2022-01-25', 'Maternal care for other isoimmunization, unspecified trimester, fetus 1', 'nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit', 'sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus', 'neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante', '6788603.00', '492189.00', '46130.00', NULL, NULL, NULL, NULL, 1, b'0', '0.00', 7),
+(4, 'Bear, black', 2, '2022-01-13', '2022-02-05', 'Motorcycle passenger injured in collision with heavy transport vehicle or bus in nontraffic accident, initial encounter', 'nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante', 'sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in', 'posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor', '9445455.00', '317164.00', '78108.00', NULL, NULL, NULL, NULL, 1, b'0', '0.00', 7),
+(5, 'Baleen whale', 3, '2021-01-04', '2021-03-07', 'Deformity of orbit due to trauma or surgery', 'libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh', 'suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus', 'dapibus dolor vel est donec odio justo sollicitudin ut suscipit', '4900305.00', '421349.00', '82086.00', NULL, NULL, NULL, NULL, 1, b'0', '0.00', 9),
+(6, 'Numbat', 1, '2021-02-02', '2022-02-14', 'Unspecified injury of unspecified part of colon', 'sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing', 'platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum', 'dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam', '9214292.00', '127903.00', '92159.00', NULL, NULL, NULL, NULL, 1, b'0', '0.00', 8),
+(7, 'African polecat', 1, '2021-01-19', '2022-02-06', 'Injury of right internal carotid artery, intracranial portion, not elsewhere classified with loss of consciousness of 1 hour to 5 hours 59 minutes', 'lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum', 'ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum', 'luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis', '3055753.00', '165747.00', '28250.00', NULL, NULL, NULL, NULL, 1, b'0', '0.00', 4),
+(8, 'Devil, tasmanian', 3, '2021-01-01', '2022-02-02', 'War operations involving direct blast effect of nuclear weapon, civilian, initial encounter', 'penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem', 'quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices', 'potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes', '2713526.00', '413669.00', '40774.00', NULL, NULL, NULL, NULL, 1, b'0', '0.00', 8),
+(9, 'Tammar wallaby', 5, '2021-02-07', '2022-02-18', 'Other nondisplaced fracture of base of first metacarpal bone, unspecified hand, subsequent encounter for fracture with nonunion', 'in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur', 'id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque', 'donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies', '652407.00', '351646.00', '75322.00', NULL, NULL, NULL, NULL, 1, b'0', '0.00', 10),
+(10, 'Grey phalarope', 5, '2021-01-13', '2022-02-17', 'Corrosion of third degree of right shoulder, subsequent encounter', 'placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula', 'at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum', 'lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui', '6980668.00', '426052.00', '37677.00', NULL, NULL, NULL, NULL, 1, b'0', '0.00', 9),
+(11, 'Red-knobbed coot', 6, '2021-01-09', '2022-02-14', 'Poisoning by unspecified hormone antagonists, intentional self-harm, initial encounter', 'viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac', 'rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat', 'amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum', '5310612.00', '136356.00', '26719.00', NULL, NULL, NULL, NULL, 1, b'0', '0.00', 5),
+(12, 'White rhinoceros', 6, '2021-01-15', '2022-02-26', 'Unspecified injury of flexor muscle, fascia and tendon of left ring finger at wrist and hand level, sequela', 'proin at turpis a pede posuere nonummy integer non velit', 'a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra', 'justo sollicitudin ut suscipit a feugiat et eros vestibulum ac', '7117673.00', '115027.00', '96719.00', NULL, NULL, NULL, NULL, 1, b'0', '0.00', 9),
+(13, 'Green-winged trumpeter', 7, '2020-12-29', '2022-01-10', 'Lead-induced chronic gout, left knee, without tophus (tophi)', 'fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis', 'at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at', 'nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede', '4094514.00', '423944.00', '93871.00', NULL, NULL, NULL, NULL, 1, b'0', '0.00', 9),
+(14, 'Stork, black-necked', 5, '2021-01-05', '2021-02-11', 'Burn of cornea and conjunctival sac, right eye, subsequent encounter', 'nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo', 'nam nulla integer pede justo lacinia eget tincidunt eget tempus vel', 'in purus eu magna vulputate luctus cum sociis natoque penatibus', '3488749.00', '194957.00', '96736.00', NULL, NULL, NULL, NULL, 1, b'0', '0.00', 2),
+(15, 'Indian tree pie', 6, '2021-01-20', '2020-04-07', 'Sprain of metacarpophalangeal joint of unspecified finger, subsequent encounter', 'amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at', 'tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum', 'et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis', '4763343.00', '380204.00', '46445.00', NULL, NULL, NULL, NULL, 1, b'0', '0.00', 7);
 
 --
 -- Bẫy `db_tour`
@@ -182,7 +184,7 @@ INSERT INTO `db_tourcategory` (`category_id`, `name`, `host_id`, `type`) VALUES
 (4, 'Retaining Wall and Brick Pavers', 7, b'0'),
 (5, 'Landscaping & Irrigation', 7, b'0'),
 (6, 'Soft Flooring and Base', 7, b'0'),
-(7, 'Ornamental Railings', 9, b'0'),
+(7, 'Ornamental Railings', 9, b'1'),
 (8, 'Overhead Doors', 2, b'0'),
 (9, 'Ornamental Railings', 4, b'0'),
 (10, 'Hard Tile & Stone', 7, b'0'),
@@ -247,35 +249,16 @@ DELIMITER ;
 
 DROP TABLE IF EXISTS `db_tourpart`;
 CREATE TABLE `db_tourpart` (
-  `tour_id` int(11) NOT NULL,
-  `part_num` int(11) NOT NULL,
+  `part_id` int(11) NOT NULL,
   `start_time` time DEFAULT NULL,
+  `start_date` date DEFAULT NULL,
   `info` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `country` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `city` varchar(85) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `district` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `address` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `address` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `tour_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `db_tourpart`
---
-
-INSERT INTO `db_tourpart` (`tour_id`, `part_num`, `start_time`, `info`, `country`, `city`, `district`, `address`) VALUES
-(1, 1, '01:02:00', 'a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas', NULL, NULL, NULL, NULL),
-(1, 2, '07:13:00', 'nunc donec quis orci eget orci vehicula condimentum curabitur in libero', NULL, NULL, NULL, NULL),
-(1, 3, '11:11:00', 'morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue', NULL, NULL, NULL, NULL),
-(5, 1, '04:10:00', 'at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam', NULL, NULL, NULL, NULL),
-(6, 1, '04:38:00', 'cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus', NULL, NULL, NULL, NULL),
-(6, 2, '05:27:00', 'at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis', NULL, NULL, NULL, NULL),
-(7, 1, '03:34:00', 'varius ut blandit non interdum in ante vestibulum ante ipsum primis', NULL, NULL, NULL, NULL),
-(8, 3, '11:36:00', 'gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi', NULL, NULL, NULL, NULL),
-(9, 2, '09:09:00', 'iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla', NULL, NULL, NULL, NULL),
-(9, 3, '05:51:00', 'blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis', NULL, NULL, NULL, NULL),
-(11, 2, '05:38:00', 'sagittis nam congue risus semper porta volutpat quam pede lobortis ligula', NULL, NULL, NULL, NULL),
-(13, 1, '08:09:00', 'vivamus tortor duis mattis egestas metus aenean fermentum donec ut', NULL, NULL, NULL, NULL),
-(13, 2, '09:33:00', 'convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat', NULL, NULL, NULL, NULL),
-(15, 1, '00:32:00', 'accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -321,7 +304,9 @@ INSERT INTO `db_user` (`user_id`, `email`, `phonenum`, `password`, `first_name`,
 (22, 'tgillyattl@rediff.com', '7137844328', 'pmYUEdOzJ', 'Teddy', 'Gillyatt', 1),
 (23, 'aghidinim@artisteer.com', '2958813480', 'ELfF2S8N1HdV', 'Ansel', 'Ghidini', 1),
 (24, 'dmacgarrityn@rambler.ru', '3371410306', '7s9MNlM', 'Danika', 'MacGarrity', 0),
-(25, 'xpuddeno@admin.ch', '8533537442', 'CenhDOb', 'Xenos', 'Pudden', 1);
+(25, 'xpuddeno@admin.ch', '8533537442', 'CenhDOb', 'Xenos', 'Pudden', 1),
+(39, 'asdasd', NULL, '$2y$10$p4h3ovf4XbRFfXHTaYddWOcN5v7FGTSsmtQzuZl5Biyx4XMKgRl/u', '1231', '123', 0),
+(40, 'asd@asd', NULL, '$2y$10$rS3oUYrSy9Ij3yeXAPozNu2NjRlXAMcCCi18ACHlAs64MiV1tBKam', '312', '123', 0);
 
 --
 -- Bẫy `db_user`
@@ -346,6 +331,7 @@ CREATE TABLE `view_tour` (
 ,`category_name` varchar(50)
 ,`host_name` varchar(255)
 ,`tour_long` int(11)
+,`starttime` date
 ,`endtime` date
 ,`man_price` decimal(10,2)
 ,`district` varchar(50)
@@ -354,6 +340,8 @@ CREATE TABLE `view_tour` (
 ,`description` varchar(400)
 ,`address` varchar(150)
 ,`type` bit(1)
+,`is_installment` bit(1)
+,`promotion` decimal(5,2)
 );
 
 -- --------------------------------------------------------
@@ -364,7 +352,7 @@ CREATE TABLE `view_tour` (
 DROP TABLE IF EXISTS `view_tour`;
 
 DROP VIEW IF EXISTS `view_tour`;
-CREATE OR REPLACE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_tour`  AS SELECT `db_tour`.`tour_id` AS `tour_id`, `db_tour`.`name` AS `tour_name`, `db_tourcategory`.`name` AS `category_name`, `db_tourhost`.`name` AS `host_name`, `db_tour`.`tour_long` AS `tour_long`, `db_tour`.`endtime` AS `endtime`, `db_tour`.`man_price` AS `man_price`, `db_tour`.`district` AS `district`, `db_tour`.`country` AS `country`, `db_tour`.`city` AS `city`, `db_tour`.`description` AS `description`, `db_tour`.`address` AS `address`, `db_tourcategory`.`type` AS `type` FROM ((`db_tour` join `db_tourcategory` on(`db_tour`.`category_id` = `db_tourcategory`.`category_id`)) join `db_tourhost` on(`db_tourcategory`.`host_id` = `db_tourhost`.`host_id`)) WHERE `db_tour`.`endtime` >= curdate() AND `db_tour`.`starttime` <= curdate() AND `db_tour`.`status` = 1 ;
+CREATE OR REPLACE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_tour`  AS SELECT `db_tour`.`tour_id` AS `tour_id`, `db_tour`.`name` AS `tour_name`, `db_tourcategory`.`name` AS `category_name`, `db_tourhost`.`name` AS `host_name`, `db_tour`.`tour_long` AS `tour_long`, `db_tour`.`starttime` AS `starttime`, `db_tour`.`endtime` AS `endtime`, `db_tour`.`man_price` AS `man_price`, `db_tour`.`district` AS `district`, `db_tour`.`country` AS `country`, `db_tour`.`city` AS `city`, `db_tour`.`description` AS `description`, `db_tour`.`address` AS `address`, `db_tourcategory`.`type` AS `type`, `db_tour`.`is_installment` AS `is_installment`, `db_tour`.`promotion` AS `promotion` FROM ((`db_tour` join `db_tourcategory` on(`db_tour`.`category_id` = `db_tourcategory`.`category_id`)) join `db_tourhost` on(`db_tourcategory`.`host_id` = `db_tourhost`.`host_id`)) WHERE `db_tour`.`endtime` >= curdate() AND `db_tour`.`starttime` <= curdate() AND `db_tour`.`status` = 1 ;
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -381,13 +369,15 @@ ALTER TABLE `db_order`
 -- Chỉ mục cho bảng `db_passenger`
 --
 ALTER TABLE `db_passenger`
-  ADD PRIMARY KEY (`passenger_id`);
+  ADD PRIMARY KEY (`passenger_id`),
+  ADD KEY `order_id` (`order_id`);
 
 --
 -- Chỉ mục cho bảng `db_service`
 --
 ALTER TABLE `db_service`
-  ADD PRIMARY KEY (`service_id`);
+  ADD PRIMARY KEY (`service_id`),
+  ADD KEY `tour_id` (`tour_id`);
 
 --
 -- Chỉ mục cho bảng `db_tour`
@@ -408,6 +398,13 @@ ALTER TABLE `db_tourcategory`
 --
 ALTER TABLE `db_tourhost`
   ADD PRIMARY KEY (`host_id`);
+
+--
+-- Chỉ mục cho bảng `db_tourpart`
+--
+ALTER TABLE `db_tourpart`
+  ADD PRIMARY KEY (`part_id`),
+  ADD KEY `tour_id` (`tour_id`);
 
 --
 -- Chỉ mục cho bảng `db_user`
@@ -452,10 +449,16 @@ ALTER TABLE `db_tourcategory`
   MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
+-- AUTO_INCREMENT cho bảng `db_tourpart`
+--
+ALTER TABLE `db_tourpart`
+  MODIFY `part_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT cho bảng `db_user`
 --
 ALTER TABLE `db_user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
@@ -466,6 +469,20 @@ ALTER TABLE `db_user`
 --
 ALTER TABLE `db_order`
   ADD CONSTRAINT `db_order_ibfk_1` FOREIGN KEY (`tour_id`) REFERENCES `db_tour` (`tour_id`);
+
+--
+-- Các ràng buộc cho bảng `db_passenger`
+--
+ALTER TABLE `db_passenger`
+  ADD CONSTRAINT `db_passenger_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `db_order` (`order_id`),
+  ADD CONSTRAINT `db_passenger_ibfk_2` FOREIGN KEY (`order_id`) REFERENCES `db_order` (`order_id`);
+
+--
+-- Các ràng buộc cho bảng `db_service`
+--
+ALTER TABLE `db_service`
+  ADD CONSTRAINT `db_service_ibfk_1` FOREIGN KEY (`tour_id`) REFERENCES `db_tour` (`tour_id`),
+  ADD CONSTRAINT `db_service_ibfk_2` FOREIGN KEY (`tour_id`) REFERENCES `db_tour` (`tour_id`);
 
 --
 -- Các ràng buộc cho bảng `db_tour`
@@ -484,6 +501,12 @@ ALTER TABLE `db_tourcategory`
 --
 ALTER TABLE `db_tourhost`
   ADD CONSTRAINT `db_tourhost_ibfk_1` FOREIGN KEY (`host_id`) REFERENCES `db_user` (`user_id`);
+
+--
+-- Các ràng buộc cho bảng `db_tourpart`
+--
+ALTER TABLE `db_tourpart`
+  ADD CONSTRAINT `db_tourpart_ibfk_1` FOREIGN KEY (`tour_id`) REFERENCES `db_tour` (`tour_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
