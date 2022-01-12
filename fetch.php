@@ -8,7 +8,7 @@ if (isset($_POST["last_id"])) {
         $query = "SELECT * FROM view_tour";
     }
 
-    
+
     $query .=" ORDER BY tour_id DESC LIMIT 6";
 
     $result = mysqli_query($conn,$query);

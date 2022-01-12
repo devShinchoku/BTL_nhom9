@@ -106,7 +106,7 @@ include("template/header.php");
                     </form>
                     <div class="btn">
                         <button class="btn1" id="btnAddon" data-btn_addon="">Tìm kiếm nâng cao</button>
-                        <button type="submit" class="btn-m-search">Tìm kiếm</button>
+                        <button type="submit" id="btnSearch" class="btn-m-search">Tìm kiếm</button>
                     </div>
                     <button class="btn-m-search-code">
                         Tra cứu mã đặt Tour
