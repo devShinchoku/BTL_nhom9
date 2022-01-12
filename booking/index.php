@@ -715,11 +715,20 @@ if(isset($_GET['id'])){{
                                     <label for="">Điểm khởi hành:</label>
                                 </div>
                             </div>
+                            <?php $sql1 = "SELECT * from db_tourpart";
+                                $result1 = mysqli_query($conn,$sql1);
+                                if(mysqli_num_rows($result1)>0){
+                                    $data1 = mysqli_fetch_assoc($result1);
+                                }else
+                                    echo "Lỗi truy cập";
+                            ?>
                             <div class="time-4">
                                 <div class="time-5" style="padding: 8px;">
-                                    <b>Thành phố Đà Nẵng</b>
+                                    <b>Thành phố <?php echo $data1['city']?></b>
                                 </div>
                             </div>
+                            <?php
+                            ?>
                         </div>
                         <div class="time-1" style="padding: 8px; display: flex;">
                             <div class="time-2">
@@ -753,7 +762,12 @@ if(isset($_GET['id'])){{
                             </div>
                             <div class="time-4">
                                 <div class="time-5" style="padding: 8px;">
-                                    <b>1 người lớn</b>
+                                    <b> <input style="width:17px; border:none;font-weight:bold" value="1" type="text" name="quantity" readonly>người lớn</b>
+                                </div>
+                            </div>
+                            <div class="time-6">
+                                <div class="time-7" style="padding: 8px; margin-left:20px">
+                                    <b> <input style="width:17px; border:none;font-weight:bold" value="0" type="text" name="quantity1" readonly>trẻ em</b>
                                 </div>
                             </div>
                         </div>
@@ -763,61 +777,62 @@ if(isset($_GET['id'])){{
                         <p style="padding: 8px; margin-bottom: 8px;"> 
                             <b style="font-size: 14px;">Chi tiết giá</b> 
                         </p>
-                        <div class="time-1" style="padding: 8px; display: flex;">
-                            <div class="time-2">
-                                <div class="time-3" style="padding: 8px;">
-                                    <label for="">Người lớn </label>
-                                    <b>x1</b>
+                        <?php 
+                        $total = 0;
+                        $sql2 = "SELECT * from db_tour";
+                                $result2 = mysqli_query($conn,$sql2);
+                                if(mysqli_num_rows($result2)>0){
+                                    $data2 = mysqli_fetch_assoc($result2);
+                                }else
+                                    echo "Lỗi truy cập";
+                        ?>
+                            <div class="time-1" style="padding: 8px; display: flex;">
+                                <div class="time-2">
+                                    <div class="time-3" style="padding: 8px;">
+                                        <label for="">Người lớn </label>
+                                        <b>x<input type="text" style="border: none;width:17px;font-weight:bold"value="1" name="quantity" readonly></b>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="time-4">
-                                <div class="time-5" style="padding: 8px;">
-                                    <div class="money-bill-bottom">
-                                        <b>1.700.000 ₫</b>
+                                <div class="time-4">
+                                    <div class="time-5" style="padding: 8px;">
+                                        <div class="money-bill-bottom">
+                                            <span class="span-price">
+                                                <b><?php echo $data2['man_price']?> ₫</b>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="time-1" style="padding: 8px; display: flex; display:none">
-                            <div class="time-2">
-                                <div class="time-3" style="padding: 8px;">
-                                    <label for="">Trẻ em </label>
-                                    <b>x1</b>
+                            <div class="time-1" style="padding: 8px; display: flex;">
+                                <div class="time-2">
+                                    <div class="time-3" style="padding: 8px;">
+                                        <label for="">Trẻ em </label>
+                                        <b>x<input type="text" style="border: none;width:17px;font-weight:bold"value="0" name="quantity1" readonly></b>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="time-4">
-                                <div class="time-5" style="padding: 8px;">
-                                    <div class="money-bill-bottom">
-                                        <b>1.700.000 ₫</b>
+                                <div class="time-4">
+                                    <div class="time-5" style="padding: 8px;">
+                                        <div class="money-bill-bottom">
+                                            <span class="span-price">
+                                                <b><?php echo $data2['kid_price']?> ₫</b>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="time-1" style="padding: 8px; display: flex;">
-                            <div class="time-2">
-                                <div class="time-3" style="padding: 8px;">
-                                    <label for="">VAT</label>
+                            <hr style="background-color: black; margin-left: 16px; margin-right: 16px;">
+                            <div class="money-bill" style="display: flex;">
+                                <div class="money-bil-1" style="padding: 8px;">
+                                    <p style="padding: 8px; margin-bottom: 8px;"> 
+                                        <b style="font-size: 18px;">Tổng tiền</b> 
+                                    </p>
+                                </div>
+                                <div class="money-all-bottom">
+                                    <h6 class="money-all" style="font-size: 20px;"><?php echo $total?></h6>
                                 </div>
                             </div>
-                            <div class="time-4">
-                                <div class="time-5" style="padding: 8px;">
-                                    <div class="money-bill-bottom">
-                                        <b>170.000₫</b>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr style="background-color: black; margin-left: 16px; margin-right: 16px;">
-                    <div class="money-bill" style="display: flex;">
-                        <div class="money-bil-1" style="padding: 8px;">
-                            <p style="padding: 8px; margin-bottom: 8px;"> 
-                                <b style="font-size: 20px;">Tổng tiền</b> 
-                            </p>
-                        </div>
-                        <div class="money-all-bottom">
-                            <h6 class="money-all">1.870.000₫</h6>
-                        </div>
+                        <?php
+                        ?>
                     </div>
                 </div>
             </div>
