@@ -1,4 +1,9 @@
+
 <?php
+session_start();
+    if(!isset($_SESSION['isLoginOK'])){
+        header("location:accounts/sign-in");
+    }
 include("template/header.php");
 ?>
 <main class="container mt-3">

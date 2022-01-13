@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require('../../config/db.php');
     if (isset($_POST['ok']) && isset($_POST['email'])) {
         $email = $_POST['email'];
@@ -18,21 +19,10 @@
                 if(mysqli_stmt_fetch($stmt)){
                     // echo $email;
                     if(password_verify($pass,$password)){                 
-                        // if($usertype == '99'){  
-                        //     // $_SESSION['isLoginOK'] = $email;
-                        //     // header("location:../admin/admin_page.php");
-                        //  ?>
-                            <?php                        
-                        // }                      
-                        // else{
-                            ?>
-                                <script>
-                                    alert("Đăng nhập thành công");
-                                    location.href = "../index.php";                                   
-                                </script>
-                            <?php        
-                        }
+                        $_SESSION['isLoginOK'] = $email;
+                        header("location:../../index.php");
                     }
+                }
                     else{
                         ?>
                             <script>
@@ -46,4 +36,4 @@
             
         }
     //}
-    ?>
+?>
