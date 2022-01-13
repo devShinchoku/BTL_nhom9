@@ -13,7 +13,7 @@ include("template/header.php");
                     <form class="m-search">
                         <div class="search-item">
                             <div class = "col-md-6">
-                                <div class="inputdecor input-effect">
+                                <div class="inputdecor">
                                     <input type="text" name="search1" id="search1" class = "effect-17">
                                     <label for="search1" class="lable-name">
                                         <span class="content-name2 focus-border">
@@ -22,9 +22,11 @@ include("template/header.php");
                                     </label>
                                 </div>
                             </div>
-                            <div class="inputdecor col-md-6 inputdecor-them">
-                                <label class="m-search-label">Ngày khởi hành</label>
-                                <input type="date" class="m-search-input" id="search2">
+                            <div class = "col-md-6">
+                                <div class="inputdecor inputdecor-them">
+                                    <label class="m-search-label">Ngày khởi hành</label>
+                                    <input type="date" class="m-search-input" id="search2">
+                                </div>
                             </div>
                         </div>
                         <div class="extend-item">
@@ -62,7 +64,7 @@ include("template/header.php");
                                         <option value="0">Trong nước</option>
                                     </select>
                                     <label for="search6" class="lable-name">
-                                        <span class="content-name2">
+                                        <span class="content-name2 tourtype">
                                             Loại tour
                                         </span>
                                     </label>
@@ -86,7 +88,7 @@ include("template/header.php");
                                     </label>
                                 </div>
                             </div>
-                            <div class="search-item1">
+                            <div class="search-item1" style = "display: flex;font-size: 18px;">
                                 <div class="inputdecor1 col-md-6">
                                     <input type="checkbox" name="search7" id="search7">
                                     <label for="search7" class="lable-name">

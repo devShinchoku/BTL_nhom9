@@ -1352,4 +1352,71 @@ input::-webkit-outer-spin-button {
   cursor: pointer;
 }
 
+/* css giao dien  */
+
+.inputdecor{
+  border-radius: 0px;
+}
+.inputdecor input:hover{
+
+  border: none;
+  border-bottom: 1px solid #313131;
+
+}
+.inputdecor input:focus{
+  outline: none !important;
+  border-color: #24a8d8;
+  border: none;
+  border-bottom: 1px solid #24a8d8;
+}
+.inputdecor input{
+  height: 48px;
+  width: 260px;
+  margin-top: 2px;
+  padding: 0px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #ada9a9;
+}
+
+.content-name2{
+  position: relative;
+  bottom: 54px;
+  left: 0px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+.inputdecor input:focus + .lable-name .content-name2,
+.inputdecor input:valid + .lable-name .content-name2 {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #43bae6;
+  background-color: white;
+}
+.search-item{
+  display: flex;
+}
+.search-location{
+  height: 48px;
+  width: 260px;
+  margin-top: 2px;
+  padding: 0px;
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px solid #ada9a9;
+}
+.inputdecor-them input{
+  height: 31px;
+  width: 260px;
+  margin-top: 2px;
+  padding: 0px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #ada9a9;
+}
+
+.tourtype{
+  font-size: 14px;
+  color: #43bae6;
+}
 
