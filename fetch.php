@@ -42,7 +42,7 @@ if (isset($_POST["last_id"])) {
     $last_id = 0;
     if (mysqli_num_rows($result) > 0) {
         $datas = mysqli_fetch_all($result,MYSQLI_ASSOC);
-        $mydate=getdate(date("U"));
+        $date= getdate(date("U"));
         foreach ($datas as $row) {
             $output .= '
                 <div class="card mt-3">
@@ -111,7 +111,7 @@ if (isset($_POST["last_id"])) {
                         </div>
                         <div class="w-temper-saclesalendar">
                             <i class="bi bi-calendar"></i>
-                            <h5 class="w-temper-saclesalendar1">'.$mydate["mday"].'/'.$mydate["mon"].'/'.$mydate["year"].'</h5>
+                            <h5 class="w-temper-saclesalendar1">'.$date["mday"].'/'.$date["mon"].'/'.$date["year"].'</h5>
                         </div>
                         <div class="mt-2 tour-sort-info" style="font-size: 0.95rem;">
                             '.$row["description"].'
@@ -120,7 +120,7 @@ if (isset($_POST["last_id"])) {
                             <div>
                                 <div class="h-price1">
                                     <b>Giá chỉ từ</b>
-                                    <span>'.number_format($row["man_price"]).' ₫</span>
+                                    <span>'.number_format($row["man_price"],0,',','.').' ₫</span>
                                 </div>
                             </div>
                             <button class="h-price2">
@@ -172,5 +172,6 @@ if (isset($_POST["last_id"])) {
     $output .= '<div id="clearfix_id" data-last_id="'.$last_id.'"></div>';
 
     echo json_encode($output);
-}
+    }
+    mysqli_close($conn);
 ?>

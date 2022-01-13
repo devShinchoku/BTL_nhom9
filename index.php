@@ -6,6 +6,7 @@ session_start();
     }
 include("template/header.php");
 ?>
+<link rel="stylesheet" href="css/style.css">
 <main class="container mt-3">
     <div class="row">
         <div class="sidebar col-md-3">

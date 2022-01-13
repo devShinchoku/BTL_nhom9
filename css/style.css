@@ -553,11 +553,7 @@ input[type="datetime"] {
   width: 870px;
   text-align: center;
 }
-.m-img-tour1 {
-  background-color: red;
-  height: 120px;
-  width: 870px;
-}
+
 .ct-tour-name {
   color: #ff9800;
   font-weight: 500;
@@ -655,8 +651,7 @@ input[type="datetime"] {
   text-decoration: underline;
 }
 .ct-muitab {
-  width: 870px;
-  height: 40px;
+  font-size: 1rem;
 }
 .ct-muitab-btn {
   border: none;
