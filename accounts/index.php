@@ -1,5 +1,5 @@
 <?php
-    if(!$_SESSION['isLogin'])
+    if(!$_SESSION['user_id'])
         header("location:../");
     else
         header("location:sign-in/");

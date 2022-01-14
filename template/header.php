@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -105,13 +108,31 @@
                             <i class="bi bi-wallet2"></i>
                         </a>
                         </span></li>
-                    <li class="nav-item"><span class="h-user-iteam">
-                        <a href="accounts/sign-in">
-                            <i class="bi bi-arrow-down-circle"></i>
-                        </a>
-                        </span></li>
-                    <li class="nav-item"><img id="img" class="style-scope yt-img-shadow" alt="Hình ảnh đại diện" height="32" width="32" src="https://yt3.ggpht.com/yti/APfAmoFV39QFrpgQ605BDJUj7quJ-JIHmqaWYE59wro_EQ=s88-c-k-c0x00ffffff-no-rj-mo">
-                    </li>
+                        <?php
+                            if(isset($_SESSION["user_id"])){
+                            ?> <h6>
+                                <li class="nav-item" style = "margin-top: 3px;" ><span class="h-user-iteam"> 
+                                    <a href="accounts/sign-in/logout.php">
+                                        <i class="bi bi-arrow-up-circle"></i>
+                                    </a>
+                                    </span>
+                                </li>
+                                </h6>
+                            <?php
+                            } else{?>
+                                <li class="nav-item"><span class="h-user-iteam"> 
+                                    <a href="accounts/sign-in">
+                                        <i class="bi bi-arrow-down-circle"></i>
+                                    </a>
+                                    </span>
+                                </li>
+                            <?php } ?>
+                    <form action="template/loadimg.php" method="post" enctype="multipart/form-data">
+                        <button class="btn-img">
+                            <li class="nav-item"><img id="img" class="style-scope yt-img-shadow" alt="Hình ảnh đại diện" height="32" width="32" src="https://yt3.ggpht.com/yti/APfAmoFV39QFrpgQ605BDJUj7quJ-JIHmqaWYE59wro_EQ=s88-c-k-c0x00ffffff-no-rj-mo">
+                            </li>
+                        </button>
+                    </form>
                 </ul>
             </div>
         </nav>

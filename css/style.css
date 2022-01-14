@@ -55,7 +55,10 @@ a:hover{
   font-size: 0.75rem;
   min-width: 80px;
 }
-
+.btn-img{
+  border: none;
+  border-radius: 50%;
+}
 .h-menu i {
   font-size: 24px;
   z-index: 1;

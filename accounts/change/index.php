@@ -1,6 +1,6 @@
 <?php
 session_start();
-    if(!isset($_SESSION['isLoginOK'])){
+    if(!isset($_SESSION['user_id'])){
         header("location:../sign-in");
     }
 ?>
