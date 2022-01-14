@@ -20,14 +20,14 @@ $(document).ready(function() {
 //     });
 //  });
 
-//  $(document).ready(function(){
-// 	$('.showbtn').click(function(){
-//   		$('#showhideForm').show();
-//   	});
-//     $('.hidebtn').click(function(){
-//   		$('#showhideForm').hide();
-//   	});
-// });
+ $(document).ready(function(){
+	$('.showbtn').click(function(){
+  		$('#showhideForm').show();
+  	});
+    $('.hidebtn').click(function(){
+  		$('#showhideForm').hide();
+  	});
+});
 //  //remove thẻ
 //  $(document).ready(function(){
 //   $(".remove").click(function(){
@@ -46,10 +46,10 @@ $(document).ready(function() {
 //copy data
   function FillBilling(f) {
     if(f.billingtoo.checked == true) {
-      f.name11.value=f.name1.value ;
-      f.name22.value =  f.name2.value;
-       f.name33.value = f.name3.value;
-       f.name55.value = f.name5.value;
+      f.name11.value=f.txtHo.value ;
+      f.name22.value =  f.txtTen.value;
+       f.name33.value = f.txtEmail.value;
+       f.name55.value = f.txtDiachi.value;
     }
     else
         {

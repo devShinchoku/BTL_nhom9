@@ -1,16 +1,10 @@
 <?php
-if(isset($_GET['id'])){{
-    $conn = mysqli_connect('localhost','root','','tour');
-    if(!$conn){
-        die("Ket noi that bai");
-    }
+if(isset($_GET['id'])){
+    require "../config/db.php";
     $sql="SELECT * FROM db_tour where tour_id = '{$_GET['id']}'";
     $result = mysqli_query($conn,$sql);
     if(mysqli_num_rows($result)>0){
         $data = mysqli_fetch_assoc($result);
-    }
-    else
-        echo 'Lỗi truy cập';
 
 ?>
 <!DOCTYPE html>
@@ -133,7 +127,9 @@ if(isset($_GET['id'])){{
 
 
     <main class="container">
-        <form>
+        <form action="booking/booking.php" method="post">
+            <input type="text" id="ttID" name="txtID" hidden readonly value="<?php echo $_GET['id'];?>">
+            <input type="text" id="ttIDT" name="txtIDT" hidden readonly value="">
             <div class="row">
                 <div class="top-info-tour" style="padding: 8px;">
                     <div class="back-up">
@@ -149,7 +145,6 @@ if(isset($_GET['id'])){{
                     </div>
                 </div>
                 <div class="col-md-8" style="padding: 0 24px;background-color: #FAFAFB;">
-                
                     <div class="info-lh1 card col-md-6">
                         <div class="info-lh2">
                             <div class="circle-bl">
@@ -159,7 +154,7 @@ if(isset($_GET['id'])){{
                             </div>
                             <div class="info-lh3">
                                 <div class="inputdecor-book btn-login-book">
-                                    <input type="text" name="name1" autocomplete="off" required
+                                    <input type="text" name="txtHo" autocomplete="off" required
                                         style="margin-left: -33px;border-radius: 0px;" />
                                     <label for="name" class="lable-name-book">
                                         <span class="content-name2-book">
@@ -168,7 +163,7 @@ if(isset($_GET['id'])){{
                                     </label>
                                 </div>
                                 <div class="inputdecor-book btn-login-book">
-                                    <input type="text" name="name2" autocomplete="off" required
+                                    <input type="text" name="txtTen" autocomplete="off" required
                                         style="margin-left: -33px;border-radius: 0px;" />
                                     <label for="name" class="lable-name-book">
                                         <span class="content-name2-book">
@@ -197,7 +192,7 @@ if(isset($_GET['id'])){{
                             <div class="info-lh5">
                                 <div style="display: flex;">
                                     <div class="inputdecor-book btn-login-book">
-                                        <input class="full-w" type="text" name="name3" autocomplete="off" required
+                                        <input class="full-w" type="text" name="txtEmail" autocomplete="off" required
                                             style="margin-left: -33px;border-radius: 0px; width: 100%;" />
                                         <label for="name" class="lable-name-book">
                                             <span class="content-name2-book">
@@ -209,9 +204,9 @@ if(isset($_GET['id'])){{
                                         <div class="ma-quoc-gia">
                                             <meta name="viewport" content="width=device-width, initial-scale=1" />
                                             <div class="container-phone-number">
-                                                <form id="login-phone-number">
+                                                <div id="login-phone-number">
                                                     <input id="phone" type="number" name="phone" step="number" />
-                                                </form>
+                                                </div>
                                             </div>
                                         </div>
                                         <!-- <div class="lh5-phone-number">
@@ -222,7 +217,7 @@ if(isset($_GET['id'])){{
                             </div>
                             <div class="info-abate-4">
                                 <div class="inputdecor-book-location btn-login-book" style="width: 100%;">
-                                    <input type="text" name="name5" autocomplete="off" required
+                                    <input type="text" name="txtDiachi" autocomplete="off" required
                                         style="margin-left: -33px;border-radius: 0px; width: 100%;" />
                                     <label for="name" class="lable-name-book">
                                         <span class="content-name2-book">
@@ -290,20 +285,6 @@ if(isset($_GET['id'])){{
                                             </button>
                                           </div>
                                         </div>
-                                        <!-- <div class="tab-sl">
-                                            <div class="dash-tab-1" style="display: flex;">
-                                                <div class="dash-tab" style="padding: 4px;">
-                                                    <input class="dash-sl" style="padding: 1px;" type=button value='-' onclick='javascript:process(-1)'>
-                                                </div>
-                                                    <input class="text-sl-person"  type=number id='v'style="border: none;" name='v' max="10" min="1" value='0' readonly>
-                                                <div class="dash-tab" style="padding: 4px;">
-                                                    <input id="newsectionbtn" class="plus-sl"  type=button value='+' onclick='javascript:process(1)'>   
-                                                </div>
-                                            </div>
-                                        </div> -->
-                                    </div>
-                                    <div>
-
                                     </div>
                                 </div>
                                 <div class="choose-enter" style="padding:0px 16px 16px 16px;">
@@ -447,24 +428,28 @@ if(isset($_GET['id'])){{
                                             </div>
                                         </div>
                                         <div class="bonus-dv-8" style="padding: 12px; width: 50%;">
-                                            <form action="booking.php" method="POST">
-                                                <div class="inputdecor-book btn-login-book full-w" style="margin-bottom:33px ">
-                                                        <input list="lists-dv" is="list-dv" class="full-w" type="text" name="list-dv" autocomplete="off" required
-                                                            style="margin-left: -33px;border-radius: 0px;" />
-                                                        <label for="name" class="lable-name-book">
-                                                            <span class="content-name2-book">
-                                                                Dịch vụ đi kèm
-                                                            </span>
-                                                        </label>
-                                                        <datalist id="lists-dv">
-                                                            <option value="Spa"></option>>  
-                                                            <option value="Cắm trại"></option>
-                                                        </datalist>
-                                                </div>
-                                            </form>
-                                            <!-- <div class="dv-icon">
-                                            <i class="bi bi-caret-down-fill"></i>
-                                            </div> -->
+                                            <div class="inputdecor-book btn-login-book full-w" style="margin-bottom:33px ">
+                                                <input list="lists-dv" is="list-dv" class="full-w" type="text" name="list-dv" autocomplete="off" required
+                                                    style="margin-left: -33px;border-radius: 0px;" />
+                                                <label for="name" class="lable-name-book">
+                                                    <span class="content-name2-book">
+                                                        Dịch vụ đi kèm
+                                                    </span>
+                                                </label>
+                                                <datalist id="lists-dv">
+                                                    <?php $sql0 = "SELECT * FROM db_dichvu";{
+                                                            $result0 = mysqli_query($conn,$sql0);
+                                                            if(mysqli_num_rows($result0)>0){
+                                                                $data0 = mysqli_fetch_assoc($result0);
+                                                            }else
+                                                            require '../template/error/404.php';
+                                                        ?>
+                                                        <option value="<?php echo $data0['name_dv'];?> (<?php echo $data0['dv_price'];?> ₫)"></option>
+                                                        <?php
+                                                        }
+                                                    ?>
+                                                </datalist>
+                                            </div>
                                         </div>
                                         <div class="bonus-dv-8" style="padding: 12px; width: 40%;">
                                             <div class="inputdecor-book btn-login-book full-w" style="margin-bottom:33px ">
@@ -476,9 +461,6 @@ if(isset($_GET['id'])){{
                                                     </span>
                                                 </label>
                                             </div>
-                                            <!-- <div class="dv-icon">
-                                            <i class="bi bi-caret-down-fill"></i>
-                                            </div> -->
                                         </div>
                                         <div class="close-dv">
                                             <button class="btn-close-dv hidebtn">
@@ -522,10 +504,10 @@ if(isset($_GET['id'])){{
                                             Họ*
                                         </span>
                                     </label>
-                                        <h6
-                                            style="font-size: 10px; color: rgba(0, 0, 0, 0.54);text-align: left;margin-top: 2px;">
-                                                Họ và tên như trong CMND/CCCD/Hộ chiếu
-                                        </h6>
+                                    <h6
+                                        style="font-size: 10px; color: rgba(0, 0, 0, 0.54);text-align: left;margin-top: 2px;">
+                                            Họ và tên như trong CMND/CCCD/Hộ chiếu
+                                    </h6>
                                 </div>
                                 <div class="inputdecor-abate btn-login-abate">
                                     <input type="text" name="name22" autocomplete="off" required
@@ -548,18 +530,14 @@ if(isset($_GET['id'])){{
                                     </label>
                                 </div>
                                 <div class="lh-5-phone-number-cont">
-                                        <div class="ma-quoc-gia">
-                                            <meta name="viewport" content="width=device-width, initial-scale=1" />
-                                            <div class="container-phone-number">
-                                                <form id="login-phone-number">
-                                                    <input id="phone1" type="number" name="phone1" step="number" />
-                                                </form>
+                                    <div class="ma-quoc-gia">
+                                        <div class="container-phone-number">
+                                            <div id="login-phone-number">
+                                                <input id="phone1" type="number" name="phone1" step="number" />
                                             </div>
                                         </div>
-                                        <!-- <div class="lh5-phone-number">
-            
-                                        </div> -->
                                     </div>
+                                </div>
                             </div>
                             <div class="info-abate-4">
                                 <div class="inputdecor-book-location btn-login-book" style="width: 100%;">
@@ -585,9 +563,6 @@ if(isset($_GET['id'])){{
                                                     style="padding: 4px 8px 8px 8px; font-size: 15px;"></i>
                                         </label>
                                     </div>
-                                            <!-- <div class="dv-icon">
-                                        <i class="bi bi-caret-down-fill"></i>
-                                    </div> -->
                                 </div>
                                 <div class="bonus-dv-8" style="padding: 20px 12px 12px 12px; width: 50%;">
                                     <div class="inputdecor-dv btn-login-dv" style="display: flex; width: 100%;">
@@ -599,9 +574,6 @@ if(isset($_GET['id'])){{
                                             </span>
                                         </label>
                                     </div>
-                                            <!-- <div class="dv-icon">
-                                        <i class="bi bi-caret-down-fill"></i>
-                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -654,7 +626,7 @@ if(isset($_GET['id'])){{
                                                 Hahalolo</h6>
                                 </div>
                                 <div class="rule-abate-1">
-                                    <button class="btn-abate" style="height: 46px; width: 154px; border: none;">
+                                    <button type="submit" class="btn-abate" style="height: 46px; width: 154px; border: none;">
                                         Thanh toán
                                     </button>
                                 </div>
@@ -662,172 +634,167 @@ if(isset($_GET['id'])){{
                         </div>
                     </div>
                 </div>
+            </div>
         </form>    
-            <div class="col-md-4" style="padding: 0px 8px 8px 8px;">
-                <div class="bill-info card">
-                    <div class="bill-info-0">
-                        <div class="bill-info-top" style="padding: 16px 16px 0px 16px;">
-                            <h6 style="font-size: 21px;">
-                                <b>Thông tin Tour</b>   
-                            </h6>
-                        </div>
+        <div class="col-md-4" style="padding: 0px 8px 8px 8px;">
+            <div class="bill-info card">
+                <div class="bill-info-0">
+                    <div class="bill-info-top" style="padding: 16px 16px 0px 16px;">
+                        <h6 style="font-size: 21px;">
+                            <b>Thông tin Tour</b>   
+                        </h6>
+                    </div>
+                    <hr style="background-color: black; margin-left: 16px; margin-right: 16px;">
+                </div>
+                <div class="bill-info-1" style="padding: 16px 16px 5px;">
+                    <div class="name-info" style="margin-bottom: 0.35rem;">
+                        <p style="margin-bottom: 5px;">
+                            <b style="font-weight: 620;"><?php echo $data['name'] ?></b> 
+                        </p>
+                    </div>
+                    <div class="full-info">
+                        <a href="" class="full-info-1" style="font-size: 15px;">Xem chi tiết tour</a>
                         <hr style="background-color: black; margin-left: 16px; margin-right: 16px;">
                     </div>
-                    <div class="bill-info-1" style="padding: 16px 16px 5px;">
-                        <div class="name-info" style="margin-bottom: 0.35rem;">
-                            <p style="margin-bottom: 5px;">
-                               <b style="font-weight: 620;"><?php echo $data['name'] ?></b> 
-                            </p>
-                            <?php
-                                }
-                            ?>
+                </div>
+                <div class="info-time">
+                    <div class="time-1" style="padding: 8px; display: flex;">
+                        <div class="time-2">
+                            <div class="time-3" style="padding: 8px;">
+                                <label for="">Thời gian:</label>
+                            </div>
                         </div>
-                        <div class="full-info">
-                            <a href="" class="full-info-1" style="font-size: 15px;">Xem chi tiết tour</a>
-                            <hr style="background-color: black; margin-left: 16px; margin-right: 16px;">
+                        <div class="time-4">
+                            <div class="time-5" style="padding: 8px;">
+                                <b><?php echo $data['tour_long'] ?> ngày</b>
+                            </div>
                         </div>
                     </div>
-                    <div class="info-time">
-                        <div class="time-1" style="padding: 8px; display: flex;">
-                            <div class="time-2">
-                                <div class="time-3" style="padding: 8px;">
-                                    <label for="">Thời gian:</label>
-                                </div>
+                    <div class="time-1" style="padding: 8px; display: flex;">
+                        <div class="time-2">
+                            <div class="time-3" style="padding: 8px;">
+                                <label for="">Điểm khởi hành:</label>
                             </div>
-                            <div class="time-4">
-                                <div class="time-5" style="padding: 8px;">
-                                    <b><?php echo $data['tour_long'] ?> ngày</b>
+                        </div>
+                        <?php $sql1 = "SELECT * from db_tourpart";{
+                            $result1 = mysqli_query($conn,$sql1);
+                            if(mysqli_num_rows($result1)>0){
+                                $data1 = mysqli_fetch_assoc($result1);
+                            }else
+                            require '../template/error/404.php';
+                        ?>
+                        <div class="time-4">
+                            <div class="time-5" style="padding: 8px;">
+                                <b>Thành phố <?php echo $data1['city']?></b>
+                            </div>
+                        </div>
+                        <?php
+                        }
+                        ?>
+                    </div>
+                    <div class="time-1" style="padding: 8px; display: flex;">
+                        <div class="time-2">
+                            <div class="time-3" style="padding: 8px;">
+                                <label for="">Ngày khởi hành:</label>
+                            </div>
+                        </div>
+                        <div class="time-4">
+                            <div class="time-5" style="padding: 8px;">
+                                <b><?php echo $data['starttime']?> (UTC+07:00)</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="time-1" style="padding: 8px; display: flex;">
+                        <div class="time-2">
+                            <div class="time-3" style="padding: 8px;">
+                                <label for="">Ngày kết thúc:</label>
+                            </div>
+                        </div>
+                        <div class="time-4">
+                            <div class="time-5" style="padding: 8px;">
+                                <b> <?php echo $data['endtime']?> (UTC+07:00)</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="time-1" style="padding: 8px; display: flex;">
+                        <div class="time-2">
+                            <div class="time-3" style="padding: 8px;">
+                                <label for="">Hành khách:</label>
+                            </div>
+                        </div>
+                        <div class="time-4">
+                            <div class="time-5" style="padding: 8px;">
+                                <b id="sl-nl"> <input style="width:17px; border:none;font-weight:bold" value="1" type="text" name="quantity" readonly></b>
+                            </div>
+                        </div>
+                        <div class="time-6">
+                            <div class="time-7" style="padding: 8px; margin-left:20px">
+                                <b> <input style="width:17px; border:none;font-weight:bold" value="0" type="text" name="quantity1" readonly>trẻ em</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr style="background-color: black; margin-left: 16px; margin-right: 16px;">
+                <div class="bottom-info-bill" style="padding: 8px;">
+                    <p style="padding: 8px; margin-bottom: 8px;"> 
+                        <b style="font-size: 14px;">Chi tiết giá</b> 
+                    </p>
+                    <?php 
+                    $total = 0;
+                    $sql2 = "SELECT * from db_tour";
+                            $result2 = mysqli_query($conn,$sql2);
+                            if(mysqli_num_rows($result2)>0){
+                                $data2 = mysqli_fetch_assoc($result2);
+                            }else
+                            require '../template/error/404.php';
+                    ?>
+                    <div class="time-1" style="padding: 8px; display: flex;">
+                        <div class="time-2">
+                            <div class="time-3" style="padding: 8px;">
+                                <label for="">Người lớn </label>
+                                    x<b id="sl-nl1"><input type="text" style="border: none;width:17px;font-weight:bold"value="1" name="quantity" readonly></b>
+                            </div>
+                        </div>
+                        <div class="time-4">
+                            <div class="time-5" style="padding: 8px;">
+                                <div class="money-bill-bottom">
+                                    <span>
+                                        <b id="chitietnl"><?php echo $data2['man_price']?> ₫</b>
+                                    </span>
                                 </div>
                             </div>
                         </div>
-                        <div class="time-1" style="padding: 8px; display: flex;">
-                            <div class="time-2">
-                                <div class="time-3" style="padding: 8px;">
-                                    <label for="">Điểm khởi hành:</label>
-                                </div>
-                            </div>
-                            <?php $sql1 = "SELECT * from db_tourpart";
-                                $result1 = mysqli_query($conn,$sql1);
-                                if(mysqli_num_rows($result1)>0){
-                                    $data1 = mysqli_fetch_assoc($result1);
-                                }else
-                                    echo "Lỗi truy cập";
-                            ?>
-                            <div class="time-4">
-                                <div class="time-5" style="padding: 8px;">
-                                    <b>Thành phố <?php echo $data1['city']?></b>
-                                </div>
-                            </div>
-                            <?php
-                            ?>
-                        </div>
-                        <div class="time-1" style="padding: 8px; display: flex;">
-                            <div class="time-2">
-                                <div class="time-3" style="padding: 8px;">
-                                    <label for="">Ngày khởi hành:</label>
-                                </div>
-                            </div>
-                            <div class="time-4">
-                                <div class="time-5" style="padding: 8px;">
-                                    <b><?php echo $data['starttime']?> (UTC+07:00)</b>
-                                </div>
+                    </div>
+                    <div class="time-1" style="padding: 8px; display: flex;">
+                        <div class="time-2">
+                            <div class="time-3" style="padding: 8px;">
+                                <label for="">Trẻ em </label>
+                                x<b id="sl-te1"></b>
                             </div>
                         </div>
-                        <div class="time-1" style="padding: 8px; display: flex;">
-                            <div class="time-2">
-                                <div class="time-3" style="padding: 8px;">
-                                    <label for="">Ngày kết thúc:</label>
-                                </div>
-                            </div>
-                            <div class="time-4">
-                                <div class="time-5" style="padding: 8px;">
-                                    <b> <?php echo $data['endtime']?> (UTC+07:00)</b>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="time-1" style="padding: 8px; display: flex;">
-                            <div class="time-2">
-                                <div class="time-3" style="padding: 8px;">
-                                    <label for="">Hành khách:</label>
-                                </div>
-                            </div>
-                            <div class="time-4">
-                                <div class="time-5" style="padding: 8px;">
-                                    <b id="sl-nl"> <input style="width:17px; border:none;font-weight:bold" value="1" type="text" name="quantity" readonly></b>
-                                </div>
-                            </div>
-                            <div class="time-6">
-                                <div class="time-7" style="padding: 8px; margin-left:20px">
-                                    <b> <input style="width:17px; border:none;font-weight:bold" value="0" type="text" name="quantity1" readonly>trẻ em</b>
+                        <div class="time-4">
+                            <div class="time-5" style="padding: 8px;">
+                                <div class="money-bill-bottom">
+                                    <span>
+                                        <b id="chitiette"> ₫</b>
+                                    </span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <hr style="background-color: black; margin-left: 16px; margin-right: 16px;">
-                    <div class="bottom-info-bill" style="padding: 8px;">
-                        <p style="padding: 8px; margin-bottom: 8px;"> 
-                            <b style="font-size: 14px;">Chi tiết giá</b> 
-                        </p>
-                        <?php 
-                        $total = 0;
-                        $sql2 = "SELECT * from db_tour";
-                                $result2 = mysqli_query($conn,$sql2);
-                                if(mysqli_num_rows($result2)>0){
-                                    $data2 = mysqli_fetch_assoc($result2);
-                                }else
-                                    echo "Lỗi truy cập";
-                        ?>
-                            <div class="time-1" style="padding: 8px; display: flex;">
-                                <div class="time-2">
-                                    <div class="time-3" style="padding: 8px;">
-                                        <label for="">Người lớn </label>
-                                        <b>x<input type="text" style="border: none;width:17px;font-weight:bold"value="1" name="quantity" readonly></b>
-                                    </div>
-                                </div>
-                                <div class="time-4">
-                                    <div class="time-5" style="padding: 8px;">
-                                        <div class="money-bill-bottom">
-                                            <span>
-                                                <b id="chitietnl"><?php echo $data2['man_price']?> ₫</b>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="time-1" style="padding: 8px; display: flex;">
-                                <div class="time-2">
-                                    <div class="time-3" style="padding: 8px;">
-                                        <label for="">Trẻ em </label>
-                                        <b>x</b>
-                                    </div>
-                                </div>
-                                <div class="time-4">
-                                    <div class="time-5" style="padding: 8px;">
-                                        <div class="money-bill-bottom">
-                                            <span>
-                                                <b id="chitiette"> ₫</b>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr style="background-color: black; margin-left: 16px; margin-right: 16px;">
-                            <div class="money-bill" style="display: flex;">
-                                <div class="money-bil-1" style="padding: 8px;">
-                                    <p style="padding: 8px; margin-bottom: 8px;"> 
-                                        <b style="font-size: 18px;">Tổng tiền</b> 
-                                    </p>
-                                </div>
-                                <div class="money-all-bottom">
-                                    <h6 id="tongtien" class="money-all totalPrice" style="font-size: 20px;"><?php echo $total?> ₫</h6>
-                                </div>
-                            </div>
-                        <?php
-                        ?>
+                    <div class="money-bill" style="display: flex;">
+                        <div class="money-bil-1" style="padding: 8px;">
+                            <p style="padding: 8px; margin-bottom: 8px;"> 
+                                <b style="font-size: 18px;">Tổng tiền</b> 
+                            </p>
+                        </div>
+                        <div class="money-all-bottom">
+                            <h6 id="tongtien" class="money-all totalPrice" name="txtTotal" style="font-size: 20px;"><?php echo $total?> ₫</h6>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </main> 
     <script>
@@ -846,11 +813,18 @@ if(isset($_GET['id'])){{
             });
             $('#minus-nl').click(function () { 
                 var slnl = Number($('#nl').val());
+                botnl(slnl);
                 slnl-=1;
                 $('#nl').val(slnl);
                 capnhaptien();
-                botnl(slnl);
                 console.log(slnl);
+                if(slnl<=1){
+                    document.getElementById("minus-nl").disabled = true;
+                }else{
+                    document.getElementById("minus-nl").disabled =! false;
+                }
+
+
             });
             function themnl(snl = 1){
                 var output ='';
@@ -911,10 +885,10 @@ if(isset($_GET['id'])){{
             });
             $('#minus-te').click(function () { 
                 var slte = Number($('#te').val());
+                botte(slte);
                 slte-=1;
                 $('#te').val(slte);
                 capnhaptien();
-                botte(slte);
                 console.log(slte);
             });
             function themte(ste = 1){
@@ -1040,6 +1014,8 @@ if(isset($_GET['id'])){{
                 // + sltn*giatn;
                 $('#tongtien').text(tong + ' ₫');
                 $('#sl-nl').text(slnl+' người lớn');
+                $('#sl-nl1').text(slnl);
+                $('#sl-te1').text(slte);
                 
             }
         })
@@ -1169,6 +1145,7 @@ if(isset($_GET['id'])){{
 </body>
 </html>
 <?php
-    }
-    echo 'Lỗi truy cập';
+    }else
+        require '../template/error/404.php';
+}
 ?>
