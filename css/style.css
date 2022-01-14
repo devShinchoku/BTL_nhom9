@@ -14,7 +14,14 @@ body {
 header {
   height: 64px;
 }
-
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  text-decoration: none;
+  color: black;
+}
 .navbar {
   height: 64px;
   padding: 0 12px;
@@ -704,15 +711,13 @@ input[type="datetime"] {
   background-color: #0e698a;
 }
 .ct-departureschedule {
-  height: 80px;
-  width: 870px;
   border: 1px solid #8f8f8f;
   display: flex;
   border-radius: 5px;
 }
 .ct-time-start {
   height: 64px;
-  width: 163px;
+  width: 100%;
   margin-left: 16px;
 }
 .ct-departureschedule-icon {

@@ -48,14 +48,14 @@ if (isset($_POST['id'])) {
                                 </span>
                             </div>
                             <div style="display:flex">
-                                <div style="with:40%">
+                            <div style="with:40%; padding:12px;">
                                     <img src="https://media.hahalolo.com/2021/12/30/07/59/f38d74fda5c43e4303d53e0323b82d92-1640851191_320xauto_high.jpg.webp">
-                                    <div style="display:flex">
+                                    <div style="display:flex;font-size:1rem;">
                                         <i class="bi bi-geo-alt"></i>
                                         '.$datas[$i]['city'].', '. $datas[$i]['country'].'
                                     </div>
                                 </div>
-                                <div style="with:60%">
+                                <div style="with:60%;padding:12px;font-size:0.8rem;">
                                     '.$datas[$i]['info'].'
                                 </div>
                         </div>';
@@ -73,14 +73,14 @@ if (isset($_POST['id'])) {
                                 </span>
                             </div>
                             <div style="display:flex">
-                                <div style="with:40%">
+                                <div style="with:40%;padding:12px;">
                                     <img src="https://media.hahalolo.com/2021/12/30/07/59/f38d74fda5c43e4303d53e0323b82d92-1640851191_320xauto_high.jpg.webp">
-                                    <div style="display:flex">
+                                    <div style="display:flex;font-size:1rem;">
                                         <i class="bi bi-geo-alt"></i>
                                         '.$datas[$i]['city'].', '. $datas[$i]['country'].'
                                     </div>
                                 </div>
-                                <div style="with:60%">
+                                <div style="with:60%;padding:12px;font-size:0.8rem;">
                                     '.$datas[$i]['info'].'
                                 </div>
                         </div>';

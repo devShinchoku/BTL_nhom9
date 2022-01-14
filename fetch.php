@@ -15,7 +15,7 @@ if (isset($_POST["last_id"])) {
         $query .=" (tour_name LIKE '%{$_POST['search_arr'][0]}%' OR country LIKE '%{$_POST['search_arr'][0]}%' OR city LIKE '%{$_POST['search_arr'][0]}%' OR district LIKE '%{$_POST['search_arr'][0]}%' OR address LIKE '%{$_POST['search_arr'][0]}%')";
         
         if($_POST['search_arr'][1] != '')
-            $query .=" AND starttime < '{$_POST['search_arr'][1]}'";
+            $query .=" AND starttime <a '{$_POST['search_arr'][1]}'";
     }
     
     if(isset($_POST['search_arr'][2])){
@@ -99,7 +99,7 @@ if (isset($_POST["last_id"])) {
                         </div>
                         <div class="tour-info mt-2">
                             <h6 class="tour-schedule">
-                                '.$row["tour_name"].'
+                            <a href="detail/?id='.$row["tour_id"].'"> '.$row["tour_name"].'</a>
                             </h6>
                             <div class="tour-long">
                                 '.$row["tour_long"].' ngày
