@@ -27,12 +27,10 @@ if(isset($_GET['id'])){{
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
-    <link rel="stylesheet" href="css/intlTelInput.css">
     <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-    <script src="js/booking.js"></script>
 </head>
 
 <body>
@@ -49,13 +47,6 @@ if(isset($_GET['id'])){{
                         </path>
                     </svg>
                 </a>
-                <!-- <div class="text-search">
-                    <div class="text-search-in">
-                        <input class="text-search-inn" placeholder="Tìm kiếm" type="text">
-                        <i class="bi bi-search"></i>
-                        </div>
-                    </div>
-                </div> -->
                 <ul class="h-menu navbar-nav justify-content-center">
                     <li class="nav-item">
                         <a href="/" class="h-menu-logo nav-link">
@@ -265,13 +256,13 @@ if(isset($_GET['id'])){{
                                         </div>
                                         <div class="input-group plus-minus-input dash-tab-1" style="display: flex;">
                                           <div class="input-group-button dash-tab" style="padding: 4px;">
-                                            <button type="button" class="button hollow circle dash-sl remove" data-quantity="minus" data-field="quantity">
+                                            <button id="minus-nl" type="button" class="button hollow circle dash-sl remove" data-quantity="minus" data-field="quantity">
                                               <i class="bi bi-dash-circle" aria-hidden="true"></i>
                                             </button>
                                           </div>
-                                          <input class="input-group-field text-sl-person" type="number" name="quantity" style="border:none" value="1" readonly>
+                                          <input id="nl" class="input-group-field text-sl-person" type="number" name="quantity" style="border:none" value="1" readonly>
                                           <div class="input-group-button dash-tab" style="padding: 4px;">
-                                            <button id="newsectionbtn" type="button" class="button hollow circle plus-sl" data-quantity="plus" data-field="quantity">
+                                            <button id="plus-nl" type="button" class="button hollow circle plus-sl add-to-man" data-quantity="plus" data-field="quantity">
                                               <i class="bi bi-plus-circle" aria-hidden="true"></i>
                                             </button>
                                           </div>
@@ -288,13 +279,13 @@ if(isset($_GET['id'])){{
                                         </div>
                                         <div class="input-group plus-minus-input dash-tab-1" style="display: flex;">
                                           <div class="input-group-button dash-tab" style="padding: 4px;">
-                                            <button type="button" class="button hollow circle dash-sl remove2" data-quantity="minus1" data-field="quantity1">
+                                            <button id="minus-te" type="button" class="button hollow circle dash-sl remove2" data-quantity="minus1" data-field="quantity1">
                                               <i class="bi bi-dash-circle" aria-hidden="true"></i>
                                             </button>
                                           </div>
-                                          <input class="input-group-field text-sl-person" type="number" name="quantity1" style="border:none" value="0" readonly>
+                                          <input id="te" class="input-group-field text-sl-person" type="number" name="quantity1" style="border:none" value="0" readonly>
                                           <div class="input-group-button dash-tab" style="padding: 4px;">
-                                            <button id="newsectionbtn999" type="button" class="button hollow circle plus-sl" data-quantity="plus1" data-field="quantity1">
+                                            <button id="plus-te" type="button" class="button hollow circle plus-sl add-to-kid" data-quantity="plus1" data-field="quantity1">
                                               <i class="bi bi-plus-circle" aria-hidden="true"></i>
                                             </button>
                                           </div>
@@ -332,104 +323,105 @@ if(isset($_GET['id'])){{
                             </div>
                         </div>
                     </div>
-
-                    <div id="container-99" class="formInput adult-info card" style="padding: 8px; margin-bottom: 16px;">
-                        <section id="mainsection">
-                            <div style="padding: 16px;">
-                                <p class="adult-info-1">
-                                    <b>Thông tin người lớn</b>
-                                    <span>
-                                        (Trên 10 tuổi)
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="adult-info-2" style="display: flex; padding: 8px;">
-                                <div class="inputdecor-book btn-login-book">
-                                    <input class="full-w" type="text" name="name" autocomplete="off" required
-                                        style="margin-left: -33px;border-radius: 0px;" />
-                                    <label for="name" class="lable-name-book">
-                                        <span class="content-name2-book">
-                                            Họ và tên*
+                    <div id="id-cont-tt">
+                        <div id="container-99" class="formInput adult-info card" style="padding: 8px;">
+                            <section id="mainsection">
+                                <div style="padding: 16px;">
+                                    <p class="adult-info-1">
+                                        <b>Thông tin người lớn</b>
+                                        <span>
+                                            (Trên 10 tuổi)
                                         </span>
-                                    </label>
+                                    </p>
                                 </div>
-                                <div class="inputdecor-book btn-login-book">
-                                    <input class="full-w" type="date" name="name" autocomplete="off" required
-                                        style="margin-left: -33px;border-radius: 0px;" />
-                                    <label for="name" class="lable-name-book">
-                                        <span class="birth-day-adult">
-                                            Ngày sinh
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="info-lh4">
-                                <div class="gender">
-                                    <p>Giới tính</p>
-                                </div>
-                                <div class="male-female">
-                                    <div class="gender-lh4">
-                                        <input class="fe-male" type="radio" name="chooseone" value="Nam"
-                                            style="height:20px; width:20px; vertical-align: middle;">
-                                        <label for="Nam">Nam</label>
+                                <div class="adult-info-2" style="display: flex; padding: 8px;">
+                                    <div class="inputdecor-book btn-login-book">
+                                        <input class="full-w" type="text" name="name" autocomplete="off" required
+                                            style="margin-left: -33px;border-radius: 0px;" />
+                                        <label for="name" class="lable-name-book">
+                                            <span class="content-name2-book">
+                                                Họ và tên*
+                                            </span>
+                                        </label>
                                     </div>
-                                    <div class="gender-lh4">
-                                        <input class="fe-male" type="radio" name="chooseone" value="Nu"
-                                            style="height:20px; width:20px; vertical-align: middle;">
-                                        <label for="Nu">Nữ</label>
+                                    <div class="inputdecor-book btn-login-book">
+                                        <input class="full-w" type="date" name="name" autocomplete="off" required
+                                            style="margin-left: -33px;border-radius: 0px;" />
+                                        <label for="name" class="lable-name-book">
+                                            <span class="birth-day-adult">
+                                                Ngày sinh
+                                            </span>
+                                        </label>
                                     </div>
                                 </div>
-                            </div>
-                        </section>
-                    </div>
-                    <div id="container-999" class="formInput adult-info card" style="padding: 8px; margin-bottom: 16px; display:none">
-                        <section id="mainsection999">
-                            <div style="padding: 16px;">
-                                <p class="adult-info-1">
-                                    <b>Thông tin trẻ em</b>
-                                    <span>
-                                        (Dưới 4 tuổi)
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="adult-info-2" style="display: flex; padding: 8px;">
-                                <div class="inputdecor-book btn-login-book">
-                                    <input class="full-w" type="text" name="name" autocomplete="off" required
-                                        style="margin-left: -33px;border-radius: 0px;" />
-                                    <label for="name" class="lable-name-book">
-                                        <span class="content-name2-book">
-                                            Họ và tên*
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="inputdecor-book btn-login-book">
-                                    <input class="full-w" type="date" name="name" autocomplete="off" required
-                                        style="margin-left: -33px;border-radius: 0px;" />
-                                    <label for="name" class="lable-name-book">
-                                        <span class="birth-day-adult">
-                                            Ngày sinh
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="info-lh4">
-                                <div class="gender">
-                                    <p>Giới tính</p>
-                                </div>
-                                <div class="male-female">
-                                    <div class="gender-lh4">
-                                        <input class="fe-male1" type="radio" name="chooseone1" value="Nam1"
-                                            style="height:20px; width:20px; vertical-align: middle;">
-                                        <label for="Nam1">Nam</label>
+                                <div class="info-lh4">
+                                    <div class="gender">
+                                        <p>Giới tính</p>
                                     </div>
-                                    <div class="gender-lh4">
-                                        <input class="fe-male1" type="radio" name="chooseone1" value="Nu1"
-                                            style="height:20px; width:20px; vertical-align: middle;">
-                                        <label for="Nu1">Nữ</label>
+                                    <div class="male-female">
+                                        <div class="gender-lh4">
+                                            <input class="fe-male" type="radio" name="chooseone" value="Nam"
+                                                style="height:20px; width:20px; vertical-align: middle;">
+                                            <label for="Nam">Nam</label>
+                                        </div>
+                                        <div class="gender-lh4">
+                                            <input class="fe-male" type="radio" name="chooseone" value="Nu"
+                                                style="height:20px; width:20px; vertical-align: middle;">
+                                            <label for="Nu">Nữ</label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </section>
+                            </section>
+                        </div>
+                        <div id="container-999" class=" adult-info card" style="padding: 8px; margin-bottom: 16px; display:none">
+                            <section id="mainsection999">
+                                <div style="padding: 16px;">
+                                    <p class="adult-info-1">
+                                        <b>Thông tin trẻ em</b>
+                                        <span>
+                                            (Dưới 4 tuổi)
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="adult-info-2" style="display: flex; padding: 8px;">
+                                    <div class="inputdecor-book btn-login-book">
+                                        <input class="full-w" type="text" name="name" autocomplete="off" required
+                                            style="margin-left: -33px;border-radius: 0px;" />
+                                        <label for="name" class="lable-name-book">
+                                            <span class="content-name2-book">
+                                                Họ và tên*
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="inputdecor-book btn-login-book">
+                                        <input class="full-w" type="date" name="name" autocomplete="off" required
+                                            style="margin-left: -33px;border-radius: 0px;" />
+                                        <label for="name" class="lable-name-book">
+                                            <span class="birth-day-adult">
+                                                Ngày sinh
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="info-lh4">
+                                    <div class="gender">
+                                        <p>Giới tính</p>
+                                    </div>
+                                    <div class="male-female">
+                                        <div class="gender-lh4">
+                                            <input class="fe-male1" type="radio" name="chooseone1" value="Nam1"
+                                                style="height:20px; width:20px; vertical-align: middle;">
+                                            <label for="Nam1">Nam</label>
+                                        </div>
+                                        <div class="gender-lh4">
+                                            <input class="fe-male1" type="radio" name="chooseone1" value="Nu1"
+                                                style="height:20px; width:20px; vertical-align: middle;">
+                                            <label for="Nu1">Nữ</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
                     </div>
                     <div class="bonus-dv card" style="padding: 8px; margin-bottom: 16px;">
                         <div class="bonus-dv-0">
@@ -669,7 +661,6 @@ if(isset($_GET['id'])){{
                             </div>
                         </div>
                     </div>
-                
                 </div>
         </form>    
             <div class="col-md-4" style="padding: 0px 8px 8px 8px;">
@@ -762,7 +753,7 @@ if(isset($_GET['id'])){{
                             </div>
                             <div class="time-4">
                                 <div class="time-5" style="padding: 8px;">
-                                    <b> <input style="width:17px; border:none;font-weight:bold" value="1" type="text" name="quantity" readonly>người lớn</b>
+                                    <b id="sl-nl"> <input style="width:17px; border:none;font-weight:bold" value="1" type="text" name="quantity" readonly></b>
                                 </div>
                             </div>
                             <div class="time-6">
@@ -796,8 +787,8 @@ if(isset($_GET['id'])){{
                                 <div class="time-4">
                                     <div class="time-5" style="padding: 8px;">
                                         <div class="money-bill-bottom">
-                                            <span class="span-price">
-                                                <b><?php echo $data2['man_price']?> ₫</b>
+                                            <span>
+                                                <b id="chitietnl"><?php echo $data2['man_price']?> ₫</b>
                                             </span>
                                         </div>
                                     </div>
@@ -807,14 +798,14 @@ if(isset($_GET['id'])){{
                                 <div class="time-2">
                                     <div class="time-3" style="padding: 8px;">
                                         <label for="">Trẻ em </label>
-                                        <b>x<input type="text" style="border: none;width:17px;font-weight:bold"value="0" name="quantity1" readonly></b>
+                                        <b>x</b>
                                     </div>
                                 </div>
                                 <div class="time-4">
                                     <div class="time-5" style="padding: 8px;">
                                         <div class="money-bill-bottom">
-                                            <span class="span-price">
-                                                <b><?php echo $data2['kid_price']?> ₫</b>
+                                            <span>
+                                                <b id="chitiette"> ₫</b>
                                             </span>
                                         </div>
                                     </div>
@@ -828,7 +819,7 @@ if(isset($_GET['id'])){{
                                     </p>
                                 </div>
                                 <div class="money-all-bottom">
-                                    <h6 class="money-all" style="font-size: 20px;"><?php echo $total?></h6>
+                                    <h6 id="tongtien" class="money-all totalPrice" style="font-size: 20px;"><?php echo $total?> ₫</h6>
                                 </div>
                             </div>
                         <?php
@@ -838,9 +829,221 @@ if(isset($_GET['id'])){{
             </div>
 
         </div>
-    </main>
+    </main> 
+    <script>
+        var gianl = <?php echo $data2['man_price']; ?>;
+        var giate = <?php echo $data2['kid_price']; ?>;
+        var giatn = <?php echo $data2['child_price']; ?>;
+        $(document).ready(function (){
+            capnhaptien();
+            $("#plus-nl").click(function () { 
+                var slnl = Number($("#nl").val());
+                slnl+=1;
+                $('#nl').val(slnl);
+                capnhaptien();
+                themnl(slnl);
+                console.log(slnl);
+            });
+            $('#minus-nl').click(function () { 
+                var slnl = Number($('#nl').val());
+                slnl-=1;
+                $('#nl').val(slnl);
+                capnhaptien();
+                botnl(slnl);
+                console.log(slnl);
+            });
+            function themnl(snl = 1){
+                var output ='';
+                output+='<div id="tt-sl-nl'+snl+'">';
+                output+='<div style="padding: 16px;">';
+                output+='<p class="adult-info-1">';
+                output+='<b>Thông tin người lớn ' + snl + ' </b>';
+                output+='<span>';
+                output+='(Trên 11 tuổi)';
+                output+='</span>';
+                output+='</p>';
+                output+='</div>';
+                output+='<div class="adult-info-2" style="display: flex; padding: 8px;">';
+                output+='<div class="inputdecor-book btn-login-book">';
+                output+='<input class="full-w" type="text" name="name" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />';
+                output+='<label for="name" class="lable-name-book">';
+                output+='<span class="content-name2-book"> Họ và tên* </span>';
+                output+='</label>';
+                output+='</div>';
+                output+='<div class="inputdecor-book btn-login-book">';
+                output+='<input class="full-w" type="date" name="name" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />';
+                output+='<label for="name" class="lable-name-book">';
+                output+='<span class="birth-day-adult">Ngày sinh</span>';
+                output+='</label>';
+                output+='</div>';
+                output+='</div>';
+                output+='<div class="info-lh4">';
+                output+='<div class="gender">';
+                output+='<p>Giới tính</p>';
+                output+='</div>';
+                output+='<div class="male-female">';
+                output+='<div class="gender-lh4">';
+                output+='<input class="fe-male" type="radio" name="chooseone'+snl+'" value="Nam'+snl+'" style="height:20px; width:20px; vertical-align: middle;">';
+                output+='<label for="Nam'+snl+'">Nam</label>';
+                output+='</div>';
+                output+='<div class="gender-lh4">';
+                output+='<input class="fe-male" type="radio" name="chooseone'+snl+'" value="Nu'+snl+'" style="height:20px; width:20px; vertical-align: middle;">';
+                output+='<label for="Nu'+snl+'">Nữ</label>';
+                output+='</div>';
+                output+='</div>';
+                output+='</div>';
+                output+='</div>';
+                $('#container-99').append(output);
+                
+            }
+            function botnl(snl = 1){
+                $('#tt-sl-nl'+snl).remove();
+            }
 
+            //Trẻ em
+            $("#plus-te").click(function () { 
+                var slte = Number($("#te").val());
+                slte+=1;
+                $('#te').val(slte);
+                capnhaptien();
+                themte(slte);
+                console.log(slte);
+            });
+            $('#minus-te').click(function () { 
+                var slte = Number($('#te').val());
+                slte-=1;
+                $('#te').val(slte);
+                capnhaptien();
+                botte(slte);
+                console.log(slte);
+            });
+            function themte(ste = 1){
+                var output ='';
+                output+='<div id="tt-sl-te'+ste+'">';
+                output+='<div style="padding: 16px;">';
+                output+='<p class="adult-info-1">';
+                output+='<b>Thông tin trẻ em ' + ste + ' </b>';
+                output+='<span>';
+                output+='(6 đến 11 tuổi)';
+                output+='</span>';
+                output+='</p>';
+                output+='</div>';
+                output+='<div class="adult-info-2" style="display: flex; padding: 8px;">';
+                output+='<div class="inputdecor-book btn-login-book">';
+                output+='<input class="full-w" type="text" name="name" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />';
+                output+='<label for="name" class="lable-name-book">';
+                output+='<span class="content-name2-book"> Họ và tên* </span>';
+                output+='</label>';
+                output+='</div>';
+                output+='<div class="inputdecor-book btn-login-book">';
+                output+='<input class="full-w" type="date" name="name" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />';
+                output+='<label for="name" class="lable-name-book">';
+                output+='<span class="birth-day-adult">Ngày sinh</span>';
+                output+='</label>';
+                output+='</div>';
+                output+='</div>';
+                output+='<div class="info-lh4">';
+                output+='<div class="gender">';
+                output+='<p>Giới tính</p>';
+                output+='</div>';
+                output+='<div class="male-female">';
+                output+='<div class="gender-lh4">';
+                output+='<input class="fe-male" type="radio" name="chooseone1'+ste+'" value="Nam1'+ste+'" style="height:20px; width:20px; vertical-align: middle;">';
+                output+='<label for="Nam1'+ste+'">Nam</label>';
+                output+='</div>';
+                output+='<div class="gender-lh4">';
+                output+='<input class="fe-male" type="radio" name="chooseone1'+ste+'" value="Nu1'+ste+'" style="height:20px; width:20px; vertical-align: middle;">';
+                output+='<label for="Nu1'+ste+'">Nữ</label>';
+                output+='</div>';
+                output+='</div>';
+                output+='</div>';
+                output+='</div>';
+                $('#container-99').append(output);
+            }
+            function botte(ste = 1){
+                $('#tt-sl-te'+ste).remove();
+            }
 
+            //Thiếu niên
+            // $("#plus-tn").click(function () { 
+            //     var sltn = Number($("#tn").val());
+            //     sltn+=1;
+            //     $('#tn').val(sltn);
+            //     capnhaptien();
+            //     themtn(sltn);
+            //     console.log(sltn);
+            // });
+            // $('#minus-tn').click(function () { 
+            //     var sltn = Number($('#tn').val());
+            //     sltn-=1;
+            //     $('#tn').val(sltn);
+            //     capnhaptien();
+            //     bottn(sltn);
+            //     console.log(sltn);
+            // });
+            // function themtn(stn = 1){
+            //     var output ='';
+            //     output+='<div id="tt-sl-tn'+stn+'">';
+            //     output+='<div style="padding: 16px;">';
+            //     output+='<p class="adult-info-1">';
+            //     output+='<b>Thông tin trẻ em ' + stn + ' </b>';
+            //     output+='<span>';
+            //     output+='(6 đến 11 tuổi)';
+            //     output+='</span>';
+            //     output+='</p>';
+            //     output+='</div>';
+            //     output+='<div class="adult-info-2" style="display: flex; padding: 8px;">';
+            //     output+='<div class="inputdecor-book btn-login-book">';
+            //     output+='<input class="full-w" type="text" name="name" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />';
+            //     output+='<label for="name" class="lable-name-book">';
+            //     output+='<span class="content-name2-book"> Họ và tên* </span>';
+            //     output+='</label>';
+            //     output+='</div>';
+            //     output+='<div class="inputdecor-book btn-login-book">';
+            //     output+='<input class="full-w" type="date" name="name" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />';
+            //     output+='<label for="name" class="lable-name-book">';
+            //     output+='<span class="birth-day-adult">Ngày sinh</span>';
+            //     output+='</label>';
+            //     output+='</div>';
+            //     output+='</div>';
+            //     output+='<div class="info-lh4">';
+            //     output+='<div class="gender">';
+            //     output+='<p>Giới tính</p>';
+            //     output+='</div>';
+            //     output+='<div class="male-female">';
+            //     output+='<div class="gender-lh4">';
+            //     output+='<input class="fe-male" type="radio" name="chooseone11'+stn+'" value="Nam11'+stn+'" style="height:20px; width:20px; vertical-align: middle;">';
+            //     output+='<label for="Nam11'+stn+'">Nam</label>';
+            //     output+='</div>';
+            //     output+='<div class="gender-lh4">';
+            //     output+='<input class="fe-male" type="radio" name="chooseone11'+stn+'" value="Nu11'+stn+'" style="height:20px; width:20px; vertical-align: middle;">';
+            //     output+='<label for="Nu11'+stn+'">Nữ</label>';
+            //     output+='</div>';
+            //     output+='</div>';
+            //     output+='</div>';
+            //     output+='</div>';
+            //     $('#container-99').append(output);
+            // }
+            // function bottn(stn = 1){
+            //     $('#tt-sl-tn'+stn).remove();
+            // }
+
+            //Tính tiền
+            function capnhaptien(){
+                var slnl = $('#nl').val();
+                var slte = $('#te').val();
+                var sltn = $('#tn').val();
+                $('#chitietnl').text(slnl*gianl + ' ₫');
+                $('#chitiette').text(slte*giate + ' ₫');
+                $('#chitiettn').text(sltn*giatn + ' ₫');
+                var tong = slnl*gianl + slte*giate; 
+                // + sltn*giatn;
+                $('#tongtien').text(tong + ' ₫');
+                $('#sl-nl').text(slnl+' người lớn');
+                
+            }
+        })
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
         crossorigin="anonymous"></script>
@@ -848,10 +1051,8 @@ if(isset($_GET['id'])){{
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
     <script src="../js/booking.js"></script>
-    <script src="js/intlTelInput.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        //flags phone number
         var input = document.querySelector("#phone");
         intlTelInput(input, {
             initialCountry: "vn",
@@ -861,9 +1062,7 @@ if(isset($_GET['id'])){{
                     success(countryCode);
                 });
             },
-            utilsScript: "js/utils.js"
         });
-
         var input = document.querySelector("#phone1");
         intlTelInput(input, {
             initialCountry: "vn",
@@ -873,10 +1072,11 @@ if(isset($_GET['id'])){{
                     success(countryCode);
                 });
             },
-            utilsScript: "js/utils.js"
+
         });
     </script>
-    <script>jQuery(document).ready(function(){
+    
+    <!-- <script>jQuery(document).ready(function(){
         $('[data-quantity="plus"]').click(function(e){
             e.preventDefault();
             fieldName = $(this).attr('data-field');
@@ -897,9 +1097,23 @@ if(isset($_GET['id'])){{
                 $('input[name='+fieldName+']').val(0);
             }
         });
+        //When the user clicks add to cart this will update the total price and the quantity in the cart 
+            var currentItems = 0;
+            var cartPrice = ;
+
+            $(document).ready(function(){
+                $(".add-to-man").click(function(){
+                    currentItems = $("input.input-group-field[name='quantity']").val();
+                    var totalPrice = currentItems * cartPrice;
+                    $(".cart-badge").text(currentItems);
+                    $(".cartPrice").text(totalPrice + " ₫");
+                    var total = totalPrice + totalPrice1;
+        $(".totalPrice").text(total + " ₫"); 
+                });
+            });
     });
-    </script>
-    <script>jQuery(document).ready(function(){
+    </script> -->
+    <!-- <script>jQuery(document).ready(function(){
         $('[data-quantity="plus1"]').click(function(e){
             e.preventDefault();
             fieldName = $(this).attr('data-field');
@@ -920,22 +1134,38 @@ if(isset($_GET['id'])){{
                 $('input[name='+fieldName+']').val(0);
             }
         });
+            //When the user clicks add to cart this will update the total price and the quantity in the cart 
+        var currentItems1 = 0;
+        var cartPrice1 = ;
+
+        $(document).ready(function(){
+            $(".add-to-kid").click(function(){
+                currentItems1 = $("input.input-group-field[name='quantity1']").val();
+                var totalPrice1 = currentItems1 * cartPrice1;
+                $(".cart-badge1").text(currentItems1);
+                $(".cartPrice1").text(totalPrice1 + " ₫");
+                var total = totalPrice + totalPrice1;
+                $(".totalPrice").text(total + " ₫"); 
+            });
+        });
     });
-    </script>
-    <!-- <script>
-    document.getElementById("newsectionbtn999").onclick = function() {
-    var container = document.getElementById("container-999");
-    var section = document.getElementById("mainsection999");
-    container.appendChild(section.cloneNode(true));
-    }
     </script> -->
-    <script>
-    document.getElementById("newsectionbtn").onclick = function() {
-    var container = document.getElementById("container-99");
-    var section = document.getElementById("mainsection");
-    container.appendChild(section.cloneNode(true));
-  }
-    </script>
+    
+
+     <!-- <script>
+//     document.getElementById("newsectionbtn999").onclick = function() {
+//     var container = document.getElementById("container-999");
+//     var section = document.getElementById("mainsection999");
+//     container.appendChild(section.cloneNode(true));
+//     }
+//     </script>
+//     <script>
+//     document.getElementById("newsectionbtn").onclick = function() {
+//     var container = document.getElementById("container-99");
+//     var section = document.getElementById("mainsection");
+//     container.appendChild(section.cloneNode(true));
+//   }
+//     </script> -->
 </body>
 </html>
 <?php

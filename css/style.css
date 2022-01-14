@@ -13,9 +13,7 @@ body {
 /* CSS for header */
 header {
   height: 64px;
-
 }
-
 
 .navbar {
   height: 64px;
@@ -67,7 +65,6 @@ header {
   background-color: rgb(134 243 255 / 30%);
   box-sizing: inherit;
 }
-
 
 .h-menu-logo:hover {
   background-color: #f6fcfe;
@@ -157,10 +154,9 @@ header {
   background-color: white;
   border: 1px solid rgba(36, 168, 216, 0.5);
 }
-.btn-start-day:hover{
+.btn-start-day:hover {
   background-color: #f6fcfe;
   border: 1px solid #24a8d8;
-
 }
 
 /* CSS for main */
@@ -168,8 +164,8 @@ header {
   box-shadow: 0 1px 6px rgba(0.1, 0.1, 0.1, 0.1);
   border: none;
 }
-.m-content-header{
-  background-color: #fff; 
+.m-content-header {
+  background-color: #fff;
   border-bottom: none;
 }
 .location {
@@ -233,7 +229,7 @@ header {
   color: #909090;
   text-decoration: underline;
 }
-.search-datetime {
+.search-item {
   display: flex;
 }
 .m-search-input {
@@ -542,8 +538,7 @@ input[type="datetime"] {
 .container {
   justify-content: space-between;
 }
-.container1{
-
+.container1 {
   display: flex;
 }
 
@@ -801,30 +796,30 @@ input[type="datetime"] {
 
 /* book */
 
-.circle-bl-1{
+.circle-bl-1 {
   top: 0;
-    left: -8px;
-    width: 24px;
-    bottom: 0;
-    height: 24px;
-    content: "";
-    z-index: -1;
-    border-radius: 50%;
-    background-color: rgba(194, 249, 255, 1);
+  left: -8px;
+  width: 24px;
+  bottom: 0;
+  height: 24px;
+  content: "";
+  z-index: -1;
+  border-radius: 50%;
+  background-color: rgba(194, 249, 255, 1);
 }
 
-.top-info-tour{
+.top-info-tour {
   width: 100%;
   height: 120px;
   margin-top: 90px;
 }
-.back-up .btn-back-up{
+.back-up .btn-back-up {
   border: none;
   font-size: 19px;
   background-color: #fafafb;
   padding: 8px 24px;
 }
-.back-up{
+.back-up {
   height: 64px;
   min-height: 64px;
   display: flex;
@@ -832,44 +827,44 @@ input[type="datetime"] {
   align-items: center;
 }
 
-.info-tour-h h5{
+.info-tour-h h5 {
   font-size: 1.5rem;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   line-height: 1.334;
 }
-.info-tour b{
+.info-tour b {
   font-weight: 600;
   font-size: 27px;
 }
-.info-lh1{
+.info-lh1 {
   padding: 8px;
   width: 100%;
   left: 0;
   margin-bottom: 16px;
 }
-.info-lh2{
-  padding: 16px 16px 24px ;
+.info-lh2 {
+  padding: 16px 16px 24px;
 }
-.info-lh2 b{
- font-weight: 600;
+.info-lh2 b {
+  font-weight: 600;
 }
-.info-lh2 h6{
+.info-lh2 h6 {
   font-size: 1.3rem;
   margin: 0 0 8.4px;
 }
-.info-lh3{
+.info-lh3 {
   display: flex;
 }
 
-
 /* edit booking*/
-.btn-login-book{
+.btn-login-book {
   width: 45%;
   position: relative;
   margin-left: 34px;
 }
-.btn-login-book label{
+.btn-login-book label {
   position: absolute;
   bottom: 0px;
   left: 0%;
@@ -879,23 +874,21 @@ input[type="datetime"] {
   pointer-events: none;
 }
 
-.inputdecor-book{
+.inputdecor-book {
   border-radius: 0px;
   padding: 12px;
 }
-.inputdecor-book input:hover{
-  
+.inputdecor-book input:hover {
   border: none;
   border-bottom: 1px solid #313131;
-  
 }
-.inputdecor-book input:focus{
+.inputdecor-book input:focus {
   outline: none !important;
   border-color: #24a8d8;
   border: none;
   border-bottom: 1px solid #24a8d8;
 }
-.inputdecor-book input{
+.inputdecor-book input {
   height: 48px;
   padding: 0px;
   font-size: 18px;
@@ -903,7 +896,7 @@ input[type="datetime"] {
   border-bottom: 1px solid #ada9a9;
 }
 
-.content-name2-book{
+.content-name2-book {
   position: absolute;
   bottom: 16px;
   left: -36px;
@@ -918,41 +911,44 @@ input[type="datetime"] {
   background-color: white;
 }
 
-
 /* start booking info gender*/
-.info-lh4{
+.info-lh4 {
   display: flex;
 }
 
-.info-lh4 .gender{
+.info-lh4 .gender {
   font-size: 1rem;
-    font-family: Mulish,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    font-weight: 400;
-    line-height: 1.5;
-    padding: 12px;
+  font-family: Mulish, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 12px;
 }
-.gender p{
+.gender p {
   margin-top: 8px;
   margin-left: 8px;
 }
-.gender-lh4 input{
+.gender-lh4 input {
   margin-right: 7px;
 }
 
-.gender-lh4 label{
+.gender-lh4 label {
   font-size: 1rem;
-    font-family: Mulish,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    font-weight: 400;
-    line-height: 1.5;
+  font-family: Mulish, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-weight: 400;
+  line-height: 1.5;
 }
-.male-female{
+.male-female {
   padding: 12px;
   flex-grow: 0;
   max-width: none;
   flex-basis: auto;
   display: flex;
 }
-.gender-lh4{
+.gender-lh4 {
   margin-top: 5px;
   align-items: center;
   padding: 0 12px;
@@ -961,9 +957,8 @@ input[type="datetime"] {
 
 /* end booking info gender*/
 
-
 /* start booking info phone number*/
-.container-phone-number input{
+.container-phone-number input {
   height: 48px;
   width: 260px;
   padding: 0px;
@@ -971,39 +966,36 @@ input[type="datetime"] {
   border: none;
   border-bottom: 1px solid #ada9a9;
 }
-.container-phone-number input:hover{
+.container-phone-number input:hover {
   outline: none;
 }
-.ma-quoc-gia{
+.ma-quoc-gia {
   border-radius: 0px;
   padding: 12px;
 }
-.container-phone-number input::-webkit-inner-spin-button, 
-input::-webkit-outer-spin-button { 
-    -webkit-appearance: none; 
-    margin: 0; 
+.container-phone-number input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 /* end booking info phone number*/
 
-
 /* start booking info location*/
-.inputdecor-book-location{
+.inputdecor-book-location {
   border-radius: 0px;
   padding: 12px;
 }
-.inputdecor-book-location input:hover{
-
+.inputdecor-book-location input:hover {
   border: none;
   border-bottom: 1px solid #313131;
-
 }
-.inputdecor-book-location input:focus{
+.inputdecor-book-location input:focus {
   outline: none !important;
   border-color: #24a8d8;
   border: none;
   border-bottom: 1px solid #24a8d8;
 }
-.inputdecor-book-location input{
+.inputdecor-book-location input {
   height: 48px;
   width: 626px;
   padding: 0px;
@@ -1013,59 +1005,57 @@ input::-webkit-outer-spin-button {
 }
 /* end booking info location*/
 
-
 /* css cart */
-.cart-iteam i{
+.cart-iteam i {
   font-size: 120px;
   color: #8f8f8f;
 }
-.cart-background{
+.cart-background {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARwAAAC0AgMAAAA7ontEAAAACVBMVEWR8f9HcEyQ8P8BmmoHAAAAA3RSTlMlAEXCRvXKAAACgElEQVRo3u3TMZITMRAF0C8KJUQQKKcI9xQO2NyB+z4KOYaKaMqnJDDYw1gtdWu+S2ZZHeDV798tnP2v4O4FPJcTR5xMypMfl2eqg7fpLBUnvTut70VzZGKeTMrDcvA4J0x0ljfq1M4wTnTyP+CkAQccZ3mkI/Oc8mROrn6veQ4e6ES/szyZU+rfwu3kJ3NQP+dZzqKcodcpT+Zk5QxnOeA41XUhTXOKdoZOJ5McaOczx1lITlHPZ46T1fPxOeA49ZohXqc81AluJ5Mc6Gv3OAvJKY21e5xMctBYu8NR6glep5Cc3FqXwwHHUer5vS67U0hObq7d7qC5LrOzkJzSXpfZye2azQ44jjbWn3VZnUxy0FmX0dG2fl2X0cm9mo0OOI461rVmm5O7NdsccBx9rOhycr9mk4N+zRankBwYajY4esurmg2O3vKq5r7TiLOqp+8UkgNTzV2nFSc6nAazrrnntOKs6+k5MNbTcZpxotlp3Y7HybDW03TacTbOy1jJm7EEGJzqzvkwsqvNFYoA+DRSzt/XIwKgWlEvTc2pJOql2Y51ce6gbhrF2Wzta5/ZjHV1VpF+wvCi5gD49nI+/8gwvdRwPE84TiA5keQkjnM31mQnkRzhOIHkJJIjHCeQnERyhOMEkpNIjnCcSHISx6m2POBEkiMcJ5KcxHGUlt1OIjmiOgdGyyI4UeII5MiII5ATI45A7IFS27HuLEjHOe6PIzAfUTPOxTntjnNx5LBr5zdHdk51dY77pro6vck6U90c2TXVyjkNfoit04LE4+hQ8jna0kScTjVRSH6nAgWRAedutlcZdEQ+35QvIuOOyPcDAHx8FdnnjLx35/90fgHmSrcG+F7gzwAAAABJRU5ErkJggg==);
   background-repeat: no-repeat;
 }
 
-
-.cart-tour-1{
+.cart-tour-1 {
   display: flex;
   height: 100%;
   width: 40%;
 }
-.cart-tour-1-1 img{
+.cart-tour-1-1 img {
   height: 107px;
   width: 143px;
 }
-.cart-tour-1-1{
+.cart-tour-1-1 {
   height: 249px;
   width: 159px;
 }
-.cart-tour-text1{
+.cart-tour-text1 {
   text-decoration: none;
   color: #212121;
   font-size: 20px;
 }
-.cart-tour-text1:hover{
+.cart-tour-text1:hover {
   color: #212121;
   text-decoration: underline;
 }
-.cart-tour-text2{
+.cart-tour-text2 {
   display: flex;
   font-size: 16px;
 }
-.cart-tour-2{
+.cart-tour-2 {
   height: auto;
   width: 700px;
 }
-.cart-tour-2-1{
+.cart-tour-2-1 {
   text-align: center;
   display: flex;
   font-size: 16px;
 }
-.cart-price{
+.cart-price {
   text-align: right;
   height: 100%;
   width: 33%;
 }
-.cart-price-tour{
+.cart-price-tour {
   width: 85px;
   height: 36px;
   color: white;
@@ -1074,59 +1064,58 @@ input::-webkit-outer-spin-button {
   border: none;
   border-radius: 30px;
 }
-.cart-price-tour:hover{
+.cart-price-tour:hover {
   background-color: #0e698a;
 }
 
 /*customer*/
-.sl-customer{
+.sl-customer {
   padding: 8px;
 }
-.customer{
+.customer {
   padding: 16px 16px 0px;
 }
-.customer b{
+.customer b {
   font-weight: 600;
 }
-.customer h6{
+.customer h6 {
   font-size: 1.3rem;
   margin: 0 0 8.4px;
 }
 
-
 /* sl-peole*/
 
-.adult-sl{
+.adult-sl {
   padding: 16px;
 }
-.adult-info b{
+.adult-info b {
   font-size: 21px;
   font-weight: 600;
 }
 
-.dash-sl{
+.dash-sl {
   padding: 1px;
   border: none;
   background-color: #fff;
   font-size: 17px;
   opacity: 0.4;
 }
-.text-sl-person{
+.text-sl-person {
   text-align: center;
 }
-.plus-sl{
+.plus-sl {
   padding: 1px;
   border: none;
   background-color: #fff;
   font-size: 17px;
   color: #24a8d8;
 }
-.input-sl .text-sl-person input{
+.input-sl .text-sl-person input {
   width: 60px;
   height: 0;
 }
 
-.choose-enter-1 input{
+.choose-enter-1 input {
   margin: 12px;
   width: 1rem;
   height: 1rem;
@@ -1134,38 +1123,35 @@ input::-webkit-outer-spin-button {
 
 /* sl-people */
 
-
-
 /*bonus-dv*/
-.dv-11-01{
-    transform: translate(0, -8px) scale(1);
-    color: rgba(0, 0, 0, 0.54);
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1;
+.dv-11-01 {
+  transform: translate(0, -8px) scale(1);
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
 }
 
-.btn-login-dv{
+.btn-login-dv {
   width: 45%;
   position: relative;
   margin-left: 34px;
 }
-.inputdecor-dv{
+.inputdecor-dv {
   border-radius: 0px;
   padding: 1px;
 }
-.inputdecor-dv input:hover{
+.inputdecor-dv input:hover {
   border: none;
   border-bottom: 1px solid #313131;
-  
 }
-.inputdecor-dv input:focus{
+.inputdecor-dv input:focus {
   outline: none !important;
   border-color: #24a8d8;
   border: none;
   border-bottom: 1px solid #24a8d8;
 }
-.inputdecor-dv input{
+.inputdecor-dv input {
   height: 18px;
   width: 260px;
   padding: 0px;
@@ -1174,7 +1160,7 @@ input::-webkit-outer-spin-button {
   border-bottom: 1px solid #ada9a9;
 }
 
-.content-name2-dv{
+.content-name2-dv {
   position: absolute;
   bottom: 7px;
   left: -36px;
@@ -1182,14 +1168,14 @@ input::-webkit-outer-spin-button {
   font-size: 16px;
 }
 
-.content-name3-dv{
+.content-name3-dv {
   position: absolute;
   bottom: 21px;
   left: -36px;
   transition: all 0.3s ease;
   font-size: 16px;
 }
-.content-name4-dv{
+.content-name4-dv {
   position: absolute;
   bottom: 7px;
   left: -36px;
@@ -1206,38 +1192,36 @@ input::-webkit-outer-spin-button {
 }
 
 /*bonus-dv*/
-.dv-plus button{
+.dv-plus button {
   display: flex;
   padding: 6px 8px;
-  border:none; 
-  background-color: #FAFAFB;
+  border: none;
+  background-color: #fafafb;
 }
-.dv-plus i{
+.dv-plus i {
   padding: 8px;
   font-size: 20px;
   color: #24a8d8;
 }
-.dv-plus-p{
+.dv-plus-p {
   text-align: center;
   padding-top: 14px;
   color: #24a8d8;
 }
-.close-dv button{
+.close-dv button {
   border: none;
-  background-color: #FAFAFB;
+  background-color: #fafafb;
   font-size: 15px;
   padding: 12px;
 }
 
-
-
 /* info-abate */
-.btn-login-abate{
+.btn-login-abate {
   width: 45%;
   position: relative;
   margin-left: 34px;
 }
-.btn-login-abate label{
+.btn-login-abate label {
   position: absolute;
   bottom: 0px;
   left: 0%;
@@ -1247,23 +1231,21 @@ input::-webkit-outer-spin-button {
   pointer-events: none;
 }
 
-.inputdecor-abate{
+.inputdecor-abate {
   border-radius: 0px;
   padding: 12px;
 }
-.inputdecor-abate input:hover{
-  
+.inputdecor-abate input:hover {
   border: none;
   border-bottom: 1px solid #313131;
-  
 }
-.inputdecor-abate input:focus{
+.inputdecor-abate input:focus {
   outline: none !important;
   border-color: #24a8d8;
   border: none;
   border-bottom: 1px solid #24a8d8;
 }
-.inputdecor-abate input{
+.inputdecor-abate input {
   height: 48px;
   width: 260px;
   padding: 0px;
@@ -1271,11 +1253,11 @@ input::-webkit-outer-spin-button {
   border: none;
   border-bottom: 1px solid #ada9a9;
 }
-.full-w{
+.full-w {
   width: 100%;
 }
 
-.content-name2-abate{
+.content-name2-abate {
   position: absolute;
   bottom: 34px;
   left: -36px;
@@ -1291,14 +1273,13 @@ input::-webkit-outer-spin-button {
 }
 /*info abate*/
 
-
 /* rule abate */
 
-.rule-abate-1{
+.rule-abate-1 {
   padding: 16px;
   text-align: center;
 }
-.rule-abate-1 button{
+.rule-abate-1 button {
   font-weight: 400;
   padding-left: 16px;
   border-radius: 99px;
@@ -1309,41 +1290,43 @@ input::-webkit-outer-spin-button {
 }
 
 /* bill-info */
-.name-info b{
+.name-info b {
   font-size: 1rem;
-  font-family: Mulish,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: Mulish, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
   font-weight: 400;
   line-height: 1.5;
 }
-.money-all{
+.money-all {
   margin-top: 8px;
   padding: 8px;
   font-size: 25px;
   color: red;
   width: 292px;
 }
-.money-bill .money-all{
+.money-bill .money-all {
   text-align: right;
 }
 
-.info-time .time-3{
+.info-time .time-3 {
   width: 115px;
 }
 
-.bottom-info-bill .time-3{
+.bottom-info-bill .time-3 {
   width: 200px;
 }
-.bottom-info-bill .time-5{
+.bottom-info-bill .time-5 {
   width: 200px;
 }
-.bottom-info-bill .money-bill-bottom{
+.bottom-info-bill .money-bill-bottom {
   text-align: right;
 }
 
-.time-1 .time-3{
+.time-1 .time-3 {
   font-size: 13px;
 }
-#eye i{
+#eye i {
   cursor: pointer;
 }
 
@@ -1414,4 +1397,87 @@ input::-webkit-outer-spin-button {
   font-size: 14px;
   color: #43bae6;
 }
+
+
+/* check lại phan search */
+
+
+.inputdecor input:hover {
+  border: none;
+  border-bottom: 1px solid #313131;
+}
+.inputdecor input:focus {
+  outline: none !important;
+  border-color: #24a8d8;
+  border: none;
+  border-bottom: 1px solid #24a8d8;
+}
+.inputdecor input {
+  height: 48px;
+  width: 260px;
+  margin-top: 2px;
+  padding: 0px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #ada9a9;
+}
+
+.search-item1 {
+  display: flex;
+}
+.content-name3{
+  font-size: 18px;
+}
+.inputdecor1{
+  margin-left: 20px;
+}
+.inputdecor-them input {
+  height: 32px;
+  width: 260px;
+  margin-top: 2px;
+  padding: 0px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #ada9a9;
+}
+.search-location{
+  height: 48px;
+  width: 260px;
+  margin-top: 2px;
+  padding: 0px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #ada9a9;
+}
+.inputdecor {
+  border-radius: 0px;
+}
+.inputdecor label{
+  color: #0ac46b;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  position: relative;
+  left: 0px;
+}
+.inputdecor lable::after{
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+.content-name2 {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+.inputdecor input::after + .lable-name .content-name2,
+.inputdecor input:valid + .lable-name .content-name2 {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #43bae6;
+  background-color: white;
+}
+
+  
 

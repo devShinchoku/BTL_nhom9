@@ -14,32 +14,32 @@ $(document).ready(function() {
 
 
 // ẩn thẻ
-  $(document).ready(function(){
-    $("#newsectionbtn999").click(function(){
-        $("#container-999").css("display","block");
-    });
- });
+//   $(document).ready(function(){
+//     $("#newsectionbtn999").click(function(){
+//         $("#container-999").css("display","block");
+//     });
+//  });
 
- $(document).ready(function(){
-	$('.showbtn').click(function(){
-  		$('#showhideForm').show();
-  	});
-    $('.hidebtn').click(function(){
-  		$('#showhideForm').hide();
-  	});
-});
- //remove thẻ
- $(document).ready(function(){
-  $(".remove").click(function(){
-    $("#mainsection").remove();
-  });
-});
+//  $(document).ready(function(){
+// 	$('.showbtn').click(function(){
+//   		$('#showhideForm').show();
+//   	});
+//     $('.hidebtn').click(function(){
+//   		$('#showhideForm').hide();
+//   	});
+// });
+//  //remove thẻ
+//  $(document).ready(function(){
+//   $(".remove").click(function(){
+//     $("#mainsection").remove();
+//   });
+// });
 
-$(document).ready(function(){
-  $(".remove2").click(function(){
-    $("#mainsection999").remove();
-  });
-});
+// $(document).ready(function(){
+//   $(".remove2").click(function(){
+//     $("#mainsection999").remove();
+//   });
+// });
 
 
 
