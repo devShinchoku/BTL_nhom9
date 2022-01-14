@@ -127,9 +127,11 @@ if(isset($_GET['id'])){
 
 
     <main class="container">
-        <form action="booking/booking.php" method="post">
-            <input type="text" id="ttID" name="txtID" hidden readonly value="<?php echo $_GET['id'];?>">
-            <input type="text" id="ttIDT" name="txtIDT" hidden readonly value="">
+        <form action="booking.php" method="post" novalidate>
+        <input type="text" id="ttID" name="txtID" hidden readonly value="<?php echo $_GET['id'];?>">
+        <input type="number" id="total-money" name="total-money" hidden readonly value="">
+        <input type="date" id="date-dat" name="date-dat" hidden readonly value="<?php echo isset($_POST['dateStart'])?$_POST['dateStart']:date('Y-m-d'); ?>">
+        <input type="date" id="date-end" name="date-end" hidden readonly value="<?php echo date('d-m-Y',  isset($_POST['dateStart'])? strtotime('+'.$data['tour_long'] .' day',strtotime($_POST['dateStart'])): strtotime('+'.$data['tour_long'] .' day'));?>">
             <div class="row">
                 <div class="top-info-tour" style="padding: 8px;">
                     <div class="back-up">
@@ -418,7 +420,7 @@ if(isset($_GET['id'])){
                                 </div>
                             </div>
                             <div class="bonus-dv-4">
-                                <div id="showhideForm" style=" display:none;">
+                                <div>
                                     <div class="bonus-dv-6 " style="padding: 12px 12px 0px; display:flex; align-items: center;">
                                         <div class="bonus-dv-7">
                                             <div class="bonus-dv-number" style="padding: 12px;">
@@ -463,14 +465,14 @@ if(isset($_GET['id'])){
                                             </div>
                                         </div>
                                         <div class="close-dv">
-                                            <button class="btn-close-dv hidebtn">
+                                            <button class="btn-close-dv">
                                                 <i class="bi bi-x-lg"></i>
                                             </button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="dv-plus" style="padding: 0px 12px 12px 12px;">
-                                    <button class="showbtn">
+                                    <button>
                                         <i class="bi bi-plus-lg"></i>
                                         <h6 class="dv-plus-p" style=" margin-bottom: 8px;">Thêm dịch vụ</h6>
                                     </button>
@@ -559,8 +561,6 @@ if(isset($_GET['id'])){
                                             <span class="content-name2-dv">
                                                 Quốc gia 
                                             </span>
-                                            <i class="bi bi-caret-down-fill"
-                                                    style="padding: 4px 8px 8px 8px; font-size: 15px;"></i>
                                         </label>
                                     </div>
                                 </div>
@@ -1016,7 +1016,7 @@ if(isset($_GET['id'])){
                 $('#sl-nl').text(slnl+' người lớn');
                 $('#sl-nl1').text(slnl);
                 $('#sl-te1').text(slte);
-                
+                $('#total-money').val(tong);
             }
         })
     </script>

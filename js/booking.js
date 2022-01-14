@@ -20,14 +20,14 @@ $(document).ready(function() {
 //     });
 //  });
 
- $(document).ready(function(){
-	$('.showbtn').click(function(){
-  		$('#showhideForm').show();
-  	});
-    $('.hidebtn').click(function(){
-  		$('#showhideForm').hide();
-  	});
-});
+// $(document).ready(function(){
+//   $("#hide").click(function(){
+//     $("#showhideForm").hide();
+//   });
+//   $("#show").click(function(){
+//     $("#showhideForm").show();
+//   });
+// });
 //  //remove thẻ
 //  $(document).ready(function(){
 //   $(".remove").click(function(){
