@@ -1,6 +1,4 @@
-
 <?php
-session_start();
 include("template/header.php");
 ?>
 <link rel="stylesheet" href="css/style.css">

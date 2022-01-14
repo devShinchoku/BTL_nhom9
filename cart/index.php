@@ -20,6 +20,7 @@
             $sql = "SELECT * FROM db_tour WHERE tour_id = $idtour";
             $ketqua = mysqli_query($conn,$sql);
             while ($row = mysqli_fetch_assoc($ketqua)){
+
         
 
     ?>
@@ -188,6 +189,7 @@
                                             <b>
                                                 <?php
                                                     echo $row["starttime"];
+                                                    
                                                 ?>
                                             </b>
                                         
@@ -216,7 +218,8 @@
                                 <div class="cart-price">
                                     <div style="font-size: 22px; color: red;">
                                             <?php
-                                                echo $row["man_price"];
+                                            
+                                                echo number_format($row["man_price"]);
                                             ?>
                                             Đ
                                     </div>
