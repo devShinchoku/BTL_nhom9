@@ -15,14 +15,23 @@
      VALUES ('$ttID','$total','$orderdate','$ho','$ten','$sdt','$email','$diachi')";
     $ketqua = mysqli_query($conn,$sql);
     if(!$ketqua){
-        header("location: ../template/error/404.php");
+        echo 'loi';
     }else{
-        ?>
-        <script>
-            alert("Thông tin đã đượ tiếp nhận, đang chờ thanh toán");
-            location.href = "index.php";                                   
-        </script>
-    <?php 
+        $sql = "SELECT order_id FROM db_oder LIMIT 1 ORDER BY order_id DESC";
+        $reslut = mysqli_query($conn,$sql);
+        $order_id = mysqli_fetch_assoc($reslut);
+        if(isset('chooseone-enter')){
+            if(isset($_POST['quantity'])){
+                $slnl = $_POST['quantity'];
+                if($slnl != 0){
+                    $sql ='';
+                    for($i=1;$i<=$slnl;$i++){
+                        $sql.="INSERT INTO db_passge(name,birthday,sex,order_id,type) VALUES('{$_POST['tennl'.$i]}','{$_POST['ngaysinh'.$i]}',..,".$order_id['order_id'].",1);";
+                    }
+                    $ketquanl = mysqli_query($conn,$sql);
+                }
+            }
+        }
     }
 ?>
 

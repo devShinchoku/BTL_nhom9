@@ -839,7 +839,7 @@ if(isset($_GET['id'])){
                 output+='</div>';
                 output+='<div class="adult-info-2" style="display: flex; padding: 8px;">';
                 output+='<div class="inputdecor-book btn-login-book">';
-                output+='<input class="full-w" type="text" name="name" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />';
+                output+='<input class="full-w" type="text" id="tennl' + snl + '" name="tennl' + snl + '" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />';
                 output+='<label for="name" class="lable-name-book">';
                 output+='<span class="content-name2-book"> Họ và tên* </span>';
                 output+='</label>';
