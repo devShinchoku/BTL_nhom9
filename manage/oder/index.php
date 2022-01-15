@@ -1,11 +1,11 @@
 <?php
-session_start();
-if (!isset($_SESSION['user_id'])) {
-  header('location:../accounts/');
-} else {
-  if ($_SESSION['permission'] > 1) {
-    header('location:../');
-  } else {
+// session_start();
+// if (!isset($_SESSION['user_id'])) {
+//   header('location:../accounts/');
+// } else {
+//   if ($_SESSION['permission'] > 1) {
+//     header('location:../');
+//   } else {
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -16,7 +16,7 @@ if (!isset($_SESSION['user_id'])) {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-      <link rel="stylesheet" href="../css/admin.css">
+      <link rel="stylesheet" href="../../css/admin.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
       <title>Document</title>
 
@@ -82,28 +82,15 @@ if (!isset($_SESSION['user_id'])) {
         </a>
         <ul class="list-unstyled">
           <li class="mb-1">
-            <button class="btn category-list selected menu-item" id="btnDashboard" data-tab="0">Tổng quan</button>
-          </li>
-          <li class="mb-1">
-            <button class="btn category-list menu-item" id="btnOder" data-tab="1">Danh sách hóa đơn</button>
-          </li>
-          <li class="mb-1">
-            <button class="btn category-list menu-item" id="btnCate" data-tab="2">Danh sách chủ đề Tour</button>
-          </li>
-          <li class="mb-1">
-            <button class="btn category-list menu-item" id="btnTour" data-tab="3">Danh sách Tour</button>
-          </li>
-          <li class="mb-1">
-            <button class="btn category-list menu-item" id="btnCreateCate" data-tab="4">Tạo chủ đề Tour</button>
-          </li>
-          <li class="mb-1">
-            <button class="btn category-list menu-item" id="btnCreatetour" data-tab="5">Tạo Tour</button>
+            <a class="btn category-list menu-item" href="../">Quay lại</a>
           </li>
         </ul>
       </div>
       <main class="container mt-5">
         <div class="main" style="margin-top: 7rem!important;">
-          <div id="tabload"></div>
+          <div class="card">
+            
+          </div>
         </div>
       </main>
 
@@ -117,6 +104,6 @@ if (!isset($_SESSION['user_id'])) {
 
     </html>
 <?php
-  }
-}
+//   }
+// }
 ?>

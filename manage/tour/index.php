@@ -80,8 +80,8 @@ if (!isset($_SESSION['user_id'])) {
             </svg>
             <h5>Hahalolo</h5>
           </a>
-          <ul class="list-unstyled">
-            <li class="mb-1">
+          <ul class="list-unstyled" style="font-size: 1rem;">
+            <li class="mb-1" style="font-size: 1.25rem;">
               <a class="btn category-list menu-item" href="../">Quay lại</a>
             </li>
             <li class="mb-1">
