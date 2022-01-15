@@ -1,11 +1,11 @@
 <?php
 session_start();
-// if (!isset($_SESSION['user_id'])) {
-//   header('location:../accounts/');
-// } else {
-//   if ($_SESSION['permission'] > 1) {
-//     header('location:../');
-//   } else {
+if (!isset($_SESSION['user_id'])) {
+  header('location:../accounts/');
+} else {
+  if ($_SESSION['permission'] > 1) {
+    header('location:../');
+  } else {
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -124,6 +124,6 @@ session_start();
 
     </html>
 <?php
-//   }
-// }
+  }
+}
 ?>

@@ -1,11 +1,13 @@
 <?php
+    session_start();
     require '../config/db.php';
 
-   
-    if($_SESSION['permission'] > 1){
-        header('location:../');
-    }
-    else{
+    if (!isset($_SESSION['user_id'])) {
+        header('location:../accounts/');
+      } else {
+        if ($_SESSION['permission'] == 2) {
+            header('location:../');
+        } else {
         if(isset($_GET['order_id'])){
             $sql = "DELETE FROM db_order WHERE order_id = {$_GET['order_id']}";
             $result = mysqli_query($conn,$sql);
@@ -31,5 +33,5 @@
             echo '<script>alert("Lỗi xảy ra, hãy thử lại sau");</script>';
         header("Refresh: 1; url='../manage/'");
     }
-    
+}
         

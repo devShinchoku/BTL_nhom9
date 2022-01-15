@@ -234,7 +234,7 @@ require '../config/db.php';
                                     <td>'.$data['tour_id'].'</td>
                                     <td>
                                     <a href="oder/?id='.$data['order_id'].'" class="btn btn-primary">Sửa</a>
-                                    <a href="detele.php?order_id='.$data['order_id'].'" class="btn btn-danger">Xoá</a>
+                                    <a href="delete.php?order_id='.$data['order_id'].'" class="btn btn-danger">Xoá</a>
                                     </td>
                                  </tr>';
                 }
@@ -410,7 +410,7 @@ require '../config/db.php';
                             <td>'.$data['first_name'].' '.$data['last_name'].'</td>
                             <td>'.$perArr[$data['permission']].'</td>
                             <td>                  
-                                <a herf="account/?id='.$data['user_id'].'" class="btn btn-primary">Sửa</a>
+                                <a href="account/?id='.$data['user_id'].'" class="btn btn-primary">Sửa</a>
                                 <a href="delete.php?user_id='.$data['user_id'].'" class="btn btn-danger">Xoá</a>
                             </td>
                           </tr>';

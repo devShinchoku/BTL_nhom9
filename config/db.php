@@ -1,7 +1,7 @@
 <?php 
-    //Start Session
-    if (session_status() == PHP_SESSION_ACTIVE)
-        session_start();
+    //Start Sessio
+    if (session_id() === '')
+    session_start();
 
     //Create Constants to Store Non Repeating Values
     define('SITEURL', 'http://localhost/BTL_NHOM9/');

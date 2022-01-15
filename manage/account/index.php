@@ -1,12 +1,12 @@
 <?php
   if(isset($_GET['id'])){
-// session_start();
-// if (!isset($_SESSION['user_id'])) {
-//   header('location:../');
-// } else {
-//   if ($_SESSION['permission'] > 1) {
-//     header('location:../');
-//   } else {
+session_start();
+if (!isset($_SESSION['user_id'])) {
+  header('location:../');
+} else {
+  if ($_SESSION['permission'] > 1) {
+    header('location:../');
+  } else {
   require '../../config/db.php';
   $sql = "SELECT * FROM db_user WHERE user_id = {$_GET['id']}";
   $result=mysqli_query($conn,$sql);
@@ -142,7 +142,7 @@
   
   </html>
   <?php
-  //   }
+    }
   }}
-  // }
+  }
   ?> 

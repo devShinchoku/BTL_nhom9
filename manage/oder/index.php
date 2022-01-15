@@ -1,14 +1,15 @@
 <?php
-session_start();
-if (!isset($_SESSION['user_id'])) {
-  header('location:../accounts/');
-} else {
-  if ($_SESSION['permission'] > 1) {
+if (isset($_GET['id'])) {
+  session_start();
+  if (!isset($_SESSION['user_id'])) {
     header('location:../');
   } else {
-    if (isset($_GET['order_id'])) {
+    if ($_SESSION['permission'] > 1) {
+      header('location:../');
+    } else {
+
       require '../../config/db.php';
-      $sql = "SELECT * FROM db_order WHERE order_id = {$_GET['order_id']}";
+      $sql = "SELECT * FROM db_order WHERE order_id = {$_GET['id']}";
       $result = mysqli_query($conn, $sql);
       if (mysqli_num_rows($result) > 0) {
         $data = mysqli_fetch_assoc($result);

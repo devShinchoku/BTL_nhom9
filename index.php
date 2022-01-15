@@ -8,7 +8,8 @@ include("template/header.php");
             <div id="weather">
             </div>
             <?php
-                if(isset($_SESSION["user_id"]) and isset( $_SESSION["permission"])){
+                if(isset($_SESSION["user_id"]) and isset($_SESSION["permission"])){
+                    if($_SESSION["permission"]<2){
                 ?> <h6> 
                     </h6>
                     <div class="card">
@@ -18,6 +19,7 @@ include("template/header.php");
                         </div>
                     </div>
                 <?php
+                }
                 }else{?>
                     
                 <?php } 

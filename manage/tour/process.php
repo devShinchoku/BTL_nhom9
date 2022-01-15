@@ -1,4 +1,5 @@
 <?php
+session_start();
 require '../../config/db.php';
 if (!isset($_SESSION['user_id'])) {
     header('location:../../accounts/');
