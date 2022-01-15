@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 // session_start();
 // if (!isset($_SESSION['user_id'])) {
 //   header('location:../accounts/');
@@ -6,7 +6,7 @@
 //   if ($_SESSION['permission'] > 1) {
 //     header('location:../');
 //   } else {
-?> -->
+?>
     <!DOCTYPE html>
     <html lang="en">
 
@@ -138,7 +138,7 @@
         </div>
       </main>
 
-      <!-- <script>
+      <script>
         var host_id = <?php echo $_SESSION['user_id']; ?>;
       </script> -->
       <script src="../js/manage.js"></script>
@@ -147,7 +147,7 @@
     </body>
 
     </html>
-<!-- <?php
+<?php
 //   }
 // }
-?> -->
+?>

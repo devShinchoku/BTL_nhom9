@@ -4,6 +4,14 @@ if(isset($_GET['id'])){
     $sql="SELECT * FROM db_tour where tour_id = '{$_GET['id']}'";
     $result = mysqli_query($conn,$sql);
     if(mysqli_num_rows($result)>0){
+        if(isset($_SESSION['cart'])){
+            if(!in_array($_GET['id'],$_SESSION['cart']))
+                array_push($_SESSION['cart'],$_GET['id']);
+        }
+        else{
+            $_SESSION['cart'] = array();
+            array_push($_SESSION['cart'],$_GET['id']);
+        }
         $data = mysqli_fetch_assoc($result);
         require '../template/header.php';
 ?>

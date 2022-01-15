@@ -30,6 +30,9 @@
                         $sql.="INSERT INTO db_passgenger(name,birthday,sex,order_id,type) VALUES('{$_POST['tennl'.$i]}','{$_POST['ngaysinh'.$i]}',..,".$order_id['order_id'].",1);";
                     }
                     $ketquanl = mysqli_query($conn,$sql);
+                    if($ketquanl){
+                        unset($_SESSION['cart']);
+                    }
                 }
             }
         }
