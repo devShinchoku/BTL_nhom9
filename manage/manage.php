@@ -1,13 +1,5 @@
 <?php
 require '../config/db.php';
-// if(!isset($_SESSION['user_id'])){
-//     header('location:../accounts/');
-//   }
-//   else{
-//     if($_SESSION['permission'] > 1){
-//       header('location:../');
-//     }
-//     else{
     if(isset($_POST['host_id']) && isset($_POST['tab'])){
         $host_id = $_POST['host_id'];
         $tab = $_POST['tab'];
@@ -435,6 +427,4 @@ require '../config/db.php';
         mysqli_close($conn);
         echo json_encode($output);
     }
-// }
-//   }
 ?> 

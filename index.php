@@ -8,13 +8,13 @@ include("template/header.php");
             <div id="weather">
             </div>
             <?php
-                if(isset($_SESSION["user_id"])){
+                if(isset($_SESSION["user_id"]) and isset( $_SESSION["permission"])){
                 ?> <h6> 
                     </h6>
                     <div class="card">
                         <div class="card-body exp" style = "text-align: center;">
                             Trang của tôi
-                            <a href="../manage/manage.php" class="btn btn-primary mt-3" style = "border-radius: 50px; background-color: #24a8d8; border: none;" >Tạo trang</a>
+                            <a href="manage/" class="btn btn-primary mt-3" style = "border-radius: 50px; background-color: #24a8d8; border: none;" >Tạo trang</a>
                         </div>
                     </div>
                 <?php

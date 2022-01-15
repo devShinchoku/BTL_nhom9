@@ -6,8 +6,6 @@ session_start();
 //   if ($_SESSION['permission'] > 1) {
 //     header('location:../');
 //   } else {
-  $_SESSION['permission'] = 2;
-  $_SESSION['user_id'] = 1;
 ?>
     <!DOCTYPE html>
     <html lang="en">
