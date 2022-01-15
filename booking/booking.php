@@ -20,13 +20,14 @@
         $sql = "SELECT order_id FROM db_oder LIMIT 1 ORDER BY order_id DESC";
         $reslut = mysqli_query($conn,$sql);
         $order_id = mysqli_fetch_assoc($reslut);
+        echo 'hehe';
         if(isset('chooseone-enter')){
             if(isset($_POST['quantity'])){
                 $slnl = $_POST['quantity'];
                 if($slnl != 0){
                     $sql ='';
                     for($i=1;$i<=$slnl;$i++){
-                        $sql.="INSERT INTO db_passge(name,birthday,sex,order_id,type) VALUES('{$_POST['tennl'.$i]}','{$_POST['ngaysinh'.$i]}',..,".$order_id['order_id'].",1);";
+                        $sql.="INSERT INTO db_passgenger(name,birthday,sex,order_id,type) VALUES('{$_POST['tennl'.$i]}','{$_POST['ngaysinh'.$i]}',..,".$order_id['order_id'].",1);";
                     }
                     $ketquanl = mysqli_query($conn,$sql);
                 }

@@ -1349,7 +1349,7 @@ input::-webkit-outer-spin-button {
 
 /* css giao dien  */
 
-.inputdecor{
+/* .inputdecor{
   border-radius: 0px;
 }
 .inputdecor input:hover{
@@ -1413,12 +1413,12 @@ input::-webkit-outer-spin-button {
 .tourtype{
   font-size: 14px;
   color: #43bae6;
-}
+} */
 
 
 /* check lại phan search */
 
-
+/* 
 .inputdecor input:hover {
   border: none;
   border-bottom: 1px solid #313131;
@@ -1445,9 +1445,18 @@ input::-webkit-outer-spin-button {
 .content-name3{
   font-size: 18px;
 }
+*/
 .inputdecor1{
-  margin-left: 20px;
+padding: 8px;
+width: 64%;
+margin-left: 0;
 }
+
+.inputdecor12{
+  margin-left: 46px;
+  padding: 8px;
+}
+/*
 .inputdecor-them input {
   height: 32px;
   width: 260px;
@@ -1494,7 +1503,7 @@ input::-webkit-outer-spin-button {
   font-size: 14px;
   color: #43bae6;
   background-color: white;
-}
+} */
 
   
 

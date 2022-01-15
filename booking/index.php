@@ -439,14 +439,14 @@ if(isset($_GET['id'])){
                                                     </span>
                                                 </label>
                                                 <datalist id="lists-dv">
-                                                    <?php $sql0 = "SELECT * FROM db_dichvu";{
+                                                    <?php $sql0 = "SELECT * FROM db_service";{
                                                             $result0 = mysqli_query($conn,$sql0);
                                                             if(mysqli_num_rows($result0)>0){
                                                                 $data0 = mysqli_fetch_assoc($result0);
                                                             }else
                                                             require '../template/error/404.php';
                                                         ?>
-                                                        <option value="<?php echo $data0['name_dv'];?> (<?php echo $data0['dv_price'];?> ₫)"></option>
+                                                        <option value="<?php echo $data0['name'];?> (<?php echo $data0['price'];?> ₫)"></option>
                                                         <?php
                                                         }
                                                     ?>
