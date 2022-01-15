@@ -126,13 +126,13 @@ if(isset($_GET['id'])){
     </header>
 
 
-    <main class="container">
+    <main class="container" style="display:flex;">
         <form action="booking.php" method="post" novalidate>
         <input type="text" id="ttID" name="txtID" hidden readonly value="<?php echo $_GET['id'];?>">
         <input type="number" id="total-money" name="total-money" hidden readonly value="">
         <input type="date" id="date-dat" name="date-dat" hidden readonly value="<?php echo isset($_POST['dateStart'])?$_POST['dateStart']:date('Y-m-d'); ?>">
         <input type="date" id="date-end" name="date-end" hidden readonly value="<?php echo date('d-m-Y',  isset($_POST['dateStart'])? strtotime('+'.$data['tour_long'] .' day',strtotime($_POST['dateStart'])): strtotime('+'.$data['tour_long'] .' day'));?>">
-            <div class="row">
+            <div class="row" style="width:121%">
                 <div class="top-info-tour" style="padding: 8px;">
                     <div class="back-up">
                         <button class="btn-back-up">
@@ -146,7 +146,7 @@ if(isset($_GET['id'])){
                         </h5>
                     </div>
                 </div>
-                <div class="col-md-8" style="padding: 0 24px;background-color: #FAFAFB;">
+                <div class="col-md-8" style="padding: 0 24px;background-color: #FAFAFB;width:85%;">
                     <div class="info-lh1 card col-md-6">
                         <div class="info-lh2">
                             <div class="circle-bl">
@@ -319,7 +319,7 @@ if(isset($_GET['id'])){
                                 </div>
                                 <div class="adult-info-2" style="display: flex; padding: 8px;">
                                     <div class="inputdecor-book btn-login-book">
-                                        <input class="full-w" type="text" name="name" autocomplete="off" required
+                                        <input class="full-w" type="text" id="tennl" name="tennl" autocomplete="off" required
                                             style="margin-left: -33px;border-radius: 0px;" />
                                         <label for="name" class="lable-name-book">
                                             <span class="content-name2-book">
@@ -328,7 +328,7 @@ if(isset($_GET['id'])){
                                         </label>
                                     </div>
                                     <div class="inputdecor-book btn-login-book">
-                                        <input class="full-w" type="date" name="name" autocomplete="off" required
+                                        <input class="full-w" type="date" id="ngaysinhnl" name="ngaysinhnl" autocomplete="off" required
                                             style="margin-left: -33px;border-radius: 0px;" />
                                         <label for="name" class="lable-name-book">
                                             <span class="birth-day-adult">
@@ -343,12 +343,12 @@ if(isset($_GET['id'])){
                                     </div>
                                     <div class="male-female">
                                         <div class="gender-lh4">
-                                            <input class="fe-male" type="radio" name="chooseone" value="Nam"
+                                            <input class="fe-male" id="chooseone" type="radio" name="chooseone" value="Nam"
                                                 style="height:20px; width:20px; vertical-align: middle;">
                                             <label for="Nam">Nam</label>
                                         </div>
                                         <div class="gender-lh4">
-                                            <input class="fe-male" type="radio" name="chooseone" value="Nu"
+                                            <input class="fe-male" id="chooseone" type="radio" name="chooseone" value="Nu"
                                                 style="height:20px; width:20px; vertical-align: middle;">
                                             <label for="Nu">Nữ</label>
                                         </div>
@@ -636,7 +636,7 @@ if(isset($_GET['id'])){
                 </div>
             </div>
         </form>    
-        <div class="col-md-4" style="padding: 0px 8px 8px 8px;">
+        <div class="col-md-4" style="padding: 0px 8px 8px 8px;width:35%;margin-top:210px;">
             <div class="bill-info card">
                 <div class="bill-info-0">
                     <div class="bill-info-top" style="padding: 16px 16px 0px 16px;">
@@ -839,13 +839,13 @@ if(isset($_GET['id'])){
                 output+='</div>';
                 output+='<div class="adult-info-2" style="display: flex; padding: 8px;">';
                 output+='<div class="inputdecor-book btn-login-book">';
-                output+='<input class="full-w" type="text" id="tennl' + snl + '" name="tennl' + snl + '" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />';
+                output+='<input class="full-w" type="text" id="tennl"'+ snl +' name="tennl"'+ snl +' autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />';
                 output+='<label for="name" class="lable-name-book">';
                 output+='<span class="content-name2-book"> Họ và tên* </span>';
                 output+='</label>';
                 output+='</div>';
                 output+='<div class="inputdecor-book btn-login-book">';
-                output+='<input class="full-w" type="date" name="name" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />';
+                output+='<input class="full-w" type="date" id="ngaysinhnl" name="ngaysinhnl" autocomplete="off" required style="margin-left: -33px;border-radius: 0px;" />';
                 output+='<label for="name" class="lable-name-book">';
                 output+='<span class="birth-day-adult">Ngày sinh</span>';
                 output+='</label>';
@@ -857,11 +857,11 @@ if(isset($_GET['id'])){
                 output+='</div>';
                 output+='<div class="male-female">';
                 output+='<div class="gender-lh4">';
-                output+='<input class="fe-male" type="radio" name="chooseone'+snl+'" value="Nam'+snl+'" style="height:20px; width:20px; vertical-align: middle;">';
+                output+='<input class="fe-male" id="chooseone" type="radio" name="chooseone'+snl+'" value="Nam'+snl+'" style="height:20px; width:20px; vertical-align: middle;">';
                 output+='<label for="Nam'+snl+'">Nam</label>';
                 output+='</div>';
                 output+='<div class="gender-lh4">';
-                output+='<input class="fe-male" type="radio" name="chooseone'+snl+'" value="Nu'+snl+'" style="height:20px; width:20px; vertical-align: middle;">';
+                output+='<input class="fe-male" id="chooseone" type="radio" name="chooseone'+snl+'" value="Nu'+snl+'" style="height:20px; width:20px; vertical-align: middle;">';
                 output+='<label for="Nu'+snl+'">Nữ</label>';
                 output+='</div>';
                 output+='</div>';
