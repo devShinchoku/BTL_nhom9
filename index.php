@@ -15,8 +15,8 @@ include("template/header.php");
                         <div class="search-item">
                             <div class = "col-md-6">
                                 <div class="inputdecor-book btn-login-book">
-                                    <input type="text" name="search1" id="search1" class = "effect-17" style="margin-left: -33px; width:222%" required>
-                                    <label for="search1" class="lable-name-book">
+                                    <input type="text" name="search0" id="search0" class = "effect-17" style="margin-left: -33px; width:222%" required>
+                                    <label for="search0" class="lable-name-book">
                                         <span class="content-name2-book">
                                             Bạn muốn đi đâu
                                         </span>
@@ -26,85 +26,12 @@ include("template/header.php");
                             <div class = "col-md-6" style="margin-top: 10px;">
                                 <div class="inputdecor inputdecor-them">
                                     <label class="m-search-label">Ngày khởi hành</label>
-                                    <input type="date" class="m-search-input" id="search2">
+                                    <input type="date" class="m-search-input" id="search1">
                                 </div>
                             </div>
                         </div>
                         <div class="extend-item">
-                            <div class="search-item">
-                                <div class="inputdecor-book btn-login-book col-md-6">
-                                    <input type="text" name="search3" id="search3" style="margin-left: -33px; width:100%" required>
-                                    <label for="search3" class="lable-name-book">
-                                        <span class="content-name2-book">
-                                            Điểm khởi hành
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="inputdecor-book btn-login-book col-md-6">
-                                    <input type="text" name="search4" id="search4" style="margin-left: -33px; width:100%" required>
-                                    <label for="search4" class="lable-name-book">
-                                        <span class="content-name2-book">
-                                            Điểm đến
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="search-item">
-                                <div class="inputdecor-book btn-login-book col-md-6">
-                                    <input type="text" name="search5" id="search5" style="margin-left: -33px; width:100%" required>
-                                    <label for="search5" class="lable-name-book">
-                                        <span class="content-name2-book">
-                                            Chủ để tour
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="inputdecor-book btn-login-book col-md-6">
-                                    <input type="text" name="search5" id="search6" style="margin-left: -33px; width:100%" required>
-                                    <label for="search5" class="lable-name-book">
-                                        <span class="content-name2-book">
-                                            Loại tour
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="search-item">
-                                <div class="inputdecor-book btn-login-book col-md-6">
-                                    <input type="number" name="search5" id="search5" style="margin-left: -33px; width:100%" min="0" required>
-                                    <label for="search5" class="lable-name-book">
-                                        <span class="content-name2-book">
-                                            Số ngày đi tour
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="inputdecor-book btn-login-book col-md-6">
-                                    <input type="number" name="search5" id="search6" style="margin-left: -33px; width:100%" min="0" required>
-                                    <label for="search5" class="lable-name-book">
-                                        <span class="content-name2-book">
-                                            Khoảng giá
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="search-item1" style = "display: flex;font-size: 18px;">
-                                <div style="padding: 8px; display:flex;">
-                                    <div class="inputdecor1 col-md-6">
-                                        <input type="checkbox" name="search7" id="search7">
-                                        <label for="search7" class="lable-name">
-                                            <span class="content-name3">
-                                                Có áp dụng khuyến mãi
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <div class="inputdecor12 col-md-6">
-                                        <input type="checkbox" name="search8" id="search8">
-                                        <label for="search8" class="lable-name">
-                                            <span class="content-name3">
-                                                Tour trả góp
-                                            </span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div> 
                     </form>
                     <div>
