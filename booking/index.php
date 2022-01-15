@@ -1,11 +1,16 @@
 <?php
+
 if(isset($_GET['id'])){
     require "../config/db.php";
     $sql="SELECT * FROM db_tour where tour_id = '{$_GET['id']}'";
     $result = mysqli_query($conn,$sql);
     if(mysqli_num_rows($result)>0){
+        
         $data = mysqli_fetch_assoc($result);
         require '../template/header.php';
+        $_SESSION['cart'] = array();
+        if(!in_array($_GET['id'],$_SESSION['cart']))
+        array_push($_SESSION['cart'],$_GET['id']);
 ?>
     <main class="container" style="display:flex;">
         <form action="booking.php" method="post" novalidate>

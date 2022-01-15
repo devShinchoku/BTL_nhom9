@@ -29,7 +29,7 @@
                 <div>
                     <div class="card-body mt-5 cart-iteam">
                         <p class="card-text" style="font-size: 22px;font-weight: 500;">
-                            Tour ( <?php echo sizeof($_SESSION['cart']); ?>)
+                            Tour ( <?php echo count($_SESSION['cart']); ?>)
                         </p>
                         <?php foreach($_SESSION['cart'] as $id)
                             $sql = "SELECT * FROM db_tour WHERE tour_id = $id";
