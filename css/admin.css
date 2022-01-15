@@ -5,6 +5,16 @@
 .spacing{
     padding: 8px;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 /* css for header */
 
 .header{
@@ -68,7 +78,7 @@
 }
 .tour-descript{
     height: 200px;
-    width: 80%;
+    width: 100%;
 }
 .tourpage-img{
     width: 300px;

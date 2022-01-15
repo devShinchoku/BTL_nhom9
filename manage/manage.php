@@ -1,6 +1,14 @@
 <?php
+require '../config/db.php';
+if(!isset($_SESSION['user_id'])){
+    header('location:../accounts/');
+  }
+  else{
+    if($_SESSION['permission'] > 1){
+      header('location:../');
+    }
+    else{
     if(isset($_POST['host_id']) && isset($_POST['tab'])){
-        require '../config/db.php';
         $host_id = $_POST['host_id'];
         $tab = $_POST['tab'];
         $output='';
@@ -322,7 +330,7 @@
                     $i++;
                     $output.='
                                 <tr>
-                                    <td scope="row">'.$data['tour_id'].'</td>
+                                    <td scope="row">'.$i.'</td>
                                     <td>'.$data['name'].'</td>
                                     <td>'.$data['cate'].'</td>
                                     <td>'.$data['starttime'].'</td>
@@ -385,4 +393,6 @@
         mysqli_close($conn);
         echo json_encode($output);
     }
+}
+  }
 ?> 
