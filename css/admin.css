@@ -41,7 +41,9 @@
 .btn:focus{
     box-shadow: none;
 }
-
+.menu-item:hover{
+    background-color: rgba(0, 0, 0, 0.08);
+}
 .selected{
     background-color: rgba(0, 0, 0, 0.08);
 }
@@ -86,4 +88,10 @@
 .tourpage-img-title{
     color: rgb(77, 77, 218);
     margin-left: 10px;
+}
+
+/* main */
+.form-group input{
+    border: 0.75px solid;
+    padding: 2px;
 }

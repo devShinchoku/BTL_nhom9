@@ -42,7 +42,6 @@ if (isset($_POST["last_id"])) {
     $last_id = 0;
     if (mysqli_num_rows($result) > 0) {
         $datas = mysqli_fetch_all($result,MYSQLI_ASSOC);
-        $date= getdate(date("U"));
         foreach ($datas as $row) {
             $output .= '
                 <div class="card mt-3">
@@ -111,7 +110,7 @@ if (isset($_POST["last_id"])) {
                         </div>
                         <div class="w-temper-saclesalendar">
                             <i class="bi bi-calendar"></i>
-                            <h5 class="w-temper-saclesalendar1">'.$date["mday"].'/'.$date["mon"].'/'.$date["year"].'</h5>
+                            <h5 class="w-temper-saclesalendar1">'.date('d-m-Y').'</h5>
                         </div>
                         <div class="mt-2 tour-sort-info" style="font-size: 0.95rem;">
                             '.$row["description"].'

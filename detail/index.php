@@ -65,11 +65,7 @@ if (isset($_GET['id'])) {
                                 <?php echo $data['city'] . ', ' . $data['country']; ?>
                             </p>
                             <p class="ct-startend-time">
-                                <?php
-                                $date = date("U");
-                                $dateArrS = getdate($date);
-                                echo $dateArrS["mday"] . '/' . $dateArrS["mon"] . '/' . $dateArrS["year"];
-                                ?>
+                                <?php echo date('d/m/Y'); ?>
                             </p>
                         </div>
                         <div class="ct-end">
@@ -86,9 +82,7 @@ if (isset($_GET['id'])) {
                             </p>
                             <p class="ct-startend-time">
                                 <?php
-                                $date = strtotime('+' . $data['tour_long'] . ' day', $date);
-                                $dateArrE = getdate($date);
-                                echo $dateArrE["mday"] . '/' . $dateArrE["mon"] . '/' . $dateArrE["year"];
+                                    echo date('d/m/Y', strtotime('+'.$data['tour_long'].' day'));
                                 ?>
                             </p>
                         </div>
@@ -120,10 +114,10 @@ if (isset($_GET['id'])) {
                             <ul class="ct-tourcode1">
                                 <li class="ct-tourcode1-1">
                                     <div class="ct-changedate">
-                                        <p><?php echo $dateArrS["mday"] . '/' . $dateArrS["mon"] . '/' . $dateArrS["year"]; ?></p>
+                                        <p><?php echo date('d/m/Y'); ?></p>
                                         <button class="ct-changedate-btn">Thay đổi ngày</button>
                                     </div>
-                                    <p class="mt-3"><?php echo $dateArrE["mday"] . '/' . $dateArrE["mon"] . '/' . $dateArrE["year"]; ?></p>
+                                    <p class="mt-3"><?php echo date('d/m/Y', strtotime('+'.$data['tour_long'].' day')); ?></p>
                                 </li>
                             </ul>
                         </div>
@@ -132,24 +126,24 @@ if (isset($_GET['id'])) {
                     <hr class="mt-3">
 
                     <div class="ct-muitab">
-                        <button class="ct-muitab-btn" id="btnCT">
+                        <button class="ct-muitab-btn" id="btnCT" data-tab="0">
                             Chi tiết
                         </button>
-                        <button class="ct-muitab-btn" id="btnQD">
+                        <button class="ct-muitab-btn" id="btnQD" data-tab="1">
                             Quy định riêng
                         </button>
-                        <button class="ct-muitab-btn" id="btnKM">
+                        <button class="ct-muitab-btn" id="btnKM" data-tab="2">
                             Khuyến mãi
                         </button>
-                        <button class="ct-muitab-btn" id="btnCS">
+                        <button class="ct-muitab-btn" id="btnCS" data-tab="3">
                             Chính sách riêng tư
                         </button>
-                        <button class="ct-muitab-btn" id="btnLH">
+                        <button class="ct-muitab-btn" id="btnLH" data-tab="4">
                             Liên hệ
                         </button>
                     </div>
                     <hr>
-                    <div id="tour-detail">
+                    <div id="tour-detail" style="font-size: 1rem;">
 
                     </div>
                     <div class="time-start">
@@ -159,7 +153,7 @@ if (isset($_GET['id'])) {
                                 Chọn thời gian khởi hành
                             </h5>
                             <form action="../booking/" method="get" style="padding:5px">
-                                <input type="text" id="id" name="id" hidden value="<?php echo $data['tour_id'];?>">
+                                <input type="text" id="id" name="id" hidden readonly value="<?php echo $data['tour_id'];?>">
                                 <input style="margin:5px" type="date" class="m-search-input" id="dateStart" name="dateStart" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>" max="<?php echo $data['endtime'] ?>">
                                 <button style="margin:5px"" class="btn btn-primary" type="submit">OK</button>
                             </form>
@@ -250,16 +244,11 @@ if (isset($_GET['id'])) {
         </footer>
         <script>
             var id = <?php echo $_GET['id']; ?>;
-            var dateS = $('#dateStart').val();
-            $.ajax({
-                type: "get",
-                url: "index.php",
-                data: {dateStart:dateS};
-            });
         </script>
         <script src="../js/detail.js"></script>
 <?php
         include  '../template/footer.php';
     } else require '..template/error/404.php';
+    mysqli_close($conn);
 } else require '..template/error/404.php';
 ?>
