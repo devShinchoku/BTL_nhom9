@@ -654,7 +654,7 @@ if(isset($_GET['id'])){
                     </div>
                     <div class="full-info">
                         <a href="" class="full-info-1" style="font-size: 15px;">Xem chi tiết tour</a>
-                        <hr style="background-color: black; margin-left: 16px; margin-right: 16px;">
+                        <hr style="background-color: black;">
                     </div>
                 </div>
                 <div class="info-time">
@@ -681,7 +681,7 @@ if(isset($_GET['id'])){
                             if(mysqli_num_rows($result1)>0){
                                 $data1 = mysqli_fetch_assoc($result1);
                             }else
-                            require '../template/error/404.php';
+                            echo 'lỗi';
                         ?>
                         <div class="time-4">
                             <div class="time-5" style="padding: 8px;">
