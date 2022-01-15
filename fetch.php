@@ -123,7 +123,7 @@ if (isset($_POST["last_id"])) {
                                 </div>
                             </div>
                             <button class="h-price2">
-                                <a href="cart/index.php?id='.$row["tour_id"].'">Xem nhanh</a>
+                                <a href="detail/id='.$row["tour_id"].'">Xem nhanh</a>
                                 <i class="bi bi-caret-right"></i>
                             </button>
                         </div>
