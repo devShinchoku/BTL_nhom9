@@ -5,127 +5,8 @@ if(isset($_GET['id'])){
     $result = mysqli_query($conn,$sql);
     if(mysqli_num_rows($result)>0){
         $data = mysqli_fetch_assoc($result);
-
+        require '../template/header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-</head>
-
-<body>
-    <header class="container-fluid fixed-top">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a href="/" class="h-logo navbar-brand"><svg viewBox="0 0 24 24" class="MuiSvgIcon-root jss7"
-                        focusable="false" aria-hidden="true">
-                        <path
-                            d="M22 11.5c0-1-.2-1.9-.6-2.8-1.4-4.2-5.6-7-10-6.8h-.1c-1.7.2-3.4.7-4.9 1.8-4.6 3-5.8 9.2-2.8 13.9v.1c.2.2.3.6.6.8l.1.1c1.9 2.2 4.7 3.6 7.7 3.6h8.7c.8 0 1.3-.6 1.3-1.3v-9.4z">
-                        </path>
-                        <path fill="#FFF"
-                            d="M16.9 16.8c-.7.9-1.7 1.4-2.8 1.5-.5 0-1-.1-1.4-.5-.3-.3-.5-.8-.4-1.2 0-.2 0-.4.1-.6 0-.2.1-.5.2-.8l1-3.8c-.2.3-.4.5-.6.8-.9 1.8-1.7 3.7-2.4 5.6 0 .1-.1.3-.2.4h-.1c-.1.1-.3.2-.5.2s-.4-.1-.5-.2c-.3-.2-.4-.4-.5-.6-.1-.3-.2-.5-.2-.8s0-.5.1-.8l2.5-9.9c0-.1.1-.2.2-.2l1.7-.5h.1c.1 0 .1.1.1.2l-3.1 12v.2c0-.1.1-.2.2-.5l.3-.9c.2-.7.5-1.4.7-2s.5-1.3.8-1.9c.3-.6.6-1.1 1.1-1.6.1-.1.2-.2.3-.2v-.1s0-.1.1-.1v-.1h.2c.3 0 .5.1.7.3.2.3.2.6.2.9 0 .4-.1.8-.2 1.2l-.3 3.2c-.1.4-.1.8-.1 1.2.1.2.3.3.8.2.7-.2 1.3-.5 1.8-.9.1 0 .2.2.1.3z">
-                        </path>
-                    </svg>
-                </a>
-                <ul class="h-menu navbar-nav justify-content-center">
-                    <li class="nav-item">
-                        <a href="/" class="h-menu-logo nav-link">
-                            <div class="h-menu-logo-icon">
-                                <div class="background-icon"></div>
-                                <i class="bi bi-newspaper"></i>
-                            </div>
-                            Bảng tin
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/" class="h-menu-logo nav-link">
-                            <div class="h-menu-logo-icon">
-                                <div class="background-icon"></div>
-                                <i class="bi bi-binoculars"></i>
-                            </div>
-                            Trải nghiệm
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/" class="h-menu-logo nav-link">
-                            <div class="h-menu-logo-icon">
-                                <div class="background-icon"></div>
-                                <i class="bi bi-geo-alt"></i>
-                            </div>
-                            Tour
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/" class="h-menu-logo nav-link">
-                            <div class="h-menu-logo-icon">
-                                <div class="background-icon"></div>
-                                <i class="bi bi-building"></i>
-                            </div>
-                            Khách sạn
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/" class="h-menu-logo nav-link">
-                            <div class="h-menu-logo-icon">
-                                <div class="background-icon"></div>
-                                <i class="bi bi-ticket"></i>
-                            </div>
-                            Vé máy bay
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/" class="h-menu-logo nav-link">
-                            <div class="h-menu-logo-icon">
-                                <div class="background-icon"></div>
-                                <i class="bi bi-bicycle"></i>
-                            </div>
-                            Thuê xe
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/" class="h-menu-logo nav-link">
-                            <div class="h-menu-logo-icon">
-                                <div class="background-icon"></div>
-                                <i class="bi bi-bag"></i>
-                            </div>
-                            Mua sắm
-                        </a>
-                    </li>
-                </ul>
-                <ul class="h-user navbar-nav justify-content-end">
-                    <li class="nav-item"><span class="h-user-iteam">
-                            <i class="bi bi-cart3"></i>
-                        </span></li>
-                    <li class="nav-item"><span class="h-user-iteam">
-                            <i class="bi bi-wallet2"></i>
-                        </span></li>
-                    <li class="nav-item"><span class="h-user-iteam">
-                            <i class="bi bi-arrow-down-circle"></i>
-                        </span></li>
-                    <li class="nav-item"><img id="img" class="style-scope yt-img-shadow" alt="Hình ảnh đại diện"
-                            height="32" width="32"
-                            src="https://yt3.ggpht.com/yti/APfAmoFV39QFrpgQ605BDJUj7quJ-JIHmqaWYE59wro_EQ=s88-c-k-c0x00ffffff-no-rj-mo">
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-
     <main class="container" style="display:flex;">
         <form action="booking.php" method="post" novalidate>
         <input type="text" id="ttID" name="txtID" hidden readonly value="<?php echo $_GET['id'];?>">
@@ -439,14 +320,14 @@ if(isset($_GET['id'])){
                                                     </span>
                                                 </label>
                                                 <datalist id="lists-dv">
-                                                    <?php $sql0 = "SELECT * FROM db_dichvu";{
+                                                    <?php $sql0 = "SELECT * FROM db_service";{
                                                             $result0 = mysqli_query($conn,$sql0);
                                                             if(mysqli_num_rows($result0)>0){
                                                                 $data0 = mysqli_fetch_assoc($result0);
                                                             }else
                                                             require '../template/error/404.php';
                                                         ?>
-                                                        <option value="<?php echo $data0['name_dv'];?> (<?php echo $data0['dv_price'];?> ₫)"></option>
+                                                        <option value="<?php echo $data0['name'];?> (<?php echo $data0['price'];?> ₫)"></option>
                                                         <?php
                                                         }
                                                     ?>
@@ -654,7 +535,7 @@ if(isset($_GET['id'])){
                     </div>
                     <div class="full-info">
                         <a href="" class="full-info-1" style="font-size: 15px;">Xem chi tiết tour</a>
-                        <hr style="background-color: black; margin-left: 16px; margin-right: 16px;">
+                        <hr style="background-color: black;">
                     </div>
                 </div>
                 <div class="info-time">
@@ -681,7 +562,7 @@ if(isset($_GET['id'])){
                             if(mysqli_num_rows($result1)>0){
                                 $data1 = mysqli_fetch_assoc($result1);
                             }else
-                            require '../template/error/404.php';
+                            echo 'lỗi';
                         ?>
                         <div class="time-4">
                             <div class="time-5" style="padding: 8px;">
