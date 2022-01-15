@@ -1,5 +1,4 @@
 <?php
-if (session_status() == PHP_SESSION_ACTIVE)
     session_start();
 ?>
 <!DOCTYPE html>
@@ -120,7 +119,7 @@ if (session_status() == PHP_SESSION_ACTIVE)
                                 </li>
                                 </h6>
                             <?php
-                            } else{?>
+                            }else{?>
                                 <li class="nav-item"><span class="h-user-iteam"> 
                                     <a href="accounts/sign-in">
                                         <i class="bi bi-arrow-down-circle"></i>
