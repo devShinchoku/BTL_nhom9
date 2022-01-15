@@ -65,7 +65,7 @@ $(document).ready(function () {
         output+='</ul>';
         output+='</div>';
         output+='<a href="https://openweathermap.org/" class="w-cr">';
-        output+='Cập nhật lúc '+new Date(data.sys.sunset).toLocaleTimeString("vi-VN",{hour:'2-digit',minute:'2-digit',hour12: true})+'. Open-weather';
+        output+='Cập nhật lúc '+new Date(data.dt*1000).toLocaleTimeString("vi-VN",{hour:'2-digit',minute:'2-digit',hour12: true})+'. @Open-weather';
         output+='</a>';
         output+='</div>';
         output+='</div>';

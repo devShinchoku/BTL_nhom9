@@ -1,11 +1,13 @@
 <?php
 session_start();
-if (!isset($_SESSION['user_id'])) {
-  header('location:../accounts/');
-} else {
-  if ($_SESSION['permission'] > 1) {
-    header('location:../');
-  } else {
+// if (!isset($_SESSION['user_id'])) {
+//   header('location:../accounts/');
+// } else {
+//   if ($_SESSION['permission'] > 1) {
+//     header('location:../');
+//   } else {
+  $_SESSION['permission'] = 2;
+  $_SESSION['user_id'] = 1;
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -37,10 +39,7 @@ if (!isset($_SESSION['user_id'])) {
             </svg>
           </li>
           <li class="nav-item spacing">
-            avatar
-          </li>
-          <li class="nav-item spacing">
-            <b>name</b>
+            <b>WeLCOME</b>
           </li>
           <li class="nav-item spacing">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
@@ -99,6 +98,16 @@ if (!isset($_SESSION['user_id'])) {
           <li class="mb-1">
             <button class="btn category-list menu-item" id="btnCreatetour" data-tab="5">Tạo Tour</button>
           </li>
+          <?php
+          if($_SESSION['permission'] == 0){
+          ?>
+          <hr>
+          <li class="mb-1">
+            <button class="btn category-list menu-item" id="btnAccount" data-tab="6">Quản lý tài khoản</button>
+          </li>
+          <?php
+          }
+          ?>
         </ul>
       </div>
       <main class="container mt-5">
@@ -117,6 +126,6 @@ if (!isset($_SESSION['user_id'])) {
 
     </html>
 <?php
-  }
-}
+//   }
+// }
 ?>

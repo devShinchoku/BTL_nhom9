@@ -1,13 +1,13 @@
 <?php
 require '../config/db.php';
-if(!isset($_SESSION['user_id'])){
-    header('location:../accounts/');
-  }
-  else{
-    if($_SESSION['permission'] > 1){
-      header('location:../');
-    }
-    else{
+// if(!isset($_SESSION['user_id'])){
+//     header('location:../accounts/');
+//   }
+//   else{
+//     if($_SESSION['permission'] > 1){
+//       header('location:../');
+//     }
+//     else{
     if(isset($_POST['host_id']) && isset($_POST['tab'])){
         $host_id = $_POST['host_id'];
         $tab = $_POST['tab'];
@@ -284,7 +284,6 @@ if(!isset($_SESSION['user_id'])){
                                     <td>'.$data['name'].'</td>
                                     <td>'.$typeArr[$data['type']].'</td>
                                     <td>
-                                    <a href="category/?id='.$data['category_id'].'" class="btn btn-primary">Sửa</a>
                                     <a href="delete.php?category_id='.$data['category_id'].'" class="btn btn-danger">Xoá</a>
                                     </td>
                                  </tr>';
@@ -390,9 +389,52 @@ if(!isset($_SESSION['user_id'])){
             else
                 $output = array('failure' => true);
         }
+        if($tab == 6){
+            $sql = "SELECT * FROM db_user";
+            $result = mysqli_query($conn,$sql);
+            if(mysqli_num_rows($result) >0){
+                $perArr = ['Admin','NCC','user'];
+                $datas=mysqli_fetch_all($result,MYSQLI_ASSOC);
+                $output.='<div class="main" style="margin-top: 7rem!important;">
+                <h5 class="card-title" style = "text-align: center;">Quản lý người dùng</h5>
+                    <table class="table mt-5">
+                        <thead>
+                          <tr>
+                            
+                            <th scope="col">STT</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Điện thoại</th>
+                            <th scope="col">Họ Tên</th>
+                            <th scope="col">Quyền</th>
+                          </tr>
+                        </thead>
+                        <tbody>';
+                        foreach($datas as $data){
+                    $output.='
+                          <tr>
+                            <td scope="row">'.$data['user_id'].'</td>
+                            <td>'.$data['email'].'</td>
+                            <td>'.$data['phonenum'].'</td>
+                            <td>'.$data['first_name'].' '.$data['last_name'].'</td>
+                            <td>'.$perArr[$data['permission']].'</td>
+                            <td>                  
+                                <a herf="account/?id='.$data['user_id'].'" class="btn btn-primary">Sửa</a>
+                                <a href="delete.php?user_id='.$data['user_id'].'" class="btn btn-danger">Xoá</a>
+                            </td>
+                          </tr>';
+                            
+                        } 
+                $output.='
+                        </tbody>
+                      </table>
+                      <a type="button" href="addUser.php" class="btn btn-primary">Thêm</a>
+                </div>
+                ';
+            }
+        }
         mysqli_close($conn);
         echo json_encode($output);
     }
-}
-  }
+// }
+//   }
 ?> 
