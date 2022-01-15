@@ -38,7 +38,7 @@ if(isset($_GET['id'])){
                             <div class="info-lh3">
                                 <div class="inputdecor-book btn-login-book">
                                     <input type="text" name="txtHo" autocomplete="off" required
-                                        style="margin-left: -33px;border-radius: 0px;" />
+                                        style="margin-left: -33px;border-radius: 0px;width:100%" />
                                     <label for="name" class="lable-name-book">
                                         <span class="content-name2-book">
                                             Họ*
@@ -47,7 +47,7 @@ if(isset($_GET['id'])){
                                 </div>
                                 <div class="inputdecor-book btn-login-book">
                                     <input type="text" name="txtTen" autocomplete="off" required
-                                        style="margin-left: -33px;border-radius: 0px;" />
+                                        style="margin-left: -33px;border-radius: 0px;width:100%" />
                                     <label for="name" class="lable-name-book">
                                         <span class="content-name2-book">
                                             Tên đệm và tên*
@@ -76,7 +76,7 @@ if(isset($_GET['id'])){
                                 <div style="display: flex;">
                                     <div class="inputdecor-book btn-login-book">
                                         <input class="full-w" type="text" name="txtEmail" autocomplete="off" required
-                                            style="margin-left: -33px;border-radius: 0px; width: 100%;" />
+                                            style="margin-left: -33px;border-radius: 0px; width:100%;"/>
                                         <label for="name" class="lable-name-book">
                                             <span class="content-name2-book">
                                                 Email*
@@ -88,7 +88,7 @@ if(isset($_GET['id'])){
                                             <meta name="viewport" content="width=device-width, initial-scale=1" />
                                             <div class="container-phone-number">
                                                 <div id="login-phone-number">
-                                                    <input id="phone" type="number" name="phone" step="number" />
+                                                    <input id="phone" type="number" name="phone" step="number" style="margin-left:45px;" />
                                                 </div>
                                             </div>
                                         </div>
@@ -312,7 +312,7 @@ if(isset($_GET['id'])){
                                         </div>
                                         <div class="bonus-dv-8" style="padding: 12px; width: 50%;">
                                             <div class="inputdecor-book btn-login-book full-w" style="margin-bottom:33px ">
-                                                <input list="lists-dv" is="list-dv" class="full-w" type="text" name="list-dv" autocomplete="off" required
+                                                <input list="lists-dv" id="list-dv" class="full-w" type="text" name="list-dv" autocomplete="off" required
                                                     style="margin-left: -33px;border-radius: 0px;" />
                                                 <label for="name" class="lable-name-book">
                                                     <span class="content-name2-book">
@@ -355,7 +355,7 @@ if(isset($_GET['id'])){
                                 <div class="dv-plus" style="padding: 0px 12px 12px 12px;">
                                     <button>
                                         <i class="bi bi-plus-lg"></i>
-                                        <h6 class="dv-plus-p" style=" margin-bottom: 8px;">Thêm dịch vụ</h6>
+                                        <h6 class="dv-plus-p" style=" margin-bottom: 8px; padding:8px">Thêm dịch vụ</h6>
                                     </button>
                                 </div>
                             </div>
@@ -405,7 +405,7 @@ if(isset($_GET['id'])){
                             <div class="info-lh5" style="display: flex;">
                                 <div class="inputdecor-book btn-login-book">
                                     <input type="text" name="name33" autocomplete="off" required
-                                        style="margin-left: -33px;border-radius: 0px;" />
+                                        style="margin-left: -33px;border-radius: 0px; width:100%" />
                                     <label for="name" class="lable-name-book">
                                         <span class="content-name2-book">
                                             Email*
@@ -416,7 +416,7 @@ if(isset($_GET['id'])){
                                     <div class="ma-quoc-gia">
                                         <div class="container-phone-number">
                                             <div id="login-phone-number">
-                                                <input id="phone1" type="number" name="phone1" step="number" />
+                                                <input id="phone1" type="number" name="phone1" step="number" style="margin-left: 45px;" />
                                             </div>
                                         </div>
                                     </div>
@@ -534,7 +534,7 @@ if(isset($_GET['id'])){
                         </p>
                     </div>
                     <div class="full-info">
-                        <a href="" class="full-info-1" style="font-size: 15px;">Xem chi tiết tour</a>
+                        <a href="" class="full-info-1" style="font-size: 15px; color:#24a8d8">Xem chi tiết tour</a>
                         <hr style="background-color: black;">
                     </div>
                 </div>
@@ -557,7 +557,7 @@ if(isset($_GET['id'])){
                                 <label for="">Điểm khởi hành:</label>
                             </div>
                         </div>
-                        <?php $sql1 = "SELECT * from db_tourpart";{
+                        <?php $sql1 = "SELECT * FROM db_tourpart";{
                             $result1 = mysqli_query($conn,$sql1);
                             if(mysqli_num_rows($result1)>0){
                                 $data1 = mysqli_fetch_assoc($result1);
