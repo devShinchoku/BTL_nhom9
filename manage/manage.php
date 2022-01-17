@@ -365,7 +365,7 @@ require '../config/db.php';
                 $output.='
                     <div class="container">
                     <form action="insert.php" method="post">
-                        <label for="txtTourName">Tên Loại tour:</label>
+                        <label for="txtTourName">Tên tour:</label>
                         <input type="text" id="txtTourName" name="txtTourName" required>
                         <select id="txtTourCate" name="txtTourCate">
                         <option value="'.$datas[0]['category_id'].'" selected>'.$datas[0]['name'].'</option>';
