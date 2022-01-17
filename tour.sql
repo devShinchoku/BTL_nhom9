@@ -409,7 +409,7 @@ ALTER TABLE `db_user`
 -- AUTO_INCREMENT cho bảng `db_order`
 --
 ALTER TABLE `db_order`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `db_passenger`
@@ -427,13 +427,13 @@ ALTER TABLE `db_service`
 -- AUTO_INCREMENT cho bảng `db_tour`
 --
 ALTER TABLE `db_tour`
-  MODIFY `tour_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `tour_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `db_tourcategory`
 --
 ALTER TABLE `db_tourcategory`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `db_tourimg`
@@ -445,13 +445,13 @@ ALTER TABLE `db_tourimg`
 -- AUTO_INCREMENT cho bảng `db_tourpart`
 --
 ALTER TABLE `db_tourpart`
-  MODIFY `part_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `part_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT cho bảng `db_user`
 --
 ALTER TABLE `db_user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT;
 
 --
 -- Các ràng buộc cho các bảng đã đổ

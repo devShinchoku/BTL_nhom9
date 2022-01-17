@@ -4,7 +4,7 @@ include("template/header.php");
 <link rel="stylesheet" href="css/style.css">
 <main class="container mt-3">
     <div class="row">
-        <div class="sidebar col-md-3">
+        <div class="sidebar col-lg-3 d-none d-lg-block">
             <div id="weather">
             </div>
             <?php
@@ -25,7 +25,7 @@ include("template/header.php");
                 <?php } 
             ?>
         </div>
-        <div id="s-tour-nc" class="m-tour col-md-6">
+        <div id="s-tour-nc" class="m-tour col-lg-6 col-md-8 col-sm-12">
             <div class="card">
                 <div class="card-body">
                     <form class="m-search">
@@ -66,7 +66,7 @@ include("template/header.php");
                 <div id="clearfix_id" data-last_id="0"></div>
             </div>
         </div>
-        <div class="sidebar col-md-3">
+        <div class="sidebar col-md-4 d-none d-md-block col-lg-3">
             <div class="card">
                 <img src="https://www.hahalolo.com/507f4286f025cc6eda4e27bd01644cb9.jpg" alt="" class="h_ads">
             </div>

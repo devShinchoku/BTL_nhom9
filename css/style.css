@@ -22,6 +22,7 @@ input[type=number] {
 /* CSS for header */
 header {
   height: 64px;
+  background-color: #fff;
 }
 a {
   text-decoration: none;
@@ -44,7 +45,6 @@ a:hover{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  margin-right: 160px;
 }
 .h-logo:hover {
   cursor: pointer;
@@ -57,6 +57,7 @@ a:hover{
 .h-menu-logo {
   padding: 4px 12px;
   display: inline-flex;
+  position: relative;
   text-align: center;
   flex-direction: column;
   justify-content: center;
@@ -77,6 +78,7 @@ a:hover{
   content: "";
   z-index: 0;
   top: 16px;
+  left: 30px;
   width: 24px;
   height: 24px;
   border-radius: 50%;

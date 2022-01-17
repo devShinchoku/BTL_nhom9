@@ -5,7 +5,7 @@ if (isset($_GET['id'])) {
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) > 0) {
         $data = mysqli_fetch_assoc($result);
-        include '../template/header.php';
+        require '../template/header.php';
 ?>
         <main class="container container1 mt-3" style="margin-bottom: 100px;">
             <div class="card col-md-8">
