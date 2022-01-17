@@ -121,7 +121,7 @@
                                         Đã bao gồm thuế và phí
                                     </div>
                                     <div>
-                                        <a class="cart-price-tour" href="http://localhost/BTL_NHOM9/booking/?id=$id">
+                                        <a class="cart-price-tour" href="http://localhost/BTL_NHOM9/booking/?id=<?php echo $id ?>">
                                             Đặt Tour
                                         </a>
                                     </div>
