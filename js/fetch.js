@@ -12,12 +12,14 @@ $(document).ready(function () {
 
     $(window).scroll(function () {
         var last_id = $('#clearfix_id').data('last_id');
-        if ($(window).scrollTop() + $(window).height() > $(".m-content").height() && action == 'inactive') {
-            action = 'active';
-            make_skeleton();
-            setTimeout(function () {
-                load_data(last_id);
-            }, 400);
+        if(last_id != 0){
+            if ($(window).scrollTop() + $(window).height() > $(".m-content").height() && action == 'inactive') {
+                action = 'active';
+                make_skeleton();
+                setTimeout(function () {
+                    load_data(last_id);
+                }, 400);
+            }
         }
     });
 
