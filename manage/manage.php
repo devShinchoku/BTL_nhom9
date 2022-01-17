@@ -297,15 +297,13 @@ require '../config/db.php';
                         <table class="table">
                         <thead>
                         <tr>
-                            <th scope="col">Tour</th>
+                            <th scope="col">STT</th>
                             <th scope="col">Tên</th>
                             <th scope="col">Chủ đề</th>
                             <th scope="col">Thời gian bắt đầu</th>
                             <th scope="col">Thời gian kết thúc</th>
                             <th scope="col">Trả góp</th>
                             <th scope="col">Tình trạng</th>
-            
-            
                         </tr>
                         </thead>
                         <tbody>';
@@ -321,7 +319,7 @@ require '../config/db.php';
                     $i++;
                     $output.='
                                 <tr>
-                                    <td scope="row">'.$i.'</td>
+                                    <td scope="col">'.$i.'</td>
                                     <td>'.$data['name'].'</td>
                                     <td>'.$data['cate'].'</td>
                                     <td>'.$data['starttime'].'</td>
