@@ -85,7 +85,7 @@
                             <input type="text" name="email" autocomplete="off" required id= "inputEmail"/>
                             <label for="name" class="lable-name"> 
                                 <span class="content-name">
-                                    Email hoặc số điện thoại
+                                    Nhập Email của bạn
                                 </span>
                             </label>
                         </div>
