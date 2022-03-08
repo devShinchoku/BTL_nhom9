@@ -114,13 +114,13 @@
                         </button>
                     </div>
                     <div class="su-rules mt-5">
-                        <span>                       
+                        <!-- <span>                       
                             <a href="../forgot/index.php" class="su-rules-iteam">
                                 <span>
                                     Quên mật khẩu?
                                 </span>
                             </a>                          
-                        </span>
+                        </span> -->
                     </div>
                     <div class="su-rules mt-5 mb-5">
                         <span>
@@ -137,7 +137,7 @@
         </div>
     </main>
 
-    <footer>
+    <!-- <footer>
         <div class="su-footer mt-5">
             <div class="" style="width: 1248px; height: 52px;">
                 <div class="su-footer-btn">
@@ -179,7 +179,7 @@
                 <p>©2017 Hahalolo. Đã đăng ký bản quyền.</p>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"

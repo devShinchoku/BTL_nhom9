@@ -179,7 +179,7 @@
         </div>
     </main>
 
-    <footer style = "margin-top: 430px;">
+    <!-- <footer style = "margin-top: 430px;">
         <div class="su-footer mt-5" >
             <div class="" style="width: 1248px; height: 52px;">
                 <div class="su-footer-btn">
@@ -221,7 +221,7 @@
                 <p>©2017 Hahalolo. Đã đăng ký bản quyền.</p>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
 
     <!-- <script src="./sign-up.js"></script> -->
