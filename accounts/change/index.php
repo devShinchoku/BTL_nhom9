@@ -125,7 +125,7 @@ session_start();
         </div>
     </main>
 
-    <footer style = "margin-top: 200px;">
+    <!-- <footer style = "margin-top: 200px;">
         <div class="su-footer mt-5">
             <div class="" style="width: 1248px; height: 52px;">
                 <div class="su-footer-btn">
@@ -167,7 +167,7 @@ session_start();
                 <p>©2017 Hahalolo. Đã đăng ký bản quyền.</p>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
