@@ -137,7 +137,7 @@
                         </button>
                     </div>
 
-                    <div class="su-rules mt-5">
+                    <!-- <div class="su-rules mt-5">
                         <span>
                             Bằng cách nhấp vào Đăng ký, bạn đồng ý với
                             <a href="" class="su-rules-iteam">
@@ -164,7 +164,7 @@
                                 </span>
                             </a>
                         </span>
-                    </div>
+                    </div> -->
                     <div class="su-rules mt-5" style="text-align: center;">
                             Bạn đã có tài khoản?
                             <a href="../sign-in/index.php" class="su-rules-iteam">
