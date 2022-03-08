@@ -18,7 +18,7 @@
         // if{
             // nhap dung
             $token = md5($email).rand(10,9999);
-            $test = 'Active account tour';
+            $test = 'Active account netflix';
             $body = 'Click link'.$link;
             
             $pass_hash = password_hash($password,PASSWORD_DEFAULT);
