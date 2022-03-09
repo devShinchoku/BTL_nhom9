@@ -17,13 +17,15 @@
     if(!$ketqua){
         echo 'Lỗi';
     }else{
-
         ?>
-            <script>
-                alert("Đặt đơn hành thành công. Đơn hàng đang được xử lí !");
-                location.href = "../index.php";                                   
-            </script>
-            
+        <?php
+        require '../accounts/sign-up/mail.php'; 
+        $subject = "Đặt Tour thành công!";
+        $last_name = $ten;
+        $body = "Đặt đơn hàng thành công. Đơn hàng đang được xử lí !";
+        sendmail($email, $last_name, $subject, $body);
+        header("location:../index.php");  
+        ?>                              
         <?php
         unset($_SESSION['cart']);
     //     $sql = "SELECT order_id FROM db_oder LIMIT 1 ORDER BY order_id DESC";
